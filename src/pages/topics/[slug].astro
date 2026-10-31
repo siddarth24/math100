@@ -1,5 +1,6 @@
 ---
 import BaseLayout, { type TocItem } from '../../layouts/BaseLayout.astro';
+import StartDiagram, { startDiagramSections } from '../../components/StartDiagram.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import { getCollection } from 'astro:content';
 import { getGroupById } from '../../data/groups';
@@ -46,6 +47,15 @@ const tocItems: TocItem[] = [
       indent: true,
     })),
 ];
+
+if (startDiagramSections.has(d.section)) {
+  const practiceAt = tocItems.findIndex((item) => item.id === 'practice-problems');
+  tocItems.splice(practiceAt + 1, 0, {
+    id: 'how-to-start',
+    label: 'How to start',
+    indent: true,
+  });
+}
 ---
 
 <BaseLayout title={headingTitle} currentSlug={d.slug} currentGroup={d.group} toc={tocItems}>
@@ -168,6 +178,14 @@ const tocItems: TocItem[] = [
       Clear checks on this page
     </button>
   </div>
+
+  {
+    startDiagramSections.has(d.section) && (
+      <details class="how-to-start-block">
+        <StartDiagram section={d.section} />
+      </details>
+    )
+  }
 
   {
     d.practiceNote && (
