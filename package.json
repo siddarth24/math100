@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "deploy": "BASE_PATH=/math100 astro build && git --work-tree=dist checkout --orphan gh-pages-tmp && git --work-tree=dist add -f --all && git --work-tree=dist commit -m 'Deploy to GitHub Pages' && git push origin HEAD:gh-pages --force && git checkout -f main && git branch -D gh-pages-tmp"
+    "deploy": "bash scripts/deploy.sh"
   },
   "dependencies": {
     "astro": "^7.4.4",

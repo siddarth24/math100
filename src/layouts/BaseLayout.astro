@@ -4,6 +4,7 @@ import '../styles/global.css';
 import { getCollection } from 'astro:content';
 import { NAV_GROUPS } from '../data/groups';
 import { withBase } from '../lib/katex';
+import { sectionShortLabel } from '../lib/section-label';
 
 export interface TocItem {
   id: string;
@@ -23,15 +24,9 @@ const { title, currentSlug, currentGroup, toc = [] } = Astro.props;
 const allTopics = await getCollection('topics');
 const sortedTopics = [...allTopics].sort((a, b) => a.data.order - b.data.order);
 
-function formatSecNum(sec: string): string {
-  if (sec === '3.3i') return '3.3*';
-  if (!sec.includes('.')) return `Ch ${sec}`;
-  return sec;
-}
-
 const currentTopicObj = sortedTopics.find((t) => t.data.slug === currentSlug);
 const drawerCurrentLabel = currentTopicObj
-  ? `${formatSecNum(currentTopicObj.data.section)} ${currentTopicObj.data.shortTitle}`
+  ? `${sectionShortLabel(currentTopicObj.data.section)} ${currentTopicObj.data.shortTitle}`
   : currentSlug === 'precalculus'
     ? 'Precalculus reference'
     : 'Overview & syllabus';
@@ -252,7 +247,6 @@ const isHomePage = !currentSlug;
                   <details
                     class="nav-group-details"
                     data-nav-group={group.id}
-                    data-flavour={group.flavour}
                     open={isOpen}
                   >
                     <summary class="nav-group-summary">{group.title}</summary>
@@ -270,11 +264,10 @@ const isHomePage = !currentSlug;
                               class="nav-section-link"
                               aria-current={currentSlug === t.data.slug ? 'page' : undefined}
                             >
-                              <span class="nav-sec-num">{formatSecNum(t.data.section)}</span>
+                              <span class="nav-sec-num">{sectionShortLabel(t.data.section)}</span>
                               <span class="nav-sec-title">{t.data.shortTitle}</span>
                               <span
                                 class="nav-sec-count"
-                                data-progress-For={t.data.slug}
                                 data-check-ids={qIds}
                                 data-total={t.data.questions.length}
                               >
@@ -605,27 +598,6 @@ const isHomePage = !currentSlug;
             } catch (err) {}
             applyState();
             return;
-          }
-
-          const ytBtn = target.closest('.yt-play-trigger[data-yt-id]');
-          if (ytBtn) {
-            const videoId = ytBtn.getAttribute('data-yt-id');
-            const start = ytBtn.getAttribute('data-yt-start');
-            const title = ytBtn.getAttribute('data-yt-title') || 'YouTube video player';
-            const stage = ytBtn.closest('[data-yt-stage]');
-            if (videoId && stage) {
-              const params = new URLSearchParams({ autoplay: '1', rel: '0' });
-              if (start) params.set('start', start);
-              const iframe = document.createElement('iframe');
-              iframe.className = 'yt-iframe';
-              iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?${params.toString()}`;
-              iframe.title = title;
-              iframe.allow =
-                'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
-              iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-              iframe.allowFullscreen = true;
-              stage.replaceChildren(iframe);
-            }
           }
         });
 

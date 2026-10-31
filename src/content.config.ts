@@ -37,13 +37,6 @@ const topicsCollection = defineCollection({
     order: z.number(),
     flavour: z.enum(['all', 'A', 'AB', 'B', 'C']),
     goal: z.string(),
-    howToReadOverride: z
-      .object({
-        title: z.string(),
-        body: z.string(),
-        cueWords: z.array(z.string()).optional(),
-      })
-      .optional(),
     beforeThis: z.object({
       skill: z.string(),
       links: z

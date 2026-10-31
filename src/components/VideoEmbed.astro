@@ -93,3 +93,32 @@ const startLabel = formatStart(startSeconds);
     }
   </div>
 </div>
+
+<script>
+  document.addEventListener('click', (e) => {
+    const rawTarget = e.target;
+    const target = rawTarget instanceof Element ? rawTarget : (rawTarget as Node | null)?.parentElement;
+    if (!(target instanceof Element)) return;
+
+    const ytBtn = target.closest('.yt-play-trigger[data-yt-id]');
+    if (ytBtn) {
+      const videoId = ytBtn.getAttribute('data-yt-id');
+      const start = ytBtn.getAttribute('data-yt-start');
+      const title = ytBtn.getAttribute('data-yt-title') || 'YouTube video player';
+      const stage = ytBtn.closest('[data-yt-stage]');
+      if (videoId && stage) {
+        const params = new URLSearchParams({ autoplay: '1', rel: '0' });
+        if (start) params.set('start', start);
+        const iframe = document.createElement('iframe');
+        iframe.className = 'yt-iframe';
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?${params}`;
+        iframe.title = title;
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.allowFullscreen = true;
+        stage.replaceChildren(iframe);
+      }
+    }
+  });
+</script>

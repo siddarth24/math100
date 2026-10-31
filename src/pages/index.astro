@@ -4,6 +4,7 @@ import VideoEmbed from '../components/VideoEmbed.astro';
 import { getCollection } from 'astro:content';
 import { NAV_GROUPS } from '../data/groups';
 import { withBase } from '../lib/katex';
+import { sectionShortLabel } from '../lib/section-label';
 
 const allTopics = await getCollection('topics');
 const sortedTopics = [...allTopics].sort((a, b) => a.data.order - b.data.order);
@@ -23,12 +24,6 @@ const tocItems: TocItem[] = [
   { id: 'course-links', label: 'Textbook & past exams' },
   { id: 'syllabus-checklist', label: 'Sections & checklist' },
 ];
-
-function formatSectionLabel(sec: string) {
-  if (sec === '3.3i') return '3.3 (Interp.)';
-  if (!sec.includes('.')) return `Ch. ${sec}`;
-  return sec;
-}
 ---
 
 <BaseLayout title="How to use this course" toc={tocItems}>
@@ -189,7 +184,7 @@ function formatSectionLabel(sec: string) {
                 const qIds = t.data.questions.map((q) => q.id).join(',');
                 return (
                   <tr data-content-flavour={t.data.flavour}>
-                    <td class="syllabus-sec-cell">{formatSectionLabel(t.data.section)}</td>
+                    <td class="syllabus-sec-cell">{sectionShortLabel(t.data.section)}</td>
                     <td>
                       <a href={withBase(`/topics/${t.data.slug}`)}>{t.data.title}</a>
                     </td>
