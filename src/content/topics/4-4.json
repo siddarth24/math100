@@ -122,15 +122,6 @@
       "asking": "Write a general formula for the derivative of $[f(x)]^{g(x)}$ in terms of $f(x)$, $f'(x)$, $g(x)$, and $g'(x)$.",
       "statement": "<p>Let $f(x)$ and $g(x)$ be differentiable functions, with $f(x) > 0$. Evaluate $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\left\\{[f(x)]^{g(x)}\\right\\}$.</p>",
       "oldExam": false
-    },
-    {
-      "id": "4.4-q32",
-      "number": 32,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Show that the derivative of $\\log(f(x))$ equals $0$ at the exact same $x$-values where $f'(x) = 0$.",
-      "statement": "<p>Let $f(x)$ be a function whose range includes only positive numbers. Show that the curves $y = f(x)$ and $y = \\log(f(x))$ have horizontal tangent lines at the same values of $x$.</p>",
-      "oldExam": false
     }
   ]
 }

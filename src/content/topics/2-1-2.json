@@ -137,24 +137,6 @@
       "asking": "Factor out the largest power of $x$ as $x \\to -\\infty$, watching the minus sign when pulling $x^2$ out of a square root ($\\sqrt{x^2} = -x$ for $x < 0$).",
       "statement": "<p>Evaluate $\\lim_{x \\to -\\infty} \\frac{5x + 7}{\\sqrt{4x^2 + 15} - x}$.</p>",
       "oldExam": true
-    },
-    {
-      "id": "2.1.2-q27",
-      "number": 27,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Check if a single rational function can approach two different finite numbers at $+\\infty$ and $-\\infty$, or explain why no such rational function exists.",
-      "statement": "<p>Give a rational function $f(x)$ with the properties that $\\lim_{x \\to \\infty} f(x) \\ne \\lim_{x \\to -\\infty} f(x)$, and both limits are (finite) real numbers.</p>",
-      "oldExam": false
-    },
-    {
-      "id": "2.1.2-q28",
-      "number": 28,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Interpret in real-world terms what it means if the concentration $c(t)$ in your body does not approach $0$ as time $t \\to \\infty$.",
-      "statement": "<p>Suppose the concentration of a substance in your body $t$ hours after injection is given by some formula $c(t)$, and $\\lim_{t \\to \\infty} c(t) \\ne 0$. What kind of substance might have been injected?</p>",
-      "oldExam": false
     }
   ]
 }

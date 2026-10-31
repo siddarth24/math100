@@ -221,6 +221,15 @@
       "asking": "Find the range of values of the exponent $a$ for which the right-hand difference-quotient limit at $x = 0$ equals the left-hand derivative $0$.",
       "statement": "<p>For which values of $a$ is the function</p>$$f(x) = \\begin{cases} 0 & x \\le 0 \\\\[4pt] x^a \\sin\\left(\\dfrac{1}{x}\\right) & x > 0 \\end{cases}$$<p>differentiable at $0$?</p>",
       "oldExam": true
+    },
+    {
+      "id": "3.3-exam-2024-14",
+      "number": 28,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Say where this function has a slope, including at the spikes $x = 1/n$ and at $0$ where those spikes pile up, and give that slope.",
+      "statement": "<p>December 2024 final. Let $f(x)$ be defined for all real numbers by</p>$$f(x) = \\begin{cases} x^2 & \\text{if } x = 1/n \\text{ for some positive integer } n \\\\ 0 & \\text{otherwise.} \\end{cases}$$<p>For what values of $x$ is $f$ differentiable? For those values, compute $f'(x)$. Justify your answer.</p>",
+      "oldExam": true
     }
   ]
 }

@@ -132,6 +132,24 @@
       "statement": "<p><strong>Biochemical reaction.</strong> A biochemical reaction in which a substance $S$ is both produced and consumed is investigated. The concentration $c(t)$ of $S$ changes during the reaction, and is seen to follow the differential equation</p>$$\\frac{\\mathrm{d}c}{\\mathrm{d}t} = K_{\\max}\\frac{c}{k + c} - rc$$<p>where $K_{\\max}, k, r$ are positive constants with certain convenient units. The first term is a concentration-dependent production term and the second term represents consumption of the substance.</p><ol type=\"a\"><li>What is the maximal rate at which the substance is produced? At what concentration is the production rate $50\\%$ of this maximal value?</li><li>If the production is turned off, the substance decays. How long would it take for the concentration to drop by $50\\%$?</li><li>At what concentration does the production rate just balance the consumption rate?</li></ol>",
       "stage": null,
       "oldExam": false
+    },
+    {
+      "id": "11-exam-2024-11b",
+      "number": 36,
+      "half": "harder",
+      "asking": "The weight stops moving after a long time. Which values of $A$ fit that fact?",
+      "statement": "<p>December 2024 final. A weight on a spring sits in a thick liquid. Its position is</p>$$x(t) = e^{At}\\bigl(B\\sin t + C\\cos t\\bigr)$$<p>with constants $A$, $B$, and $C$. After a very long time, the weight seems to stop moving. Find every value of $A$ consistent with that.</p>",
+      "stage": null,
+      "oldExam": true
+    },
+    {
+      "id": "11-exam-2024-12a",
+      "number": 37,
+      "half": "harder",
+      "asking": "You do not have a formula for $y(x)$. Build the second-order Maclaurin polynomial from the differential equation and $y(0) = 0$.",
+      "statement": "<p>December 2024 final. Let $y(x)$ solve $y' = y + e^{-y}$ with $y(0) = 0$. Find the second-order Maclaurin expansion of $y(x)$.</p>",
+      "stage": null,
+      "oldExam": true
     }
   ]
 }

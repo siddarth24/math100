@@ -77,6 +77,15 @@
       "statement": "<p>Use one iteration of Newton’s method to find an approximate value for $\\sqrt{8}$ that is a rational number. (Hint: first think of a function, $f(x)$, such that $f(x) = 0$ has the solution $x = \\sqrt{8}$.) </p>",
       "stage": null,
       "oldExam": false
+    },
+    {
+      "id": "10-exam-2024-10",
+      "number": 7,
+      "half": "harder",
+      "asking": "The root of $x^3 - 2 = 0$ sits between two integers. Decide which of those integers is the closer start, and say why, before you iterate.",
+      "statement": "<p>December 2024 final. We want a rational approximation of $\\sqrt[3]{2}$, thought of as a solution of $x^3 - 2 = 0$. Starting from an integer, find consecutive integers that bracket the root. Which one is likely closer, and why?</p>",
+      "stage": null,
+      "oldExam": true
     }
   ]
 }

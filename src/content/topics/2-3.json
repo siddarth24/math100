@@ -122,6 +122,15 @@
       "asking": "Find all values of $c$ that make the two branches of $f(x)$ match at the transition point $x = 2c$, and justify using the definition of continuity.",
       "statement": "<p>Find all values of $c$ such that the following function is continuous:</p>$$f(x) = \\begin{cases} 6 - cx & \\text{if } x \\le 2c \\\\ x^2 & \\text{if } x > 2c \\end{cases}$$<p>Use the definition of continuity to justify your answer.</p>",
       "oldExam": true
+    },
+    {
+      "id": "2.3-exam-2024-4b",
+      "number": 16,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Name every $x$ where this fraction breaks, and say whether each break is a hole, a jump, or infinite.",
+      "statement": "<p>December 2024 final. Give the locations and types (jump, removable, or infinite) of all discontinuities of</p>$$f(x) = \\frac{x + 1}{x^2 - 1}$$<p>or write “none” if there are none.</p>",
+      "oldExam": true
     }
   ]
 }

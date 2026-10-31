@@ -110,7 +110,7 @@
       "number": 24,
       "stage": 2,
       "half": "first",
-      "asking": "Notice that $\\sin(1/x)$ stays trapped between $-1$ and $1$ while $x^2 \\to 0$, so use the Squeeze Theorem to see what the product is pinched toward.",
+      "asking": "The sine stays between $-1$ and $1$ no matter how fast it wiggles, and $x^2$ goes to $0$, so the product goes to $0$.",
       "statement": "<p>Evaluate $\\lim_{x \\to 0} x^2 \\sin\\left(\\frac{1}{x}\\right)$.</p>",
       "oldExam": true
     },

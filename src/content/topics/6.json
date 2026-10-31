@@ -157,24 +157,6 @@
       "oldExam": true
     },
     {
-      "id": "6-q19",
-      "number": 19,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Show that the relative error $\\frac{|S(n) - A(n)|}{S(n)}$ approaches $0$ as $n \\to \\infty$, and determine what happens to the absolute error $|S(n) - A(n)|$.",
-      "statement": "<p>Suppose an algorithm, given an input with $n$ variables, will terminate in at most $S(n) = 5n^4 - 13n^3 - 4n + \\log(n)$ steps. A researcher writes that the algorithm will terminate in roughly at most $A(n) = 5n^4$ steps. Show that the percentage error involved in using $A(n)$ instead of $S(n)$ tends to zero as $n$ gets very large. What happens to the absolute error?</p><p><em>Remark:</em> this is a very common kind of approximation. When people deal with functions that give very large numbers, often they don’t care about the exact large number—they only want a ballpark. So, a complicated function might be replaced by an easier function that doesn’t give a large relative error.</p>",
-      "oldExam": false
-    },
-    {
-      "id": "6-q20",
-      "number": 20,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Construct explicit formulas for two functions $f(x) \\to 1$ and $g(x) \\to \\infty$ as $x \\to \\infty$ such that $[f(x)]^{g(x)} \\to 5$.",
-      "statement": "<p>Give two functions $f(x)$ and $g(x)$ with the following properties:</p><ol type=\"i\"><li>$\\lim_{x \\to \\infty} f(x) = 1$</li><li>$\\lim_{x \\to \\infty} g(x) = \\infty$</li><li>$\\lim_{x \\to \\infty} [f(x)]^{g(x)} = 5$</li></ol>",
-      "oldExam": false
-    },
-    {
       "id": "6-q21",
       "number": 21,
       "stage": 3,

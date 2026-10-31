@@ -187,15 +187,6 @@
       "oldExam": false
     },
     {
-      "id": "4.3-q33",
-      "number": 33,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Differentiate both sides of $\\sin(2x) = 2\\sin x \\cos x$ with respect to $x$ and simplify to obtain a formula for $\\cos(2x)$.",
-      "statement": "<p>We know that $\\sin(2x) = 2\\sin x \\cos x$. What other trig identity can you derive from this, using differentiation?</p>",
-      "oldExam": false
-    },
-    {
       "id": "4.3-q35",
       "number": 35,
       "stage": 3,
