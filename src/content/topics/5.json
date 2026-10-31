@@ -34,49 +34,40 @@
   "staged": true,
   "questions": [
     {
-      "id": "5-q1",
-      "number": 1,
+      "id": "5-simple-circle",
+      "number": 25,
       "stage": 1,
-      "half": "harder",
-      "asking": "Spot which of the four combinations of given values at $t = 0$ provide enough information to solve for the unknown rate in $P = Q^3$.",
-      "statement": "<p>Suppose the quantities $P$ and $Q$ are related by the formula $P = Q^3$. $P$ and $Q$ are changing with respect to time, $t$. Given this information, which of the following are problems you could solve?</p><ol type=\"i\"><li>Given $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$, find $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$. (Remember: the notation $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$ means the derivative of $P$ with respect to $t$ at the time $t = 0$.)</li><li>Given $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$ and the value of $Q$ when $t = 0$, find $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$.</li><li>Given $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$, find $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$.</li><li>Given $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$ and the value of $P$ when $t = 0$, find $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$.</li></ol>",
+      "half": "first",
+      "asking": "The ripple is a circle whose radius is growing. Find how fast its area is growing when the radius is $10\\text{ cm}$.",
+      "statement": "<p>A stone falls into a still pond. The circular ripple grows so that its radius increases at $3\\text{ cm/s}$. How fast is the area of the ripple growing when the radius is $10\\text{ cm}$?</p>",
       "oldExam": false
     },
     {
-      "id": "5-q2",
-      "number": 2,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the rate of change $\\mathrm{d}x/\\mathrm{d}t$ of the point's $x$-coordinate at the instant it passes through $(2/\\sqrt{5}, 1/\\sqrt{5})$.",
-      "statement": "<p>A point is moving on the unit circle $\\{(x, y) : x^2 + y^2 = 1\\}$ in the $xy$-plane. At the point $\\left(\\dfrac{2}{\\sqrt{5}}, \\dfrac{1}{\\sqrt{5}}\\right)$, its $y$-coordinate is increasing at rate $3$. What is the rate of change of its $x$-coordinate?</p>",
-      "oldExam": true
+      "id": "5-simple-balloon",
+      "number": 26,
+      "stage": 1,
+      "half": "first",
+      "asking": "Air is pumped into a sphere at a steady rate. Find how fast the radius is growing when the radius is $5\\text{ cm}$.",
+      "statement": "<p>Air is pumped into a spherical balloon at $100\\text{ cm}^3/\\text{s}$. How fast is the radius growing when the radius is $5\\text{ cm}$?</p>",
+      "oldExam": false
     },
     {
-      "id": "5-q3",
-      "number": 3,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the instantaneous percentage rate of change $R'/R$ when $R = PQ$, $P'/P = 0.08$, and $Q'/Q = -0.02$.",
-      "statement": "<p>The quantities $P, Q$ and $R$ are functions of time and are related by the equation $R = PQ$. Assume that $P$ is increasing instantaneously at the rate of $8\\%$ per year and that $Q$ is decreasing instantaneously at the rate of $2\\%$ per year. That is, $\\dfrac{P'}{P} = 0.08$ and $\\dfrac{Q'}{Q} = -0.02$. Determine the percentage rate of change for $R$.</p>",
-      "oldExam": true
+      "id": "5-simple-ladder",
+      "number": 27,
+      "stage": 1,
+      "half": "first",
+      "asking": "A $13\\text{ m}$ ladder leans on a wall. The bottom slides away from the wall. Find how fast the top is sliding down when the bottom is $5\\text{ m}$ from the wall.",
+      "statement": "<p>A $13\\text{ m}$ ladder leans against a wall. The bottom slides away from the wall at $2\\text{ m/s}$. How fast is the top sliding down the wall when the bottom is $5\\text{ m}$ from the wall?</p>",
+      "oldExam": false
     },
     {
-      "id": "5-q4",
-      "number": 4,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the instantaneous rate of change $\\mathrm{d}F/\\mathrm{d}t$ in part (a) and the percentage rate of change $F'/F$ in part (b) when $F = P/Q$.",
-      "statement": "<p>Three quantities, $F, P$ and $Q$ all depend upon time $t$ and are related by the equation</p>$$F = \\frac{P}{Q}$$<ol type=\"a\"><li>Assume that at a particular moment in time $P = 25$ and $P$ is increasing at the instantaneous rate of $5$ units/min. At the same moment, $Q = 5$ and $Q$ is increasing at the instantaneous rate of $1$ unit/min. What is the instantaneous rate of change in $F$ at this moment?</li><li>Assume that at another moment in time $P$ is increasing at the instantaneous rate of $10\\%$ and $Q$ is decreasing at the instantaneous rate $5\\%$. What can you conclude about the rate of change of $F$ at this moment?</li></ol>",
-      "oldExam": true
-    },
-    {
-      "id": "5-q5",
-      "number": 5,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the rate (in units per second) at which the straight-line distance between particles $A$ and $B$ is changing at the instant $A$ reaches $(4, 0)$.",
-      "statement": "<p>Two particles move in the Cartesian plane. Particle $A$ travels on the $x$-axis starting at $(10, 0)$ and moving towards the origin with a speed of $2$ units per second. Particle $B$ travels on the $y$-axis starting at $(0, 12)$ and moving towards the origin with a speed of $3$ units per second. What is the rate of change of the distance between the two particles when particle $A$ reaches the point $(4, 0)$?</p>",
-      "oldExam": true
+      "id": "5-simple-square",
+      "number": 28,
+      "stage": 1,
+      "half": "first",
+      "asking": "Each side of a square is growing at a steady rate. Find how fast the area is growing when a side is $8\\text{ cm}$.",
+      "statement": "<p>Each side of a square is growing at $3\\text{ cm/s}$. How fast is the area of the square growing when a side is $8\\text{ cm}$?</p>",
+      "oldExam": false
     },
     {
       "id": "5-q6",
@@ -217,40 +208,6 @@
       "oldExam": false
     },
     {
-      "id": "5-q18",
-      "number": 18,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the rate at which the salt flow rate ($15A\\text{ cm}^3/\\text{s}$) is changing as the rotating door covers the quarter-annulus opening.",
-      "statement": "<p>The circular lid of a salt shaker has radius $8$. There is a cut-out to allow the salt to pour out of the lid, and a door that rotates around to cover the cut-out. The door is a quarter-circle of radius $7\\text{ cm}$. The cut-out has the shape of a quarter-annulus with outer radius $6\\text{ cm}$ and inner radius $1\\text{ cm}$. If the uncovered area of the cut-out is $A\\text{ cm}^2$, then the salt flows out at $15A\\text{ cm}^3$ per second.</p><p>Recall: an annulus is the set of points inside one circle and outside another, like a flat doughnut (see Question 15).</p><p>While pouring out salt, you spin the door around the lid at a constant rate of $\\dfrac{\\pi}{6}$ radians per second, covering more and more of the cut-out. When exactly half of the cut-out is covered, how fast is the flow of salt changing?</p>",
-      "figures": [
-        {
-          "src": "/figures/5-q18-1.png",
-          "alt": "Two circular salt shaker lids: the left lid shows the white quarter-annulus cut-out completely uncovered by the orange quarter-circle door; the right lid shows the orange door rotated to partially cover the cut-out."
-        },
-        {
-          "src": "/figures/5-q18-2.png",
-          "alt": "Diagram comparing a full ring-shaped annulus on the left with a 90-degree sector of that ring (a quarter annulus) on the right."
-        }
-      ],
-      "oldExam": false
-    },
-    {
-      "id": "5-q19",
-      "number": 19,
-      "stage": 2,
-      "half": "harder",
-      "asking": "Find the rate at which the water flow rate ($\\frac{1}{5}A\\text{ m}^3/\\text{s}$) is decreasing when the vertical door has descended $25\\text{ cm}$ from the top of the circular pipe.",
-      "statement": "<p>A cylindrical sewer pipe with radius $1$ metre has a vertical rectangular door that slides in front of it to block the flow of water, as shown below. If the uncovered area of the pipe is $A\\text{ m}^2$, then the flow of water through the pipe is $\\dfrac{1}{5}A$ cubic metres per second.</p><p>The door slides over the pipe, moving vertically at a rate of $1$ centimetre per second. How fast is the flow of water changing when the door covers the top $25$ centimetres of the pipe?</p>",
-      "figures": [
-        {
-          "src": "/figures/5-q19.png",
-          "alt": "Front view of a circular pipe of radius 1 m with a grey rectangular gate sliding downward over the upper portion of the circle."
-        }
-      ],
-      "oldExam": false
-    },
-    {
       "id": "5-q20",
       "number": 20,
       "stage": 2,
@@ -266,21 +223,6 @@
       "oldExam": false
     },
     {
-      "id": "5-q21",
-      "number": 21,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Find the rate of change of the river depth $D$ in part (a), and explain physically how the rope/buoy system can produce the derivative signs described in parts (b) and (c).",
-      "statement": "<p>A floating buoy is anchored to the bottom of a river. As the river flows, the buoy is pulled in the direction of flow until its $2$-metre rope is taut. A sensor at the anchor reads the angle $\\theta$ between the rope and the riverbed, as shown in the diagram below. This data is used to measure the depth $D$ of water in the river, which depends on time.</p><ol type=\"a\"><li>If $\\theta = \\dfrac{\\pi}{4}$ and $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} = 0.25\\,\\dfrac{\\text{rad}}{\\text{hr}}$, how fast is the depth $D$ of the water changing?</li><li>A measurement shows $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} = 0$, but $\\dfrac{\\mathrm{d}D}{\\mathrm{d}t} \\ne 0$. Under what circumstances does this occur?</li><li>Another measurement shows $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} > 0$, but $\\dfrac{\\mathrm{d}D}{\\mathrm{d}t} < 0$. Under what circumstances does this occur?</li></ol>",
-      "figures": [
-        {
-          "src": "/figures/5-q21.png",
-          "alt": "Side view of a river of vertical depth D showing an orange buoy on the water surface tethered by a straight rope to an anchor on the riverbed at angle theta above the riverbed."
-        }
-      ],
-      "oldExam": false
-    },
-    {
       "id": "5-q22",
       "number": 22,
       "stage": 3,
@@ -291,21 +233,6 @@
         {
           "src": "/figures/5-q22.png",
           "alt": "Coordinate grid with unit ticks at x = 1 and y = 1 showing a quadrilateral with vertices at (-4, -2), (3, -2), (2, 1), and (-2, 3). The bottom edge lies on y = -2 and the top edge passes through (-2, 3), (0, 2), and (2, 1)."
-        }
-      ],
-      "oldExam": false
-    },
-    {
-      "id": "5-q23",
-      "number": 23,
-      "stage": 3,
-      "half": "harder",
-      "asking": "Relate the semi-axes $a$ and $b$ via the constant cross-sectional perimeter, express the bottle's volume in terms of $a$ and $b$, and find the rate at which water spills out when $a = 2b$.",
-      "statement": "<p>You have a cylindrical water bottle $20\\text{ cm}$ high, filled with water. Its cross section is a circle of radius $5$. You slowly smoosh the sides, so the cross section becomes an ellipse with major axis (widest part) $2a$ and minor axis (skinniest part) $2b$.</p><p>After $t$ seconds of smooshing the bottle, $a = 5 + t\\text{ cm}$. The perimeter of the cross section is unchanged as the bottle deforms. The perimeter of an ellipse is actually quite difficult to calculate, but we will use an approximation derived by Ramanujan and assume that the perimeter $p$ of our ellipse is</p>$$p \\approx \\pi\\left[3(a + b) - \\sqrt{(a + 3b)(3a + b)}\\right].$$<p>The area of an ellipse is $\\pi ab$.</p><ol type=\"a\"><li>Give an equation that relates $a$ and $b$ (and no other variables).</li><li>Give an expression for the volume of the bottle as it is being smooshed, in terms of $a$ and $b$ (and no other variables).</li><li>Suppose the bottle was full when its cross section was a circle. How fast is the water spilling out when $a$ is twice as big as $b$?</li></ol>",
-      "figures": [
-        {
-          "src": "/figures/5-q23.png",
-          "alt": "Diagram showing a circular cylinder of radius 5 and height 20 on the left transforming into an elliptical cylinder of semi-axes a and b and height 20 on the right."
         }
       ],
       "oldExam": false
