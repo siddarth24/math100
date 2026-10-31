@@ -52,8 +52,12 @@ const isHomePage = !currentSlug;
     <meta name="color-scheme" content="light dark" />
     <script is:inline>
       try {
-        document.querySelector('meta[name="color-scheme"]').content =
-          localStorage.getItem('color-scheme') ?? 'light dark';
+        var storedScheme = localStorage.getItem('color-scheme');
+        var schemeMeta = document.querySelector('meta[name="color-scheme"]');
+        if (storedScheme === 'light' || storedScheme === 'dark') {
+          schemeMeta.setAttribute('content', storedScheme);
+          document.documentElement.style.colorScheme = storedScheme;
+        }
       } catch (e) {}
     </script>
     <title>{title} — UBC MATH 100/180 Study Guide</title>
@@ -409,6 +413,98 @@ const isHomePage = !currentSlug;
           });
         }
 
+        function readStoredScheme() {
+          try {
+            const stored = localStorage.getItem('color-scheme');
+            return stored === 'light' || stored === 'dark' ? stored : null;
+          } catch (e) {
+            return null;
+          }
+        }
+
+        function applyColorScheme(stored) {
+          const pinned = stored === 'light' || stored === 'dark' ? stored : null;
+          const meta = document.querySelector('meta[name="color-scheme"]');
+          if (meta) meta.setAttribute('content', pinned ?? 'light dark');
+          document.documentElement.style.colorScheme = pinned ?? '';
+        }
+
+        function systemScheme() {
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function syncBeforeThis(course) {
+          document.querySelectorAll('.before-this-details').forEach((details) => {
+            if (course === '180') details.setAttribute('open', '');
+            else if (course === '100') details.removeAttribute('open');
+          });
+        }
+
+        function syncPagination() {
+          const visible = [...document.querySelectorAll('[data-nav-item]')].filter((item) => !item.hidden);
+          const current = visible.findIndex(
+            (item) => item.querySelector('a')?.getAttribute('aria-current') === 'page'
+          );
+          const prevLink = document.querySelector(
+            '.topic-pagination .pagination-slot:not(.pagination-slot-next) .pagination-link'
+          );
+          const nextLink = document.querySelector('.topic-pagination .pagination-link-next');
+
+          function point(anchor, item) {
+            if (!anchor) return;
+            const slot = anchor.parentElement;
+            if (current < 0 || !item) {
+              anchor.hidden = true;
+              if (slot) slot.hidden = true;
+              return;
+            }
+            const link = item.querySelector('a');
+            const num = item.querySelector('.nav-sec-num')?.textContent?.trim() ?? '';
+            const title = item.querySelector('.nav-sec-title')?.textContent?.trim() ?? '';
+            const titleEl = anchor.querySelector('.pagination-title');
+            anchor.hidden = false;
+            if (slot) slot.hidden = false;
+            if (link) anchor.href = link.href;
+            if (titleEl) titleEl.textContent = `${num} ${title}`.trim();
+          }
+
+          point(prevLink, current > 0 ? visible[current - 1] : null);
+          point(nextLink, current >= 0 && current < visible.length - 1 ? visible[current + 1] : null);
+        }
+
+        function syncPageToc() {
+          const tocLinks = [...document.querySelectorAll('.page-toc-link')];
+          if (!tocLinks.length) return;
+          const headings = tocLinks
+            .map((link) => {
+              const id = (link.getAttribute('href') || '').replace(/^#/, '');
+              const heading = id ? document.getElementById(id) : null;
+              return heading ? { id, link, heading } : null;
+            })
+            .filter(Boolean);
+          if (!headings.length) return;
+
+          function setActive(id) {
+            for (const entry of headings) {
+              const on = entry.id === id;
+              entry.link.classList.toggle('page-toc-link-active', on);
+              if (on) entry.link.setAttribute('aria-current', 'location');
+              else entry.link.removeAttribute('aria-current');
+            }
+          }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              const visible = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+              if (visible.length) setActive(visible[0].target.id);
+            },
+            { rootMargin: '-104px 0px -55% 0px', threshold: [0, 1] }
+          );
+          for (const entry of headings) observer.observe(entry.heading);
+        }
+
         function applyState() {
           let course = null;
           let flavour = null;
@@ -431,15 +527,6 @@ const isHomePage = !currentSlug;
           if (promptEl) {
             promptEl.hidden = Boolean(course && flavour);
           }
-
-          // Update "Before this" blocks based on course
-          document.querySelectorAll('.before-this-details').forEach((details) => {
-            if (course === '180') {
-              details.setAttribute('open', '');
-            } else if (course === '100') {
-              details.removeAttribute('open');
-            }
-          });
 
           // Filter navigation items and groups by flavour
           document.querySelectorAll('[data-nav-item]').forEach((item) => {
@@ -466,43 +553,36 @@ const isHomePage = !currentSlug;
             const visibleRows = groupEl.querySelectorAll('[data-content-flavour]:not([hidden])');
             groupEl.hidden = visibleRows.length === 0;
           });
+
+          syncPagination();
         }
 
         applyState();
+        try {
+          syncBeforeThis(localStorage.getItem(COURSE_KEY));
+        } catch (e) {}
         updateProgressCounts();
+        try {
+          syncPageToc();
+        } catch (e) {}
 
         window.addEventListener('math100:checks-updated', updateProgressCounts);
 
         document.addEventListener('click', (e) => {
-          const target = e.target;
-          if (!(target instanceof HTMLElement)) return;
+          const rawTarget = e.target;
+          const target = rawTarget instanceof Element ? rawTarget : rawTarget?.parentElement;
+          if (!(target instanceof Element)) return;
 
           const themeBtn = target.closest('[data-theme-toggle]');
           if (themeBtn) {
-            const meta = document.querySelector('meta[name="color-scheme"]');
-            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            const systemScheme = systemDark ? 'dark' : 'light';
-            let stored = null;
-            try {
-              stored = localStorage.getItem('color-scheme');
-            } catch (err) {}
-            const currentRendered =
-              stored === 'light' || stored === 'dark' ? stored : systemScheme;
+            const system = systemScheme();
+            const currentRendered = readStoredScheme() ?? system;
             const targetScheme = currentRendered === 'dark' ? 'light' : 'dark';
             try {
-              if (targetScheme !== systemScheme) {
-                localStorage.setItem('color-scheme', targetScheme);
-              } else {
-                localStorage.removeItem('color-scheme');
-              }
+              if (targetScheme !== system) localStorage.setItem('color-scheme', targetScheme);
+              else localStorage.removeItem('color-scheme');
             } catch (err) {}
-            if (meta) {
-              let nextMeta = targetScheme !== systemScheme ? targetScheme : 'light dark';
-              try {
-                nextMeta = localStorage.getItem('color-scheme') ?? 'light dark';
-              } catch (err) {}
-              meta.setAttribute('content', nextMeta);
-            }
+            applyColorScheme(targetScheme !== system ? targetScheme : null);
             return;
           }
 
@@ -513,6 +593,7 @@ const isHomePage = !currentSlug;
               if (val) localStorage.setItem(COURSE_KEY, val);
             } catch (err) {}
             applyState();
+            syncBeforeThis(val);
             return;
           }
 
@@ -549,12 +630,11 @@ const isHomePage = !currentSlug;
         });
 
         window.addEventListener('storage', (e) => {
-          if (e.key === 'color-scheme') {
-            const meta = document.querySelector('meta[name="color-scheme"]');
-            if (meta) {
-              meta.setAttribute('content', e.newValue ?? 'light dark');
-            }
-          }
+          if (e.key === 'color-scheme') applyColorScheme(e.newValue);
+        });
+
+        window.addEventListener('pageshow', () => {
+          applyColorScheme(readStoredScheme());
         });
       })();
     </script>

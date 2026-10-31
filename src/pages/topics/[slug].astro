@@ -266,7 +266,6 @@ function formatShortNav(sec: string, shortTitle: string) {
           <a
             href={withBase(`/topics/${prevTopic.data.slug}`)}
             class="pagination-link"
-            data-content-flavour={prevTopic.data.flavour}
           >
             <span class="pagination-dir">← Previous section</span>
             <span class="pagination-title">
@@ -282,7 +281,6 @@ function formatShortNav(sec: string, shortTitle: string) {
           <a
             href={withBase(`/topics/${nextTopic.data.slug}`)}
             class="pagination-link pagination-link-next"
-            data-content-flavour={nextTopic.data.flavour}
           >
             <span class="pagination-dir">Next section →</span>
             <span class="pagination-title">

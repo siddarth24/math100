@@ -98,8 +98,85 @@
   --tag-harder-dot: var(--tag-harder-dot-light);
   --tag-count-border: var(--tag-count-border-light);
 
-  /* Fallback for browsers without light-dark() support */
+  /*
+    A pinned <meta content="light|dark"> wins over the OS.
+    prefers-color-scheme does not follow that pin, so the dark fallback
+    must not apply when light is pinned. light-dark() is only for the
+    unpinned "light dark" state; a stuck light-dark() value must not
+    repaint a pinned page.
+  */
   @media (prefers-color-scheme: dark) {
+    &:not(:has(> head > meta[name='color-scheme'][content='light'])) {
+      --paper: var(--paper-dark);
+      --paper-sheet: var(--paper-sheet-dark);
+      --surface-tint: var(--surface-tint-dark);
+      --surface-hover: var(--surface-hover-dark);
+      --sidebar-active-bg: var(--sidebar-active-bg-dark);
+      --ink: var(--ink-dark);
+      --ink-secondary: var(--ink-secondary-dark);
+      --blue: var(--blue-dark);
+      --blue-tint: var(--blue-tint-dark);
+      --accent-warm: var(--blue-dark);
+      --accent-warm-tint: var(--blue-tint-dark);
+      --red: var(--red-dark);
+      --red-tint: var(--red-tint-dark);
+      --rule: var(--rule-dark);
+      --rule-subtle: var(--rule-subtle-dark);
+      --scrollbar-thumb: var(--scrollbar-thumb-dark);
+      --scrollbar-track: var(--scrollbar-track-dark);
+      --header-bg: var(--header-bg-dark);
+      --link-underline: var(--link-underline-dark);
+      --pill-bg: var(--pill-bg-dark);
+      --pill-border: var(--pill-border-dark);
+      --tag-first-text: var(--tag-first-text-dark);
+      --tag-first-bg: var(--tag-first-bg-dark);
+      --tag-first-border: var(--tag-first-border-dark);
+      --tag-harder-text: var(--tag-harder-text-dark);
+      --tag-harder-bg: var(--tag-harder-bg-dark);
+      --tag-harder-border: var(--tag-harder-border-dark);
+      --tag-harder-dot: var(--tag-harder-dot-dark);
+      --tag-count-border: var(--tag-count-border-dark);
+    }
+  }
+
+  @supports (color: light-dark(white, black)) {
+    &:not(:has(> head > meta[name='color-scheme'][content='light'])):not(
+        :has(> head > meta[name='color-scheme'][content='dark'])
+      ) {
+      --paper: light-dark(var(--paper-light), var(--paper-dark));
+      --paper-sheet: light-dark(var(--paper-sheet-light), var(--paper-sheet-dark));
+      --surface-tint: light-dark(var(--surface-tint-light), var(--surface-tint-dark));
+      --surface-hover: light-dark(var(--surface-hover-light), var(--surface-hover-dark));
+      --sidebar-active-bg: light-dark(var(--sidebar-active-bg-light), var(--sidebar-active-bg-dark));
+      --ink: light-dark(var(--ink-light), var(--ink-dark));
+      --ink-secondary: light-dark(var(--ink-secondary-light), var(--ink-secondary-dark));
+      --blue: light-dark(var(--blue-light), var(--blue-dark));
+      --blue-tint: light-dark(var(--blue-tint-light), var(--blue-tint-dark));
+      --accent-warm: light-dark(var(--blue-light), var(--blue-dark));
+      --accent-warm-tint: light-dark(var(--blue-tint-light), var(--blue-tint-dark));
+      --red: light-dark(var(--red-light), var(--red-dark));
+      --red-tint: light-dark(var(--red-tint-light), var(--red-tint-dark));
+      --rule: light-dark(var(--rule-light), var(--rule-dark));
+      --rule-subtle: light-dark(var(--rule-subtle-light), var(--rule-subtle-dark));
+      --scrollbar-thumb: light-dark(var(--scrollbar-thumb-light), var(--scrollbar-thumb-dark));
+      --scrollbar-track: light-dark(var(--scrollbar-track-light), var(--scrollbar-track-dark));
+      --header-bg: light-dark(var(--header-bg-light), var(--header-bg-dark));
+      --link-underline: light-dark(var(--link-underline-light), var(--link-underline-dark));
+      --pill-bg: light-dark(var(--pill-bg-light), var(--pill-bg-dark));
+      --pill-border: light-dark(var(--pill-border-light), var(--pill-border-dark));
+      --tag-first-text: light-dark(var(--tag-first-text-light), var(--tag-first-text-dark));
+      --tag-first-bg: light-dark(var(--tag-first-bg-light), var(--tag-first-bg-dark));
+      --tag-first-border: light-dark(var(--tag-first-border-light), var(--tag-first-border-dark));
+      --tag-harder-text: light-dark(var(--tag-harder-text-light), var(--tag-harder-text-dark));
+      --tag-harder-bg: light-dark(var(--tag-harder-bg-light), var(--tag-harder-bg-dark));
+      --tag-harder-border: light-dark(var(--tag-harder-border-light), var(--tag-harder-border-dark));
+      --tag-harder-dot: light-dark(var(--tag-harder-dot-light), var(--tag-harder-dot-dark));
+      --tag-count-border: light-dark(var(--tag-count-border-light), var(--tag-count-border-dark));
+    }
+  }
+
+  /* Pin dark while the OS is light. Higher specificity than the fallbacks above. */
+  &:has(> head > meta[name='color-scheme'][content='dark']) {
     --paper: var(--paper-dark);
     --paper-sheet: var(--paper-sheet-dark);
     --surface-tint: var(--surface-tint-dark);
@@ -131,37 +208,36 @@
     --tag-count-border: var(--tag-count-border-dark);
   }
 
-  /* Dynamic light-dark() evaluation following computed color-scheme */
-  @supports (color: light-dark(white, black)) {
-    --paper: light-dark(var(--paper-light), var(--paper-dark));
-    --paper-sheet: light-dark(var(--paper-sheet-light), var(--paper-sheet-dark));
-    --surface-tint: light-dark(var(--surface-tint-light), var(--surface-tint-dark));
-    --surface-hover: light-dark(var(--surface-hover-light), var(--surface-hover-dark));
-    --sidebar-active-bg: light-dark(var(--sidebar-active-bg-light), var(--sidebar-active-bg-dark));
-    --ink: light-dark(var(--ink-light), var(--ink-dark));
-    --ink-secondary: light-dark(var(--ink-secondary-light), var(--ink-secondary-dark));
-    --blue: light-dark(var(--blue-light), var(--blue-dark));
-    --blue-tint: light-dark(var(--blue-tint-light), var(--blue-tint-dark));
-    --accent-warm: light-dark(var(--blue-light), var(--blue-dark));
-    --accent-warm-tint: light-dark(var(--blue-tint-light), var(--blue-tint-dark));
-    --red: light-dark(var(--red-light), var(--red-dark));
-    --red-tint: light-dark(var(--red-tint-light), var(--red-tint-dark));
-    --rule: light-dark(var(--rule-light), var(--rule-dark));
-    --rule-subtle: light-dark(var(--rule-subtle-light), var(--rule-subtle-dark));
-    --scrollbar-thumb: light-dark(var(--scrollbar-thumb-light), var(--scrollbar-thumb-dark));
-    --scrollbar-track: light-dark(var(--scrollbar-track-light), var(--scrollbar-track-dark));
-    --header-bg: light-dark(var(--header-bg-light), var(--header-bg-dark));
-    --link-underline: light-dark(var(--link-underline-light), var(--link-underline-dark));
-    --pill-bg: light-dark(var(--pill-bg-light), var(--pill-bg-dark));
-    --pill-border: light-dark(var(--pill-border-light), var(--pill-border-dark));
-    --tag-first-text: light-dark(var(--tag-first-text-light), var(--tag-first-text-dark));
-    --tag-first-bg: light-dark(var(--tag-first-bg-light), var(--tag-first-bg-dark));
-    --tag-first-border: light-dark(var(--tag-first-border-light), var(--tag-first-border-dark));
-    --tag-harder-text: light-dark(var(--tag-harder-text-light), var(--tag-harder-text-dark));
-    --tag-harder-bg: light-dark(var(--tag-harder-bg-light), var(--tag-harder-bg-dark));
-    --tag-harder-border: light-dark(var(--tag-harder-border-light), var(--tag-harder-border-dark));
-    --tag-harder-dot: light-dark(var(--tag-harder-dot-light), var(--tag-harder-dot-dark));
-    --tag-count-border: light-dark(var(--tag-count-border-light), var(--tag-count-border-dark));
+  &:has(> head > meta[name='color-scheme'][content='light']) {
+    --paper: var(--paper-light);
+    --paper-sheet: var(--paper-sheet-light);
+    --surface-tint: var(--surface-tint-light);
+    --surface-hover: var(--surface-hover-light);
+    --sidebar-active-bg: var(--sidebar-active-bg-light);
+    --ink: var(--ink-light);
+    --ink-secondary: var(--ink-secondary-light);
+    --blue: var(--blue-light);
+    --blue-tint: var(--blue-tint-light);
+    --accent-warm: var(--blue-light);
+    --accent-warm-tint: var(--blue-tint-light);
+    --red: var(--red-light);
+    --red-tint: var(--red-tint-light);
+    --rule: var(--rule-light);
+    --rule-subtle: var(--rule-subtle-light);
+    --scrollbar-thumb: var(--scrollbar-thumb-light);
+    --scrollbar-track: var(--scrollbar-track-light);
+    --header-bg: var(--header-bg-light);
+    --link-underline: var(--link-underline-light);
+    --pill-bg: var(--pill-bg-light);
+    --pill-border: var(--pill-border-light);
+    --tag-first-text: var(--tag-first-text-light);
+    --tag-first-bg: var(--tag-first-bg-light);
+    --tag-first-border: var(--tag-first-border-light);
+    --tag-harder-text: var(--tag-harder-text-light);
+    --tag-harder-bg: var(--tag-harder-bg-light);
+    --tag-harder-border: var(--tag-harder-border-light);
+    --tag-harder-dot: var(--tag-harder-dot-light);
+    --tag-count-border: var(--tag-count-border-light);
   }
 
   --radius-sm: 0.375rem;
@@ -453,6 +529,7 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 /* Default (light): show moon icon ("Switch to dark theme") */
@@ -1013,6 +1090,7 @@ li {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
   transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1239,11 +1317,7 @@ li {
   }
 }
 
-/* Defer rendering for below-the-fold problems only */
-.problem:nth-child(n + 4) {
-  content-visibility: auto;
-  contain-intrinsic-size: auto none auto 220px;
-}
+
 
 .problem-meta {
   display: flex;
@@ -1362,7 +1436,7 @@ li {
   margin-top: 0.4rem;
   padding: 0.6rem 0.9rem;
   background-color: var(--red-tint);
-  border: 1px solid rgba(235, 133, 122, 0.3);
+  border: 1px solid color-mix(in srgb, var(--red) 35%, transparent);
   border-radius: var(--radius-md);
   color: var(--red);
   font-size: 0.9375rem;

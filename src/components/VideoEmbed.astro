@@ -33,6 +33,16 @@ function parseYouTubeUrl(rawUrl: string): { videoId: string; startSeconds: strin
 const { videoId, startSeconds } = parseYouTubeUrl(url);
 const thumbUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
 const fullLabel = `${creator} — ${title}`;
+
+function formatStart(raw: string): string {
+  const total = Number(raw);
+  if (!Number.isFinite(total) || total <= 0) return '';
+  const minutes = Math.floor(total / 60);
+  const seconds = total % 60;
+  return `${minutes}:${String(seconds).padStart(2, '0')}`;
+}
+
+const startLabel = formatStart(startSeconds);
 ---
 
 <div class="yt-card">
@@ -63,7 +73,7 @@ const fullLabel = `${creator} — ${title}`;
       </span>
       <span class="yt-thumb-caption">
         <span class="yt-thumb-creator">{creator}</span>
-        {startSeconds && <span class="yt-thumb-time">Starts at 9:53</span>}
+        {startLabel && <span class="yt-thumb-time">Starts at {startLabel}</span>}
       </span>
     </button>
   </div>
