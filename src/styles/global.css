@@ -1419,6 +1419,47 @@ li {
   margin-top: 1.85rem;
 }
 
+.copy-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+}
+
+.copy-prompt-text {
+  width: 100%;
+  margin: 0;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background-color: var(--paper-sheet);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.copy-prompt-btn {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  min-height: 2.05rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-sm);
+  background-color: var(--paper-sheet);
+  color: var(--ink-secondary);
+  cursor: pointer;
+}
+
+.copy-prompt-btn:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--ink-secondary);
+  color: var(--ink);
+}
+
 .exam-priority-note {
   background-color: var(--paper-sheet);
   border: 1px solid var(--rule);

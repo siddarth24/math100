@@ -20,7 +20,6 @@ const tocItems: TocItem[] = [
   { id: 'courses-and-flavours', label: 'Courses & flavours' },
   { id: 'exam-split', label: 'How the final exam works' },
   { id: 'how-to-work', label: 'How to study a topic' },
-  { id: 'where-to-get-help', label: 'Where to get help' },
   { id: 'course-links', label: 'Textbook & past exams' },
   { id: 'syllabus-checklist', label: 'Sections & checklist' },
 ];
@@ -30,7 +29,7 @@ const tocItems: TocItem[] = [
   <header class="topic-header">
     <h1>MATH 100 and MATH 180 Study Guide</h1>
     <p class="topic-goal">
-      Every recommended practice question from the UBC MATH 100/180 practice book, organized topic by topic with plain-English intuition, short video previews, and a simple translation of what each problem is actually asking.
+      Every recommended practice question from the UBC MATH 100/180 practice book, organized topic by topic, with short video previews and a simple translation of what each problem is actually asking.
     </p>
   </header>
 
@@ -109,17 +108,24 @@ const tocItems: TocItem[] = [
         <strong>2. Read the problem in the book's own words first.</strong> On the midterm and final, nobody translates the question for you. Try to spot what the question wants on your own, and click the red <span class="red-inline-sample">What this is asking</span> line only when the wording has you stuck.
       </li>
       <li>
-        <strong>3. Check your work in the back of the UBC Practice Book.</strong> The official practice book has separate Hints, Answers, and full Solutions sections in the back—peek at the Hint first before reading the full Solution.
-      </li>
-    </ul>
-  </section>
+        <strong>3. Screenshot the question and paste this prompt.</strong>
+        The worked solutions in the practice book skip the idea and are hard to learn from. Screenshot the question, paste the prompt under the image, and work one step at a time. It breaks down each phrase and says what you need for the next step. It does not give you the solution.
+        <div class="copy-prompt">
+          <pre class="copy-prompt-text" id="study-prompt">This screenshot is a UBC MATH 100/180 practice question I am stuck on.
 
-  <section class="home-section">
-    <h2 id="where-to-get-help">Where to get free help from a real person</h2>
-    <ul>
-      <li><strong>Calculus Common Room:</strong> Drop-in office hours specifically for MATH 100/180 students (check Canvas for the room and schedule).</li>
-      <li><strong>Math Learning Centre (MLC):</strong> Free drop-in tutoring run by UBC Math graduate students and TAs.</li>
-      <li><strong>Piazza:</strong> Best place to ask quick questions about WeBWorK formatting or practice problems (linked on Canvas).</li>
+Do not give me the final answer or a full solution.
+
+Guide me slowly:
+1. Quote each phrase in the question and say, in plain words, what that phrase is telling me to do.
+2. Before every step, say what I need in order to take that step, and why.
+3. Give me only the next step, then stop so I can try it.
+4. If I am wrong, point at the phrase I missed and ask one question that gets me to the next step.
+5. Keep going this way until I reach the answer myself.</pre>
+          <button type="button" class="copy-prompt-btn" data-copy-target="study-prompt">
+            Copy prompt
+          </button>
+        </div>
+      </li>
     </ul>
   </section>
 
@@ -224,4 +230,29 @@ const tocItems: TocItem[] = [
       </table>
     </div>
   </section>
+  <script>
+    document.addEventListener('click', async (event) => {
+      const target = event.target instanceof Element ? event.target : null;
+      const button = target?.closest('[data-copy-target]');
+      if (!(button instanceof HTMLButtonElement)) return;
+      const source = document.getElementById(button.dataset.copyTarget || '');
+      const text = source?.textContent?.trim();
+      if (!source || !text) return;
+      const label = button.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        button.textContent = 'Copied';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(source);
+        const selection = getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        button.textContent = 'Selected — press Ctrl+C';
+      }
+      window.setTimeout(() => {
+        button.textContent = label;
+      }, 1500);
+    });
+  </script>
 </BaseLayout>
