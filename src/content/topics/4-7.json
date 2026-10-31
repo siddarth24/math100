@@ -22,6 +22,18 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=QDKj-E-ICPo",
       "watchFor": "Reviews trigonometric derivatives and right-triangle relationships used in inverse trig differentiation."
+    },
+    {
+      "title": "Derivatives of Inverse Trigonometric Functions",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=KbYW9FDm-Zk",
+      "watchFor": "States $(\\arcsin u)'$, $(\\arctan u)'$, and $(\\operatorname{arcsec} u)'$, then uses the chain rule on each."
+    },
+    {
+      "title": "Derivatives of Inverse Functions",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=Hw6ltuCEtuU",
+      "watchFor": "Computes $(f^{-1})'(b) = 1/f'(a)$ after finding the input $a$ with $f(a) = b$."
     }
   ],
   "slowWalkthrough": [

@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=ccDMpj2UK_M",
       "watchFor": "Shows how the sign of $\\mathrm{d}y/\\mathrm{d}t$ determines whether $y(t)$ moves toward or away from a steady state."
+    },
+    {
+      "title": "Autonomous Equations, Equilibrium Solutions, and Stability",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=pZOmToxx-R8",
+      "watchFor": "Finds equilibria where $\\mathrm{d}y/\\mathrm{d}t = 0$, then uses the sign on either side to see which ones attract and which ones repel."
     }
   ],
   "slowWalkthrough": [

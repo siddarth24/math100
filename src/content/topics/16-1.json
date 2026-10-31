@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=QQPz3eXXgQI",
       "watchFor": "Shows why horizontal tangent planes ($f_x = 0$ and $f_y = 0$) locate peaks, valleys, and saddle points on a surface."
+    },
+    {
+      "title": "Multi-variable Optimization & the Second Derivative Test",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=_Ffcr98c7EE",
+      "watchFor": "Classifies a point where $f_x = f_y = 0$ with $D = f_{xx}f_{yy} - (f_{xy})^2$: positive $D$ is a peak or a bowl, negative $D$ is a saddle."
     }
   ],
   "staged": true,

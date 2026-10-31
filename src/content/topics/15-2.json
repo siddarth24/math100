@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=EoEV5-_mLeM",
       "watchFor": "Builds the foundation for differentiating a multivariable function multiple times with respect to $x$ and $y$."
+    },
+    {
+      "title": "Mixed Partial Derivatives of Second Order",
+      "creator": "sumchief",
+      "url": "https://www.youtube.com/watch?v=flRLlGXHfYw",
+      "watchFor": "Computes $f_{xx}$, $f_{yy}$, $f_{xy}$, and $f_{yx}$, then checks that the mixed partials match."
     }
   ],
   "staged": true,

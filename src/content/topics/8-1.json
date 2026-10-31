@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=6zqrFILyVbI",
       "watchFor": "Shows how critical points ($f'(x) = 0$) and domain boundaries identify local and global extrema."
+    },
+    {
+      "title": "Critical Points: Where f'(x) = 0 or Undefined",
+      "creator": "CodeLucky",
+      "url": "https://www.youtube.com/watch?v=QFTctTBCwFw",
+      "watchFor": "Counts sharp corners and cusps, where $f'$ does not exist, as singular points that can still be local maxima or minima."
     }
   ],
   "slowWalkthrough": [

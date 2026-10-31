@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=QQPz3eXXgQI",
       "watchFor": "Explains why optimizing $f(x, y)$ on a closed region requires checking both interior critical points where $\\nabla f = \\mathbf{0}$ and the boundary."
+    },
+    {
+      "title": "Absolute Maximum and Minimum Values of Multivariable Functions",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=Hg38kfK5w4E",
+      "watchFor": "Compares the interior critical points with the values along each edge of a closed rectangle, including the corners."
     }
   ],
   "staged": true,

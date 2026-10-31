@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
       "watchFor": "Shows how domain, asymptotes, $f'(x)$, and $f''(x)$ fit together to determine the full shape of a curve."
+    },
+    {
+      "title": "Hyperbolic Functions: Definitions, Identities, Derivatives, and Inverses",
+      "creator": "Professor Dave Explains",
+      "url": "https://www.youtube.com/watch?v=uMXcKY_w3w4",
+      "watchFor": "Sketches $\\sinh$ and $\\cosh$, shows $(\\sinh x)' = \\cosh x$, and restricts $\\cosh$ to $x \\ge 0$ so $\\operatorname{arcosh}$ is a function. Then $(\\operatorname{arcosh} x)' = 1/\\sqrt{x^2 - 1}$."
     }
   ],
   "slowWalkthrough": [

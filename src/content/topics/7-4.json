@@ -22,6 +22,18 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
       "watchFor": "Reviews combining geometric features like symmetry with derivative sign charts."
+    },
+    {
+      "title": "Even, Odd, or Neither Functions",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=fKyBOLsqRlo",
+      "watchFor": "Tests $f(-x) = f(x)$ and $f(-x) = -f(x)$ from the formula and from mirror or half-turn symmetry of the graph."
+    },
+    {
+      "title": "Graphing Sine and Cosine With Period",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=Vw-RwPBWS8g",
+      "watchFor": "Finds the period $2\\pi/|b|$ of $\\sin(bx)$ and $\\cos(bx)$. Tangent repeats every $\\pi$, so $\\tan(bx)$ has period $\\pi/|b|$."
     }
   ],
   "slowWalkthrough": [

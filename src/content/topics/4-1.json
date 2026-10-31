@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=O6m9rtIGxUM",
       "watchFor": "Walks through why product and quotient derivatives take their two-term forms (see also 3Blue1Brown's visual picture at https://www.youtube.com/watch?v=YG15m2VwSjA)."
+    },
+    {
+      "title": "Power, Constant Multiple, and Sum & Difference Derivative Rules",
+      "creator": "Math with Dr. Claire",
+      "url": "https://www.youtube.com/watch?v=tcJM-hbBdiU",
+      "watchFor": "States the power, constant-multiple, and sum rules that the product and quotient lecture uses without proving."
     }
   ],
   "slowWalkthrough": [

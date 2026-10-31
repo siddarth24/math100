@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=yHtIxYKVKUs",
       "watchFor": "Visualizes how a curve flattens against a horizontal asymptote as the input grows large."
+    },
+    {
+      "title": "Limits at Infinity & Horizontal Asymptotes",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=sjLFl7Z8W_I",
+      "watchFor": "Reads the limiting height of a rational function, such as a Hill or Michaelis–Menten curve, from the highest powers on the top and bottom."
     }
   ],
   "slowWalkthrough": [

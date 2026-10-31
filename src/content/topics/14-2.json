@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=acdX4YamDtU",
       "watchFor": "Shows how a function $z = f(x, y)$ maps a 2D domain in the $xy$-plane to a 3D surface and level curves."
+    },
+    {
+      "title": "Domain and range of functions of several variables",
+      "creator": "Prime Newtons",
+      "url": "https://www.youtube.com/watch?v=49yFxuUH9EQ",
+      "watchFor": "Finds which $(x, y)$ pairs are allowed and which output heights actually occur, including a square root."
     }
   ],
   "staged": true,

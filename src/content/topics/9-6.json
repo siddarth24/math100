@@ -22,6 +22,12 @@
       "creator": "3Blue1Brown",
       "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
       "watchFor": "Shows how the gap between a function and its $n$th Taylor polynomial is controlled by the $(n+1)$st derivative."
+    },
+    {
+      "title": "Taylor's Remainder Theorem",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=lY0LzJXTgeo",
+      "watchFor": "Bounds the error by $\\left|\\dfrac{f^{(n+1)}(z)}{(n+1)!}(x - c)^{n+1}\\right|$ on an interval between the center and $x$."
     }
   ],
   "slowWalkthrough": [

@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=_bAjWNsNrQA",
       "watchFor": "Demonstrates setting up and analyzing an applied rate-balance differential equation."
+    },
+    {
+      "title": "Mixing Problems and Separable Differential Equations",
+      "creator": "Patrick J",
+      "url": "https://www.youtube.com/watch?v=6wk9zWa-Fww",
+      "watchFor": "Writes rate in minus rate out for a tank, solves the exponential, and reads the steady amount from that formula. A fixed total of two amounts is the same move: replace one variable, then set the derivative to $0$."
     }
   ],
   "slowWalkthrough": [

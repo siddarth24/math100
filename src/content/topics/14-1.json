@@ -22,6 +22,18 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=acdX4YamDtU",
       "watchFor": "Introduces visualizing points, coordinate planes, and surfaces in three-dimensional $(x, y, z)$ space."
+    },
+    {
+      "title": "Plotting Points In a Three Dimensional Coordinate System",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=EzJP9uwV3ms",
+      "watchFor": "Plots $(x, y, z)$ on the three axes. The floor $z = 0$ is the $xy$-plane, the wall $x = 0$ is the $yz$-plane, and the wall $y = 0$ is the $xz$-plane."
+    },
+    {
+      "title": "How To Find The Distance Between 2 Points In 3D Space",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=0c6cP2zLC2c",
+      "watchFor": "Uses $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}$ for the straight-line distance."
     }
   ],
   "staged": true,

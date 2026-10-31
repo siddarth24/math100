@@ -21,7 +21,13 @@
       "title": "Limits at Infinity & Horizontal Asymptotes",
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=yHtIxYKVKUs",
-      "watchFor": "Shows how highest-power terms control the long-run height of a function as $x \\to \\pm\\infty$."
+      "watchFor": "Shows $\\lim_{x \\to \\infty} \\arctan x = \\pi/2$ as one horizontal asymptote."
+    },
+    {
+      "title": "Limits at Infinity & Horizontal Asymptotes",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=sjLFl7Z8W_I",
+      "watchFor": "Divides by the highest power, including under a square root, to get the limit of a rational function as $x \\to \\pm\\infty$."
     }
   ],
   "slowWalkthrough": [

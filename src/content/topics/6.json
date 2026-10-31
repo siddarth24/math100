@@ -22,6 +22,12 @@
       "creator": "3Blue1Brown",
       "url": "https://www.youtube.com/watch?v=kfF40MiS7zA&t=593s",
       "watchFor": "Watch the L'Hôpital portion from 9:53 to 17:17 (the earlier epsilon-delta section is beyond this course)."
+    },
+    {
+      "title": "Applying L'Hôpital's Rule to Exponential Indeterminate Forms",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=jzhn9Xg5iAQ",
+      "watchFor": "Takes a natural log to turn a variable power ($1^\\infty$, $0^0$, $\\infty^0$) into a fraction, then applies L'Hôpital to the exponent."
     }
   ],
   "slowWalkthrough": [

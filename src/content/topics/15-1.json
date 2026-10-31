@@ -22,6 +22,12 @@
       "creator": "Dr. Trefor Bazett",
       "url": "https://www.youtube.com/watch?v=EoEV5-_mLeM",
       "watchFor": "Visualizes slicing a surface $z = f(x, y)$ along the $x$- or $y$-direction to measure the slope of a tangent line (see also Tangent Planes at https://www.youtube.com/watch?v=wqtr4Udz8AY)."
+    },
+    {
+      "title": "Implicit Differentiation With Partial Derivatives",
+      "creator": "Organic Chemistry Tutor",
+      "url": "https://www.youtube.com/watch?v=OBELQIPH5xY",
+      "watchFor": "Differentiates $F(x, y, z) = 0$ with respect to $x$ and with respect to $y$, holding the other input fixed, then solves for $\\partial z/\\partial x$ and $\\partial z/\\partial y$."
     }
   ],
   "staged": true,
