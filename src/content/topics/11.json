@@ -1,0 +1,137 @@
+{
+  "slug": "11",
+  "section": "11",
+  "title": "Introduction to differential equations",
+  "shortTitle": "Intro to DEs",
+  "group": "differential-equations",
+  "order": 34,
+  "flavour": "AB",
+  "goal": "Understand differential equations—equations that describe how fast a quantity grows or decays—check candidate solutions, and find where a system settles down (steady states).",
+  "beforeThis": {
+    "skill": "Remember: the solution to a differential equation is a whole function $y(t)$, not a single number. And a \"steady state\" just means the flat value of $y$ where $\\frac{\\mathrm{d}y}{\\mathrm{d}t} = 0$.",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and logarithms",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Differential equations, a tourist’s guide",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=p_di4Zn4wz4",
+      "watchFor": "Visual picture of how differential equations link a system’s state to its rate of change."
+    },
+    {
+      "title": "What is a differential equation?",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=B5IjsTONKkw",
+      "watchFor": "Course-shaped introduction to verifying and solving first-order differential equations."
+    },
+    {
+      "title": "Newton’s Law of Cooling",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=_bAjWNsNrQA",
+      "note": "Application",
+      "watchFor": "Worked application of a linear balance differential equation."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Introduction to Differential Equations (Differential Equations 2)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=EWVSxND_iWA"
+    },
+    {
+      "title": "Checking Solutions in Differential Equations (Differential Equations 3)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=5LkQEOPwqfk"
+    },
+    {
+      "title": "Introduction to Initial Value Problems (Differential Equations 4)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=HjioXdmwze0"
+    },
+    {
+      "title": "Introduction to Time Rate of Change (Differential Equations 5)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=yhklHobbuyg"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "11-q2",
+      "number": 2,
+      "half": "harder",
+      "asking": "Differentiate each function and check algebraically that the derivative equals the right-hand side of its differential equation.",
+      "statement": "<p>A differential equation is an equation in which some function is related to its own derivative(s). For each of the following functions, calculate the appropriate derivative, and show that the function satisfies the indicated differential equation.</p><ol type=\"a\"><li>$f(x) = 2e^{-3x}, \\quad f'(x) = -3f(x)$</li><li>$f(t) = Ce^{kt}, \\quad f'(t) = kf(t)$</li><li>$f(t) = 1 - e^{-t}, \\quad f'(t) = 1 - f(t)$</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q4",
+      "number": 4,
+      "half": "harder",
+      "asking": "Differentiate $N(t) = N_0 e^{(r - m)t}$ with respect to $t$ and evaluate $N(0)$ to confirm both equations hold.",
+      "statement": "<p>Check that the function</p>$$N(t) = N_0 e^{kt} = N_0 e^{(r - m)t}$$<p>satisfies the differential equation</p>$$\\frac{\\mathrm{d}N}{\\mathrm{d}t} = (r - m)N$$<p>and the initial condition $N(0) = N_0$.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q5",
+      "number": 5,
+      "half": "harder",
+      "asking": "Write the exponential function that satisfies each differential equation and given initial value.",
+      "statement": "<p>Find a function that satisfies each of the following differential equations.</p><p><em>Note:</em> all your answers should be exponential functions, but they may have different dependent and independent variables. Question 2 may help.</p><ol type=\"a\"><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -y$,</li><li>$\\dfrac{\\mathrm{d}c}{\\mathrm{d}x} = -0.1c$ and $c(0) = 20$,</li><li>$\\dfrac{\\mathrm{d}z}{\\mathrm{d}t} = 3z$ and $z(0) = 5$.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q7",
+      "number": 7,
+      "half": "harder",
+      "asking": "Write the differential equation, initial condition at $t = 0$, and explicit exponential formula $P(t)$ (with $t$ in hours) for a population starting at $1$ and doubling every $1/3$ hour.",
+      "statement": "<p>Suppose a population of bacteria starts from a single bacterium, and grows at a rate proportional to the number of bacteria in the population. Suppose further that it takes $20$ minutes for the population to double.</p><p>Find the appropriate differential equation that describes this growth, the appropriate initial condition, and the exponential function that is the solution to that differential equation. Use units of hours for time $t$.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q24",
+      "number": 24,
+      "half": "harder",
+      "asking": "Compute $\\mathrm{d}y/\\mathrm{d}t$, compare it with $1 - y(t)$, and evaluate $y(0)$ to confirm that $y(t) = 1 - (1 - y_0)e^{-t}$ solves the initial value problem.",
+      "statement": "<p><strong>Verifying a solution.</strong> Verify that the function $y(t) = 1 - (1 - y_0)e^{-t}$ satisfies the initial value problem (differential equation and initial condition)</p>$$\\frac{\\mathrm{d}y}{\\mathrm{d}t} = 1 - y, \\qquad y(0) = y_0$$<p>(equation 11.4.3 in the text).</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q29",
+      "number": 29,
+      "half": "harder",
+      "asking": "Substitute the given initial values (and initial derivatives where specified) to solve for the unknown constants $C, C_1, C_2$.",
+      "statement": "<p><strong>Determining the constant.</strong> Find the constants $C, C_1$, and/or $C_2$ that satisfy the given initial conditions.</p><ol type=\"a\"><li>$2x^2 - 3y^2 = C, \\quad \\left.y\\right|_{x=0} = 2$.</li><li>$y = C_1 e^{5t} + C_2 t e^{5t}, \\quad \\left.y\\right|_{t=0} = 1$ and $\\left.\\dfrac{\\mathrm{d}y}{\\mathrm{d}t}\\right|_{t=0} = 0$.</li><li>$y = C_1 \\cos(t - C_2 \\pi), \\quad \\left.y\\right|_{t=\\pi/2} = 0$ and $\\left.\\dfrac{\\mathrm{d}y}{\\mathrm{d}t}\\right|_{t=\\pi/2} = 1$.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q31",
+      "number": 31,
+      "half": "harder",
+      "asking": "Differentiate $y(t) = \\sqrt{3t + 64}$ to find $k$ in $\\mathrm{d}y/\\mathrm{d}t = k/y$, and give one realistic feature and one unrealistic feature of this model for human weight.",
+      "statement": "<p><strong>Infant weight gain.</strong> During the first year of its life, the weight of a baby is given by</p>$$y(t) = \\sqrt{3t + 64}$$<p>where $t$ is measured in some convenient unit.</p><ol type=\"a\"><li>Show that $y$ satisfies the differential equation $$\\frac{\\mathrm{d}y}{\\mathrm{d}t} = \\frac{k}{y}$$ where $k$ is some positive constant.</li><li>What is the value for $k$?</li><li>Suppose we adopt this differential equation as a model for human growth. State concisely (that is, in one sentence) one feature about this differential equation which makes it a reasonable model. State one feature which makes it unreasonable.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "11-q35",
+      "number": 35,
+      "half": "harder",
+      "asking": "Find the maximum production rate and half-max concentration from the Michaelis–Menten term, the half-life when production is zero, and the steady-state concentration where production equals consumption.",
+      "statement": "<p><strong>Biochemical reaction.</strong> A biochemical reaction in which a substance $S$ is both produced and consumed is investigated. The concentration $c(t)$ of $S$ changes during the reaction, and is seen to follow the differential equation</p>$$\\frac{\\mathrm{d}c}{\\mathrm{d}t} = K_{\\max}\\frac{c}{k + c} - rc$$<p>where $K_{\\max}, k, r$ are positive constants with certain convenient units. The first term is a concentration-dependent production term and the second term represents consumption of the substance.</p><ol type=\"a\"><li>What is the maximal rate at which the substance is produced? At what concentration is the production rate $50\\%$ of this maximal value?</li><li>If the production is turned off, the substance decays. How long would it take for the concentration to drop by $50\\%$?</li><li>At what concentration does the production rate just balance the consumption rate?</li></ol>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

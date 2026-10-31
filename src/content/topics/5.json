@@ -1,0 +1,323 @@
+{
+  "slug": "5",
+  "section": "5",
+  "title": "Related rates",
+  "shortTitle": "Related rates",
+  "group": "related-rates",
+  "order": 17,
+  "flavour": "all",
+  "goal": "Find how fast one measurement is changing when it is linked to another moving measurement (like a growing balloon's radius and volume) by differentiating a geometry formula with respect to time $t$.",
+  "beforeThis": {
+    "skill": "Golden rule: never plug in the \"at the instant when...\" numbers until AFTER you take the derivative with respect to time $t$!",
+    "links": [
+      {
+        "label": "Precalculus: Geometry, similar triangles, and trigonometry",
+        "href": "/precalculus#geometry"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Related Rates | The Growing Balloon & Sliding Ladder",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=3e27UqwPtMw",
+      "watchFor": "Shows how a geometric equation linking two changing quantities lets you convert one known rate of change into another."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.8: Related Rates",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=43Qt6wc44To"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "5-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Spot which of the four combinations of given values at $t = 0$ provide enough information to solve for the unknown rate in $P = Q^3$.",
+      "statement": "<p>Suppose the quantities $P$ and $Q$ are related by the formula $P = Q^3$. $P$ and $Q$ are changing with respect to time, $t$. Given this information, which of the following are problems you could solve?</p><ol type=\"i\"><li>Given $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$, find $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$. (Remember: the notation $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$ means the derivative of $P$ with respect to $t$ at the time $t = 0$.)</li><li>Given $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$ and the value of $Q$ when $t = 0$, find $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$.</li><li>Given $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$, find $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$.</li><li>Given $\\dfrac{\\mathrm{d}Q}{\\mathrm{d}t}(0)$ and the value of $P$ when $t = 0$, find $\\dfrac{\\mathrm{d}P}{\\mathrm{d}t}(0)$.</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "5-q2",
+      "number": 2,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate of change $\\mathrm{d}x/\\mathrm{d}t$ of the point's $x$-coordinate at the instant it passes through $(2/\\sqrt{5}, 1/\\sqrt{5})$.",
+      "statement": "<p>A point is moving on the unit circle $\\{(x, y) : x^2 + y^2 = 1\\}$ in the $xy$-plane. At the point $\\left(\\dfrac{2}{\\sqrt{5}}, \\dfrac{1}{\\sqrt{5}}\\right)$, its $y$-coordinate is increasing at rate $3$. What is the rate of change of its $x$-coordinate?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the instantaneous percentage rate of change $R'/R$ when $R = PQ$, $P'/P = 0.08$, and $Q'/Q = -0.02$.",
+      "statement": "<p>The quantities $P, Q$ and $R$ are functions of time and are related by the equation $R = PQ$. Assume that $P$ is increasing instantaneously at the rate of $8\\%$ per year and that $Q$ is decreasing instantaneously at the rate of $2\\%$ per year. That is, $\\dfrac{P'}{P} = 0.08$ and $\\dfrac{Q'}{Q} = -0.02$. Determine the percentage rate of change for $R$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the instantaneous rate of change $\\mathrm{d}F/\\mathrm{d}t$ in part (a) and the percentage rate of change $F'/F$ in part (b) when $F = P/Q$.",
+      "statement": "<p>Three quantities, $F, P$ and $Q$ all depend upon time $t$ and are related by the equation</p>$$F = \\frac{P}{Q}$$<ol type=\"a\"><li>Assume that at a particular moment in time $P = 25$ and $P$ is increasing at the instantaneous rate of $5$ units/min. At the same moment, $Q = 5$ and $Q$ is increasing at the instantaneous rate of $1$ unit/min. What is the instantaneous rate of change in $F$ at this moment?</li><li>Assume that at another moment in time $P$ is increasing at the instantaneous rate of $10\\%$ and $Q$ is decreasing at the instantaneous rate $5\\%$. What can you conclude about the rate of change of $F$ at this moment?</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate (in units per second) at which the straight-line distance between particles $A$ and $B$ is changing at the instant $A$ reaches $(4, 0)$.",
+      "statement": "<p>Two particles move in the Cartesian plane. Particle $A$ travels on the $x$-axis starting at $(10, 0)$ and moving towards the origin with a speed of $2$ units per second. Particle $B$ travels on the $y$-axis starting at $(0, 12)$ and moving towards the origin with a speed of $3$ units per second. What is the rate of change of the distance between the two particles when particle $A$ reaches the point $(4, 0)$?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate (in units per second) at which the distance between $A$ and $B$ is increasing at the moment they are $5$ units apart.",
+      "statement": "<p>Two particles $A$ and $B$ are placed on the Cartesian plane at $(0, 0)$ and $(3, 0)$ respectively. At time $0$, both start to move in the $+y$ direction. Particle $A$ moves at $3$ units per second, while $B$ moves at $2$ units per second. How fast is the distance between the particles changing when particle $A$ is at a distance of $5$ units from $B$?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate (in miles per hour) at which the distance between Ship A and Ship B is changing at that instant.",
+      "statement": "<p>Ship $A$ is $400$ miles directly south of Hawaii and is sailing south at $20$ miles/hour. Ship $B$ is $300$ miles directly east of Hawaii and is sailing west at $15$ miles/hour. At what rate is the distance between the ships changing?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate (in cm per minute) at which the straight-line distance between the two climbing snails is increasing when the first snail is $100\\text{ cm}$ high.",
+      "statement": "<p>Two tall sticks are vertically planted into the ground, separated by a distance of $30\\text{ cm}$. We simultaneously put two snails at the base of each stick. The two snails then begin to climb their respective sticks. The first snail is moving with a speed of $25\\text{ cm}$ per minute, while the second snail is moving with a speed of $15\\text{ cm}$ per minute. What is the rate of change of the distance between the two snails when the first snail reaches $100\\text{ cm}$ above the ground?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the speed (in m/s) at which the top of the collapsing ladder is sliding down the wall at $t = 3.5$ seconds.",
+      "statement": "<p>A $20\\text{ m}$ long extension ladder leaning against a wall starts collapsing in on itself at a rate of $2\\text{ m/s}$, while the foot of the ladder remains a constant $5\\text{ m}$ from the wall. How fast is the ladder moving down the wall after $3.5$ seconds?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the water depth in the trapezoidal trough is decreasing when the water is $25\\text{ cm}$ deep (watch unit conversions between litres, $\\text{cm}^3$, and metres).",
+      "statement": "<p>A watering trough has a cross section shaped like an isosceles trapezoid. The trough is $2$ metres long, $50\\text{ cm}$ high, $1$ metre wide at the top, and $60\\text{ cm}$ wide at the bottom.</p><p>A pig is drinking water from the trough at a rate of $3$ litres per minute. When the height of the water is $25\\text{ cm}$, how fast is the height decreasing?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q10.png",
+          "alt": "Diagram of a 3D watering trough of length 2 m and vertical height 50 cm, whose cross-section is an isosceles trapezoid with bottom width 60 cm and top width 1 m."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the water depth in the tank is rising when the water is $10\\text{ cm}$ deep.",
+      "statement": "<p>A tank is $5$ metres long, and has a trapezoidal cross section with the dimensions shown below.</p><p>A hose is filling the tank up at a rate of one litre per second. How fast is the height of the water increasing when the water is $10$ centimetres deep?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q11.png",
+          "alt": "Diagram of a 5 m long prism tank of vertical height 1.25 m. The trapezoidal front face has a bottom horizontal base divided into two 3 m segments (total bottom width 6 m), a vertical left wall overhanging by 1 m at the top, and a slanted right wall rising over a 3 m horizontal run."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q12",
+      "number": 12,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the angular speed (in radians per second) of your line of sight at $t = 1$ minute ($1/60$ hour) after liftoff.",
+      "statement": "<p>A rocket is blasting off, $2$ kilometres away from you. You and the rocket start at the same height. The height of the rocket in kilometres, $t$ hours after liftoff, is given by</p>$$h(t) = 61750t^2$$<p>How fast (in radians per second) is your line of sight rotating to keep looking at the rocket, one minute after liftoff?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "5-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find both the rate at which the camera-to-train distance is growing (in km/min) and the rate at which the camera angle is turning (in rad/min) when the distance is $1.3\\text{ km}$.",
+      "statement": "<p>A high speed train is traveling at $2\\text{ km/min}$ along a straight track. The train is moving away from a movie camera which is located $0.5\\text{ km}$ from the track.</p><ol type=\"a\"><li>How fast is the distance between the train and the camera increasing when they are $1.3\\text{ km}$ apart?</li><li>Assuming that the camera is always pointed at the train, how fast (in radians per min) is the camera rotating when the train and the camera are $1.3\\text{ km}$ apart?</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "5-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the distance $D$ between the tips of the minute and hour hands is decreasing at 4:00.",
+      "statement": "<p>A clock has a minute hand that is $10\\text{ cm}$ long, and an hour hand that is $5\\text{ cm}$ long. Let $D$ be the distance between the tips of the two hands. How fast is $D$ decreasing at 4:00?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q14.png",
+          "alt": "Clock face at 4:00 showing the long minute hand pointing straight up to 12, the shorter hour hand pointing to 4 (an angle of 2*pi/3 radians clockwise from 12), and a dashed red segment labeled D connecting their tips."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q15",
+      "number": 15,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate of change (in $\\text{cm}^2/\\text{s}$) of the shaded area between the outer and inner circles at the given instant.",
+      "statement": "<p>Find the rate of change of the area of the annulus $\\{(x, y) : r^2 \\le x^2 + y^2 \\le R^2\\}$. (i.e. the points inside the circle of radius $R$ but outside the circle of radius $r$) if</p>$$R = 3\\text{ cm}, \\quad r = 1\\text{ cm}, \\quad \\frac{\\mathrm{d}R}{\\mathrm{d}t} = 2\\,\\frac{\\text{cm}}{\\text{s}}, \\quad \\text{and} \\quad \\frac{\\mathrm{d}r}{\\mathrm{d}t} = 7\\,\\frac{\\text{cm}}{\\text{s}}.$$",
+      "figures": [
+        {
+          "src": "/figures/5-q15.png",
+          "alt": "Two concentric circles of inner radius r and outer radius R with the ring-shaped region (annulus) between them shaded grey."
+        }
+      ],
+      "oldExam": true
+    },
+    {
+      "id": "5-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate of change of the volume of the shell between the two concentric spheres at the time $t$ when $R(t) = 2r(t)$.",
+      "statement": "<p>Two spheres are centred at the same point. The radius $R$ of the bigger sphere at time $t$ is given by $R(t) = 10 + 2t$, while the radius $r$ of the smaller sphere is given by $r(t) = 6t$, $t \\ge 0$. How fast is the volume between the spheres (inside the big sphere and outside the small sphere) changing when the bigger sphere has a radius twice as large as the smaller?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "5-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the area of the triangle formed by the two sticks and the ground is changing when the peak height is $120\\text{ cm}$.",
+      "statement": "<p>You attach two sticks together at their ends, and stick the other ends in the mud. One stick is $150\\text{ cm}$ long, and the other is $200\\text{ cm}$.</p><p>The structure starts out being $1.4$ metres high at its peak, but the sticks slide, and the height decreases at a constant rate of three centimetres per minute. How quickly is the area of the triangle (formed by the two sticks and the level ground) changing when the height of the structure is $120\\text{ cm}$?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q17.png",
+          "alt": "Triangle formed by a left stick of length 150 cm, a right stick of length 200 cm, and the horizontal ground, with peak height labeled 1.4 m."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q18",
+      "number": 18,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the salt flow rate ($15A\\text{ cm}^3/\\text{s}$) is changing as the rotating door covers the quarter-annulus opening.",
+      "statement": "<p>The circular lid of a salt shaker has radius $8$. There is a cut-out to allow the salt to pour out of the lid, and a door that rotates around to cover the cut-out. The door is a quarter-circle of radius $7\\text{ cm}$. The cut-out has the shape of a quarter-annulus with outer radius $6\\text{ cm}$ and inner radius $1\\text{ cm}$. If the uncovered area of the cut-out is $A\\text{ cm}^2$, then the salt flows out at $15A\\text{ cm}^3$ per second.</p><p>Recall: an annulus is the set of points inside one circle and outside another, like a flat doughnut (see Question 15).</p><p>While pouring out salt, you spin the door around the lid at a constant rate of $\\dfrac{\\pi}{6}$ radians per second, covering more and more of the cut-out. When exactly half of the cut-out is covered, how fast is the flow of salt changing?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q18-1.png",
+          "alt": "Two circular salt shaker lids: the left lid shows the white quarter-annulus cut-out completely uncovered by the orange quarter-circle door; the right lid shows the orange door rotated to partially cover the cut-out."
+        },
+        {
+          "src": "/figures/5-q18-2.png",
+          "alt": "Diagram comparing a full ring-shaped annulus on the left with a 90-degree sector of that ring (a quarter annulus) on the right."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q19",
+      "number": 19,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the water flow rate ($\\frac{1}{5}A\\text{ m}^3/\\text{s}$) is decreasing when the vertical door has descended $25\\text{ cm}$ from the top of the circular pipe.",
+      "statement": "<p>A cylindrical sewer pipe with radius $1$ metre has a vertical rectangular door that slides in front of it to block the flow of water, as shown below. If the uncovered area of the pipe is $A\\text{ m}^2$, then the flow of water through the pipe is $\\dfrac{1}{5}A$ cubic metres per second.</p><p>The door slides over the pipe, moving vertically at a rate of $1$ centimetre per second. How fast is the flow of water changing when the door covers the top $25$ centimetres of the pipe?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q19.png",
+          "alt": "Front view of a circular pipe of radius 1 m with a grey rectangular gate sliding downward over the upper portion of the circle."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q20",
+      "number": 20,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the rate at which the liquid height in the conical glass is dropping when the liquid is $7\\text{ cm}$ deep.",
+      "statement": "<p>A martini glass is shaped like a cone, with top diameter $10\\text{ cm}$ and side length $10\\text{ cm}$.</p><p>When the liquid in the glass is $7\\text{ cm}$ high, it is evaporating at a rate of $5\\text{ mL}$ per minute. How fast is the height of the liquid decreasing?</p>",
+      "figures": [
+        {
+          "src": "/figures/5-q20.png",
+          "alt": "Inverted cone representing a martini glass with top diameter labeled 10 and both slant sides labeled 10."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q21",
+      "number": 21,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the rate of change of the river depth $D$ in part (a), and explain physically how the rope/buoy system can produce the derivative signs described in parts (b) and (c).",
+      "statement": "<p>A floating buoy is anchored to the bottom of a river. As the river flows, the buoy is pulled in the direction of flow until its $2$-metre rope is taut. A sensor at the anchor reads the angle $\\theta$ between the rope and the riverbed, as shown in the diagram below. This data is used to measure the depth $D$ of water in the river, which depends on time.</p><ol type=\"a\"><li>If $\\theta = \\dfrac{\\pi}{4}$ and $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} = 0.25\\,\\dfrac{\\text{rad}}{\\text{hr}}$, how fast is the depth $D$ of the water changing?</li><li>A measurement shows $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} = 0$, but $\\dfrac{\\mathrm{d}D}{\\mathrm{d}t} \\ne 0$. Under what circumstances does this occur?</li><li>Another measurement shows $\\dfrac{\\mathrm{d}\\theta}{\\mathrm{d}t} > 0$, but $\\dfrac{\\mathrm{d}D}{\\mathrm{d}t} < 0$. Under what circumstances does this occur?</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/5-q21.png",
+          "alt": "Side view of a river of vertical depth D showing an orange buoy on the water surface tethered by a straight rope to an anchor on the riverbed at angle theta above the riverbed."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q22",
+      "number": 22,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Use the equations of the quadrilateral's bottom and top edges to find the speed of the moving point at $(0, -2)$ and at $(0, 2)$.",
+      "statement": "<p>A point is moving in the $xy$-plane along the quadrilateral shown below.</p><ol type=\"a\"><li>When the point is at $(0, -2)$, it is moving to the right. An observer stationed at the origin must turn at a rate of one radian per second to keep looking directly at the point. How fast is the point moving?</li><li>When the point is at $(0, 2)$, its $x$-coordinate is increasing at a rate of one unit per second. How fast is its $y$-coordinate changing? How fast is the point moving?</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/5-q22.png",
+          "alt": "Coordinate grid with unit ticks at x = 1 and y = 1 showing a quadrilateral with vertices at (-4, -2), (3, -2), (2, 1), and (-2, 3). The bottom edge lies on y = -2 and the top edge passes through (-2, 3), (0, 2), and (2, 1)."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q23",
+      "number": 23,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Relate the semi-axes $a$ and $b$ via the constant cross-sectional perimeter, express the bottle's volume in terms of $a$ and $b$, and find the rate at which water spills out when $a = 2b$.",
+      "statement": "<p>You have a cylindrical water bottle $20\\text{ cm}$ high, filled with water. Its cross section is a circle of radius $5$. You slowly smoosh the sides, so the cross section becomes an ellipse with major axis (widest part) $2a$ and minor axis (skinniest part) $2b$.</p><p>After $t$ seconds of smooshing the bottle, $a = 5 + t\\text{ cm}$. The perimeter of the cross section is unchanged as the bottle deforms. The perimeter of an ellipse is actually quite difficult to calculate, but we will use an approximation derived by Ramanujan and assume that the perimeter $p$ of our ellipse is</p>$$p \\approx \\pi\\left[3(a + b) - \\sqrt{(a + 3b)(3a + b)}\\right].$$<p>The area of an ellipse is $\\pi ab$.</p><ol type=\"a\"><li>Give an equation that relates $a$ and $b$ (and no other variables).</li><li>Give an expression for the volume of the bottle as it is being smooshed, in terms of $a$ and $b$ (and no other variables).</li><li>Suppose the bottle was full when its cross section was a circle. How fast is the water spilling out when $a$ is twice as big as $b$?</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/5-q23.png",
+          "alt": "Diagram showing a circular cylinder of radius 5 and height 20 on the left transforming into an elliptical cylinder of semi-axes a and b and height 20 on the right."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "5-q24",
+      "number": 24,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the numerical value of $B$ at $t = 10$ by using what $A = 0$ tells you about $C$ and $D$ at that instant.",
+      "statement": "<p>The quantities $A, B, C$, and $D$ all depend on time, and are related by the formula</p>$$AB = \\log\\left(C^2 + D^2 + 1\\right).$$<p>At time $t = 10$, the following values are known:</p><ul><li>$A = 0$</li><li>$\\dfrac{\\mathrm{d}A}{\\mathrm{d}t} = 2$ units per second</li></ul><p>What is $B$ when $t = 10$?</p>",
+      "oldExam": false
+    }
+  ]
+}

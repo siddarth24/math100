@@ -1,0 +1,63 @@
+{
+  "slug": "14-2",
+  "section": "14.2",
+  "title": "Functions of several variables",
+  "shortTitle": "Multivariable functions",
+  "group": "flavour-c-multivariable",
+  "order": 39,
+  "flavour": "C",
+  "goal": "Picture a two-variable function $z = f(x, y)$ as a 3D landscape height above an $(x, y)$ map, and find which $(x, y)$ inputs are allowed (domain) and which heights $z$ come out (range).",
+  "beforeThis": {
+    "skill": "To find the domain of $f(x, y)$, look for the usual three troublemakers: denominators cannot be $0$, inside of $\\sqrt{\\phantom{x}}$ must be $\\ge 0$, and inside of $\\ln(\\phantom{x})$ must be $> 0$.",
+    "links": [
+      {
+        "label": "Precalculus: Function composition, domains, and ranges",
+        "href": "/precalculus#composition"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Contour Plots & Functions of Two Variables",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=acdX4YamDtU",
+      "watchFor": "Shows how a function $z = f(x, y)$ maps a 2D domain in the $xy$-plane to a 3D surface and level curves."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "14.2-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Read the output intervals of $f$ and $g$ from their graphs on $[-1, 1]$, then determine which $x$-inputs can be fed into $f(g(x))$ and what outputs result.",
+      "statement": "<p>Single-variable functions $f(x)$ and $g(x)$ are sketched below. Both have domain $[-1, 1]$.</p><p>Based on the sketches, find the following.</p><ol type=\"a\"><li>The range of $f(x)$,</li><li>the range of $g(x)$,</li><li>the domain of $f(g(x))$, and</li><li>the range of $f(g(x))$.</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/14.2-q2.png",
+          "alt": "Two side-by-side graphs on the domain [-1, 1]: on the left, y = f(x) oscillates between a minimum of -10 and a maximum of 10, passing through (0, 0); on the right, y = g(x) is a upper semicircle on [-1, 1] ranging from y = 0 at x = -1 and x = 1 up to y = 1 at x = 0."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "14.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "State the set of all pairs $(x, y) \\in \\mathbb{R}^2$ for which $f(x, y) = \\sqrt{4x^2 + y^2}$ is defined, and the set of all output values it produces.",
+      "statement": "<p>Find the domain and range of the function</p>$$f(x, y) = \\sqrt{4x^2 + y^2}.$$",
+      "oldExam": false
+    },
+    {
+      "id": "14.2-q10",
+      "number": 10,
+      "stage": 3,
+      "half": "harder",
+      "asking": "State realistic sets of possible values for advertising spending $a$, unit price $p$, and resulting unit sales $D(a, p)$.",
+      "statement": "<p>If a company spends $a$ dollars on advertisements, and sells the advertised product at $p$ dollars each, then the number of units that will be sold is given as a function $D(a, p)$.</p><p>Give a sensible model domain and range.</p>",
+      "oldExam": false
+    }
+  ]
+}

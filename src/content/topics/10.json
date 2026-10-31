@@ -1,0 +1,82 @@
+{
+  "slug": "10",
+  "section": "10",
+  "title": "Newton’s method",
+  "shortTitle": "Newton’s method",
+  "group": "newtons-method",
+  "order": 33,
+  "flavour": "AB",
+  "goal": "Zero in on solutions to $f(x) = 0$ that algebra cannot solve by repeatedly sliding down the tangent line: $x_{n+1} = x_n - \\frac{f(x_n)}{f'(x_n)}$.",
+  "beforeThis": {
+    "skill": "Where does the formula come from? Draw the tangent line at $(x_n, f(x_n))$, set $y = 0$ to find where it hits the $x$-axis, and solve for $x_{n+1}$!",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines and x-intercepts",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Newton-Raphson Idea",
+      "creator": "Mathematical Visual Proofs",
+      "url": "https://www.youtube.com/watch?v=NYpyk5ICAK0",
+      "watchFor": "One-minute visual picture of how riding tangent lines to the x-axis converges to a root."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Newton's Method",
+      "creator": "Tamás Görbe",
+      "url": "https://www.youtube.com/watch?v=VmKw9mXf_tA"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "10-q1",
+      "number": 1,
+      "half": "harder",
+      "asking": "Compute $x_1$ and $x_2$ starting from $x_0 = 3$ for $f(x) = x^2 - 10$, leaving $x_2$ in calculator-ready form.",
+      "statement": "<p>Starting at $x_0 = 3$, use two iterations of Newton’s method to approximate the root of $f(x) = x^2 - 10$. You may leave your answer in calculator-ready form.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "10-q2",
+      "number": 2,
+      "half": "harder",
+      "asking": "Plug $x_0 = 3$, $f(3) = 3^3 - 30 = -3$, and $f'(3) = 3(3^2) = 27$ into Newton's formula $x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)}$.",
+      "statement": "<p>Starting at $x_0 = 3$, use one iteration of Newton’s method to approximate the root of $f(x) = x^3 - 30$. Express your answer as a simplified fraction. Then, check that you’re on the right path by cubing your answer with a calculator.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "10-q3",
+      "number": 3,
+      "half": "harder",
+      "asking": "Apply two iterations to the derivative equation $g'(x) = 0$ (starting from a simple nearby guess such as $x_0 = 0$) to approximate the critical point of $g(x) = x - x^2 - x^4$.",
+      "statement": "<p>Use two iterations of Newton’s method to approximate the $x$-value of the critical point of the function $g(x) = x - x^2 - x^4$.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "10-q5",
+      "number": 5,
+      "half": "harder",
+      "asking": "Compute $x_1$ and $x_2$ starting at $x_0 = 2$ for $f(x) = x^3 - 12x + 15$, leaving $x_2$ in calculator-ready form.",
+      "statement": "<p>Use two iterations of Newton’s method to approximate a root of the function</p>$$f(x) = x^3 - 12x + 15$$<p>close to $x = 2$. Leave your answer in calculator-ready form.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "10-q6",
+      "number": 6,
+      "half": "harder",
+      "asking": "Write a polynomial equation $f(x) = 0$ whose positive root is $\\sqrt{8}$, pick the closest integer starting guess $x_0$, and perform one step to get a rational approximation.",
+      "statement": "<p>Use one iteration of Newton’s method to find an approximate value for $\\sqrt{8}$ that is a rational number. (Hint: first think of a function, $f(x)$, such that $f(x) = 0$ has the solution $x = \\sqrt{8}$.) </p>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

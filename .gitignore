@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.agent/
+.gemini/
+.grok/
+.impeccable/
+docs/
+.env
+.env.*
+.DS_Store

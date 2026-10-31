@@ -1,0 +1,64 @@
+{
+  "slug": "9-3",
+  "section": "9.3",
+  "title": "Quadratic approximation",
+  "shortTitle": "Quadratic approx",
+  "group": "taylor-polynomials",
+  "order": 29,
+  "flavour": "all",
+  "goal": "Upgrade your tangent-line estimate by adding a $\\frac{1}{2}f''(a)(x - a)^2$ bend term so your parabola hugs the curve as it curves away from the line.",
+  "beforeThis": {
+    "skill": "Why is there a $\\frac{1}{2}$ in front of $f''(a)(x - a)^2$? Because when you take two derivatives of $(x - a)^2$, the $2$ comes down and cancels the $\\frac{1}{2}$, leaving $f''(a)$!",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and quadratics",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Taylor series (Ch. 11 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
+      "watchFor": "Shows why adding the quadratic term $\\frac{1}{2}f''(a)(x - a)^2$ matches the bending of $f(x)$ at $x = a$."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 2 Lecture 9.9: Approximation of Functions by Taylor Polynomials",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RbreIk02B3c"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "9.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the exact values of $f(3)$, $f'(3)$, and $f''(3)$ from the given quadratic approximation at $x = 3$, and state whether $f'''(3)$ can be determined.",
+      "statement": "<p>The quadratic approximation of a function $f(x)$ about $x = 3$ is</p>$$f(x) \\approx -x^2 + 6x$$<p>What are the values of $f(3)$, $f'(3)$, $f''(3)$, and $f'''(3)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.3-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Calculate the second-degree polynomial approximation of $\\log x$ centered at $a = 1$ and evaluate it at $x = 0.93$.",
+      "statement": "<p>Use a quadratic approximation to estimate $\\log(0.93)$.</p><p>(Remember we use $\\log x$ to mean the natural logarithm of $x$, $\\log_e x$.)</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.3-q10",
+      "number": 10,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Plug $x = 1$ into the degree-$2$ Maclaurin polynomial for $e^x$ ($T_2(x) = 1 + x + \\frac{1}{2}x^2$) to estimate $e^1$.",
+      "statement": "<p>Use a quadratic approximation of $e^x$ to estimate $e$ as a decimal.</p>",
+      "oldExam": false
+    }
+  ]
+}

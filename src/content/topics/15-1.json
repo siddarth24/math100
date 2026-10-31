@@ -1,0 +1,66 @@
+{
+  "slug": "15-1",
+  "section": "15.1",
+  "title": "Partial derivatives",
+  "shortTitle": "Partial derivatives",
+  "group": "flavour-c-multivariable",
+  "order": 40,
+  "flavour": "C",
+  "goal": "Find partial derivatives $f_x$ and $f_y$: measure how steep a 3D surface is in the $x$-direction while freezing $y$ as a constant (and vice versa).",
+  "beforeThis": {
+    "skill": "The secret to partial derivatives: when finding $f_x$, treat every $y$ in the formula like the number $5$. You already know all the derivative rules!",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines and slope",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "What are derivatives in 3D? (Partial Derivatives)",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=EoEV5-_mLeM",
+      "watchFor": "Visualizes slicing a surface $z = f(x, y)$ along the $x$- or $y$-direction to measure the slope of a tangent line (see also Tangent Planes at https://www.youtube.com/watch?v=wqtr4Udz8AY)."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "15.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Explain whether a differentiable surface can have a highest peak at $(0, 0)$ if its eastward slope $f_y(0, 0)$ is strictly negative.",
+      "statement": "<p>You are traversing an undulating landscape. Take the $z$-axis to be straight up towards the sky, the positive $x$-axis to be due south, and the positive $y$-axis to be due east. Then the landscape near you is described by the equation $z = f(x, y)$, with you at the point $(0, 0, f(0, 0))$. The function $f(x, y)$ is differentiable.</p><p>Suppose $f_y(0, 0) < 0$. Is it possible that you are at a summit? Explain.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "15.1-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Estimate each partial derivative at $(x, y)$ by computing the rate of change between adjacent entries in the $x$-direction (across columns) or $y$-direction (down rows).",
+      "statement": "<p>The table below gives approximate values of $f(x, y)$ at different values of $x$ and $y$. (The row gives the value of $x$, and the column gives the value of $y$.)</p>\n<div class=\"table-scroll\"><table class=\"ref-table\">\n<thead>\n<tr><th>$y \\downarrow \\;\\backslash\\; x \\to$</th><th>1.0</th><th>1.1</th><th>1.2</th><th>1.3</th><th>1.4</th><th>1.5</th><th>1.6</th><th>1.7</th><th>1.8</th><th>1.9</th></tr>\n</thead>\n<tbody>\n<tr><th>1.5</th><td>8.2</td><td>9.1</td><td>10.1</td><td>11.2</td><td>12.2</td><td>13.3</td><td>14.4</td><td>15.6</td><td>16.7</td><td>17.9</td></tr>\n<tr><th>1.6</th><td>8.0</td><td>9.0</td><td>9.9</td><td>10.9</td><td>12.0</td><td>13.1</td><td>14.2</td><td>15.3</td><td>16.4</td><td>17.6</td></tr>\n<tr><th>1.7</th><td>7.8</td><td>8.8</td><td>9.7</td><td>10.7</td><td>11.7</td><td>12.8</td><td>13.9</td><td>15.0</td><td>16.1</td><td>17.3</td></tr>\n<tr><th>1.8</th><td>7.6</td><td>8.6</td><td>9.5</td><td>10.5</td><td>11.5</td><td>12.5</td><td>13.6</td><td>14.7</td><td>15.8</td><td>17.0</td></tr>\n<tr><th>1.9</th><td>7.5</td><td>8.4</td><td>9.3</td><td>10.3</td><td>11.3</td><td>12.3</td><td>13.3</td><td>14.4</td><td>15.5</td><td>16.6</td></tr>\n<tr><th>2.0</th><td>7.3</td><td>8.2</td><td>9.1</td><td>10.0</td><td>11.0</td><td>12.0</td><td>13.0</td><td>14.1</td><td>15.2</td><td>16.3</td></tr>\n<tr><th>2.1</th><td>7.1</td><td>8.0</td><td>8.9</td><td>9.8</td><td>10.8</td><td>11.8</td><td>12.8</td><td>13.8</td><td>14.9</td><td>16.0</td></tr>\n<tr><th>2.2</th><td>7.0</td><td>7.8</td><td>8.7</td><td>9.6</td><td>10.5</td><td>11.5</td><td>12.5</td><td>13.5</td><td>14.6</td><td>15.6</td></tr>\n<tr><th>2.3</th><td>6.8</td><td>7.6</td><td>8.5</td><td>9.4</td><td>10.3</td><td>11.2</td><td>12.2</td><td>13.2</td><td>14.2</td><td>15.3</td></tr>\n<tr><th>2.4</th><td>6.6</td><td>7.4</td><td>8.3</td><td>9.1</td><td>10.0</td><td>11.0</td><td>11.9</td><td>12.9</td><td>13.9</td><td>15.0</td></tr>\n</tbody>\n</table></div>\n<p>Use the table to approximate the following partial derivatives.</p>\n<ol type=\"a\"><li>$f_y(1.5, 2.4)$</li><li>$f_x(1.7, 1.7)$</li><li>$f_y(1.7, 1.7)$</li><li>$f_x(1.1, 2)$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "15.1-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find all first partial derivatives of each function and plug in the given point to get numerical values.",
+      "statement": "<p>Find all first partial derivatives of the following functions and evaluate them at the given point.</p><ol type=\"a\"><li>$f(x, y, z) = x^3 y^4 z^5 \\quad$ at $(0, -1, -1)$</li><li>$w(x, y, z) = \\log(1 + e^{xyz}) \\quad$ at $(2, 0, -1)$</li><li>$f(x, y) = \\dfrac{1}{\\sqrt{x^2 + y^2}} \\quad$ at $(-3, 4)$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "15.1-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Treat $z = z(x, y)$ as an implicit function of $x$ and $y$, differentiate both sides with respect to $x$ and with respect to $y$ to solve for $\\partial z/\\partial x$ and $\\partial z/\\partial y$, and evaluate at $(-1, -2, 1/2)$.",
+      "statement": "<p>A surface $z(x, y)$ is defined by $zy - y + x = \\log(xyz)$.</p><ol type=\"a\"><li>Compute $\\dfrac{\\partial z}{\\partial x}$, $\\dfrac{\\partial z}{\\partial y}$ in terms of $x, y, z$.</li><li>Evaluate $\\dfrac{\\partial z}{\\partial x}$ and $\\dfrac{\\partial z}{\\partial y}$ at $(x, y, z) = (-1, -2, 1/2)$.</li></ol>",
+      "oldExam": true
+    }
+  ]
+}

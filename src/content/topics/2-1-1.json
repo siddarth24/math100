@@ -1,0 +1,208 @@
+{
+  "slug": "2-1-1",
+  "section": "2.1.1",
+  "title": "Calculating limits with limit laws",
+  "shortTitle": "Limit laws",
+  "group": "limits",
+  "order": 2,
+  "flavour": "all",
+  "goal": "Find limits from formulas: plug the number in first, and if you get $\\frac{0}{0}$ (a hole in disguise), factor or rationalize to cancel the zero-maker.",
+  "beforeThis": {
+    "skill": "Quick check: if plugging in $x = a$ gives $\\frac{0}{0}$, $(x - a)$ is hiding as a factor in both the top and bottom. Cancel it, or conjugate away square roots using $(\\sqrt{A} - \\sqrt{B})(\\sqrt{A} + \\sqrt{B}) = A - B$.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and algebraic manipulation",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Limit of a Function",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=fzh-jmeDOvw",
+      "watchFor": "Shows why simplifying a removable hole ($0/0$) leaves the limit equal to the height of the simplified curve."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 1.2: Properties of Limits and Techniques of Limit Computation",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=VSqOZNULRjQ"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "2.1.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Spot which of the four expressions have a single guaranteed limit when both $f(x)$ and $g(x)$ approach $0$, and give those limits.",
+      "statement": "<p>Suppose $\\lim_{x \\to a} f(x) = 0$ and $\\lim_{x \\to a} g(x) = 0$. Which of the following limits can you compute, given this information?</p><ol type=\"a\"><li>$\\lim_{x \\to a} \\frac{f(x)}{2}$</li><li>$\\lim_{x \\to a} \\frac{2}{f(x)}$</li><li>$\\lim_{x \\to a} \\frac{f(x)}{g(x)}$</li><li>$\\lim_{x \\to a} f(x)g(x)$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Write down explicit formulas for two functions $f(x)$ and $g(x)$ that both approach $0$ as $x \\to 3$ while their ratio approaches $10$.",
+      "statement": "<p>Give two functions $f(x)$ and $g(x)$ that satisfy $\\lim_{x \\to 3} f(x) = \\lim_{x \\to 3} g(x) = 0$ and $\\lim_{x \\to 3} \\frac{f(x)}{g(x)} = 10$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Write down explicit formulas for two functions $f(x)$ and $g(x)$ that both approach $0$ as $x \\to 3$ while their ratio also approaches $0$.",
+      "statement": "<p>Give two functions $f(x)$ and $g(x)$ that satisfy $\\lim_{x \\to 3} f(x) = \\lim_{x \\to 3} g(x) = 0$ and $\\lim_{x \\to 3} \\frac{f(x)}{g(x)} = 0$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Simplify the fraction first so the $h$ in the denominator cancels out, then plug in $h = 0$.",
+      "statement": "<p>Evaluate $\\lim_{h \\to 0} \\frac{(2 + h)^2 - 4}{2h}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Plug in $x = 1$ first; since it gives $0/0$, factor or rationalize the expression to cancel the $(x - 1)$ term causing the zero, then plug in $x = 1$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 1} \\frac{\\log(1 + x) - x}{x^2}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "first",
+      "asking": "Factor the numerator and denominator to cancel out the $(x - 2)$ factor causing $0/0$, then plug in $x = 2$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 2} \\frac{x^2 + x - 6}{x - 2}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q18",
+      "number": 18,
+      "stage": 2,
+      "half": "first",
+      "asking": "Factor out the $(x + 3)$ term causing $0/0$ in the top and bottom, cancel it, and then plug in $x = -3$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to -3} \\frac{x^2 - 9}{x + 3}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q23",
+      "number": 23,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the numerical limit as $x$ approaches $0$ when $-x^2$ multiplies an oscillating cosine term.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} -x^2 \\cos\\left(\\frac{3}{x}\\right)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q24",
+      "number": 24,
+      "stage": 2,
+      "half": "first",
+      "asking": "Notice that $\\sin(1/x)$ stays trapped between $-1$ and $1$ while $x^2 \\to 0$, so use the Squeeze Theorem to see what the product is pinched toward.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} x^2 \\sin\\left(\\frac{1}{x}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q28",
+      "number": 28,
+      "stage": 2,
+      "half": "first",
+      "asking": "Check if the quotient approaches a finite number, $+\\infty$, $-\\infty$, or does not exist as $x$ approaches $0$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\frac{x^2 + 2x + 1}{3x^5 - 5x^3}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q32",
+      "number": 32,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the numerical value of the limit as $x$ approaches $0$, or give a clear justification for why the limit does not exist.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} x^{1/101} \\sin\\left(x^{-100}\\right)$ or explain why this limit does not exist.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q36",
+      "number": 36,
+      "stage": 2,
+      "half": "first",
+      "asking": "Check if the expression involving $|x|/x$ approaches a single number as $x \\to 0$ from both sides.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\left(3 + \\frac{|x|}{x}\\right)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q37",
+      "number": 37,
+      "stage": 2,
+      "half": "first",
+      "asking": "Check if the quotient involving $|3d + 12|$ approaches a single number as $d \\to -4$ from both sides.",
+      "statement": "<p>Evaluate $\\lim_{d \\to -4} \\frac{|3d + 12|}{d + 4}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q38",
+      "number": 38,
+      "stage": 2,
+      "half": "first",
+      "asking": "Simplify the fraction to cancel the factor of $x$ making the denominator $0$, then plug in $x = 0$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\frac{5x - 9}{|x| + 2}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q40",
+      "number": 40,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the specific number $a$ that allows the rational expression to have a finite limit as $x$ approaches $-2$, when the denominator approaches $0$.",
+      "statement": "<p>Find the value of the constant $a$ for which $\\lim_{x \\to -2} \\frac{x^2 + ax + 3}{x^2 + x - 2}$ exists.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q42",
+      "number": 42,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact numerical value that the quotient of square-root expressions approaches as $x$ approaches $2$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 2} \\frac{\\sqrt{x + 7} - \\sqrt{11 - x}}{2x - 4}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q43",
+      "number": 43,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Combine or factor the expression so the $(t - 1)$ zero-maker cancels out, then plug in $t = 1$.",
+      "statement": "<p>Evaluate $\\lim_{t \\to 1} \\frac{3t - 3}{2 - \\sqrt{5 - t}}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.1.1-q46",
+      "number": 46,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Compare the limits of $f(x)$ and $g(x)$ individually with the limit of their sum $f(x) + g(x)$, and answer whether the sum law holds when the individual limits fail to exist.",
+      "statement": "<p>Let $f(x) = \\frac{1}{x}$ and $g(x) = \\frac{-1}{x}$.</p><ol type=\"a\"><li>Evaluate $\\lim_{x \\to 0} f(x)$ and $\\lim_{x \\to 0} g(x)$.</li><li>Evaluate $\\lim_{x \\to 0} [f(x) + g(x)]$.</li><li>Is it always true that $\\lim_{x \\to a} [f(x) + g(x)] = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)$?</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1.1-q48",
+      "number": 48,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the left-hand, right-hand, and two-sided limits of the piecewise function at the transition point $x = -4$.",
+      "statement": "<p>Suppose</p>$$f(x) = \\begin{cases} \\dfrac{x^2 + 8x + 16}{x^2 + 30x - 4}, & x > -4 \\\\[8pt] x^3 + 8x^2 + 16x, & x \\le -4 \\end{cases}$$<ol type=\"a\"><li>Evaluate $\\lim_{x \\to -4^-} f(x)$.</li><li>Evaluate $\\lim_{x \\to -4^+} f(x)$.</li><li>Evaluate $\\lim_{x \\to -4} f(x)$.</li></ol>",
+      "oldExam": false
+    }
+  ]
+}

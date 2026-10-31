@@ -1,0 +1,52 @@
+{
+  "slug": "3-4",
+  "section": "3.4",
+  "title": "Higher order derivatives",
+  "shortTitle": "Higher derivatives",
+  "group": "slopes-and-derivative",
+  "order": 9,
+  "flavour": "all",
+  "goal": "Understand what the derivative of the derivative ($f''$) tells you: while $f'$ measures how steep the hill is, $f''$ measures whether the hill is curving upward or downward.",
+  "beforeThis": {
+    "skill": "Think of driving a car: $f(t)$ is your position on the road, $f'(t)$ is your speedometer (velocity), and $f''(t)$ is how hard you press the gas or brake pedal (acceleration).",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Concavity & The Second Derivative",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
+      "watchFor": "Shows how the sign of $f''(x)$ tells you whether the slope $f'(x)$ is increasing (concave up) or decreasing (concave down)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.4: Applications of the Derivative",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=qr1WXiq3S3k"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "3.4-q1",
+      "number": 1,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Spot which of the five graphs goes downward from left to right while its tangent slope becomes less negative (bends upward) on $(a, b)$.",
+      "statement": "<p>A function $f(x)$ satisfies $f'(x) < 0$ and $f''(x) > 0$ over $(a, b)$. Which of the following curves below might represent $y = f(x)$?</p>",
+      "figures": [
+        {
+          "src": "/figures/3.4-q1.png",
+          "alt": "Five small graphs labeled (i) through (v) over the interval (a, b): (i) increasing and bending upward; (ii) decreasing and bending upward; (iii) decreasing and bending downward; (iv) increasing and bending downward; (v) decreasing straight line."
+        }
+      ],
+      "oldExam": false
+    }
+  ]
+}

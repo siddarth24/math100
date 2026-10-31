@@ -1,0 +1,83 @@
+{
+  "slug": "7-2",
+  "section": "7.2",
+  "title": "First derivative — increasing or decreasing",
+  "shortTitle": "Increasing & decreasing",
+  "group": "curve-sketching",
+  "order": 19,
+  "flavour": "all",
+  "goal": "Find where a graph climbs uphill ($f'(x) > 0$) and where it slides downhill ($f'(x) < 0$) by testing the sign of its first derivative.",
+  "beforeThis": {
+    "skill": "Quick check: a function can only switch from uphill to downhill at places where $f'(x) = 0$ (flat spots) or where $f(x)$ or $f'(x)$ is undefined.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and sign charts",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Concavity & Derivative Sign Charts",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
+      "watchFor": "Shows how the sign of $f'(x)$ determines where the graph rises ($f'(x) > 0$) and falls ($f'(x) < 0$)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.3: The First Derivative Test for Increasing and Decreasing",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=nQ6tOORDQ3I"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "7.2-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Match each of the five graphed curves $A(x)$ through $E(x)$ to its derivative formula from $l(x), m(x), n(x), o(x), p(x)$ by comparing where each curve rises, falls, and levels off at $x = \\pm 2$.",
+      "statement": "<p>Match each function graphed below to its derivative from the list. (For example, which function on the list corresponds to $A'(x)$?)</p><p>The $y$-axes have been scaled to make the curve’s behaviour clear, so the vertical scales differ from graph to graph.</p>$$l(x) = (x - 2)^4 \\qquad m(x) = (x - 2)^4(x + 2) \\qquad n(x) = (x - 2)^2(x + 2)^2$$$$o(x) = (x - 2)(x + 2)^3 \\qquad p(x) = (x + 2)^4$$",
+      "figures": [
+        {
+          "src": "/figures/7.2-q1-1.png",
+          "alt": "Three graphs with ticks at x = -2 and x = 2: green curve y = A(x) increases everywhere with a flat horizontal terrace at x = 2; blue curve y = B(x) increases everywhere with a flat horizontal terrace at x = -2; red curve y = C(x) increases everywhere with flat horizontal terraces at both x = -2 and x = 2."
+        },
+        {
+          "src": "/figures/7.2-q1-2.png",
+          "alt": "Two graphs with ticks at x = -2 and x = 2: orange curve y = D(x) rises to a peak at x = -2 (with a terrace there), falls to a minimum at x = 2, and rises for x > 2; magenta curve y = E(x) falls to a minimum at x = -2, then rises for x > -2 with a flat horizontal terrace at x = 2."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.2-q2",
+      "number": 2,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the largest open interval of $x$-values on which $f(x) = \\frac{e^x}{x + 3}$ is increasing.",
+      "statement": "<p>Find the largest open interval on which $f(x) = \\dfrac{e^x}{x + 3}$ is increasing.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.2-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the largest open interval (within the domain $x \\ge 1$) on which $f(x) = \\frac{\\sqrt{x - 1}}{2x + 4}$ is increasing.",
+      "statement": "<p>Find the largest open interval on which $f(x) = \\dfrac{\\sqrt{x - 1}}{2x + 4}$ is increasing.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the largest open interval of $x$-values on which $f(x) = 2\\arctan(x) - \\log(1 + x^2)$ is increasing.",
+      "statement": "<p>Find the largest open interval on which $f(x) = 2\\arctan(x) - \\log(1 + x^2)$ is increasing.</p>",
+      "oldExam": true
+    }
+  ]
+}

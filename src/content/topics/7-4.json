@@ -1,0 +1,151 @@
+{
+  "slug": "7-4",
+  "section": "7.4",
+  "title": "Symmetries",
+  "shortTitle": "Symmetries",
+  "group": "curve-sketching",
+  "order": 21,
+  "flavour": "all",
+  "goal": "Spot mirror symmetry (even), half-turn symmetry (odd), and repeating waves (periodicity) so you only have to sketch half a graph.",
+  "beforeThis": {
+    "skill": "Quick check: plug $-x$ into the formula. If the minus signs disappear ($f(-x) = f(x)$), it is even; if one minus sign pops out in front ($f(-x) = -f(x)$), it is odd.",
+    "links": [
+      {
+        "label": "Precalculus: Trigonometry and function composition",
+        "href": "/precalculus#trig"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Concavity & Curve Sketching",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
+      "watchFor": "Reviews combining geometric features like symmetry with derivative sign charts."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.1: Increasing/Decreasing and Concavity of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=Mx39JbbzEAo"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "7.4-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if the left half of the W-shaped graph is a mirror image of the right half across the $y$-axis (even symmetry).",
+      "statement": "<p>What symmetries (even, odd, periodic) does the function graphed below have?</p>",
+      "figures": [
+        {
+          "src": "/figures/7.4-q1.png",
+          "alt": "Graph of a W-shaped curve y = f(x) that is symmetric across the y-axis, with a local maximum on the positive y-axis and two equal minima below the x-axis on either side."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if the wave mirrors across the $y$-axis (even), flips upside-down through the origin (odd), and repeats every fixed horizontal shift (periodic).",
+      "statement": "<p>What symmetries (even, odd, periodic) does the function graphed below have?</p>",
+      "figures": [
+        {
+          "src": "/figures/7.4-q2.png",
+          "alt": "Graph of a repeating wave y = f(x) passing through the origin (0, 0) with rotational symmetry about the origin and regularly repeating cycles across the x-axis."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Draw the left half ($x < 0$) of the curve so that the completed graph is symmetric across the $y$-axis.",
+      "statement": "<p>Suppose $f(x)$ is an even function defined for all real numbers. Below is the curve $y = f(x)$ when $x > 0$. Complete the sketch of the curve.</p>",
+      "figures": [
+        {
+          "src": "/figures/7.4-q3.png",
+          "alt": "Coordinate axes showing a curve drawn only for x > 0: starting at the origin (0, 0), dipping below the x-axis to a local minimum, and then rising above the x-axis to the right."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q4",
+      "number": 4,
+      "stage": 1,
+      "half": "first",
+      "asking": "Draw the left half ($x < 0$) of the curve so that the completed graph has $180^\\circ$ rotational symmetry about the origin.",
+      "statement": "<p>Suppose $f(x)$ is an odd function defined for all real numbers. Below is the curve $y = f(x)$ when $x > 0$. Complete the sketch of the curve.</p>",
+      "figures": [
+        {
+          "src": "/figures/7.4-q4.png",
+          "alt": "Coordinate axes showing the same x > 0 curve starting at (0, 0), dipping to a minimum in the fourth quadrant, and rising into the first quadrant."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Plug $-x$ in place of $x$ everywhere in the formula and simplify to show that all the minus signs disappear ($f(-x) = f(x)$).",
+      "statement": "<p>$$f(x) = \\frac{x^4 - x^6}{e^{x^2}}$$</p><p>Show that $f(x)$ is even.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find a nonzero constant period $p$ and verify algebraically that $f(x + p) = f(x)$ for all $x$.",
+      "statement": "<p>$$f(x) = \\sin(x) + \\cos\\left(\\frac{x}{2}\\right)$$</p><p>Show that $f(x)$ is periodic.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Replace $x$ with $-x$ and simplify—remember that $(-x)^4 = x^4$, $(-x)^2 = x^2$, and $\\cos(-u) = \\cos(u)$!",
+      "statement": "<p>$$f(x) = x^4 + 5x^2 + \\cos(x^3)$$</p><p>What symmetries (even, odd, periodic) does $f(x)$ have?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Plug in $-x$ to see that $x^5$ flips sign while $5x^4$ keeps its sign, so $f(-x)$ matches neither $f(x)$ nor $-f(x)$.",
+      "statement": "<p>$$f(x) = x^5 + 5x^4$$</p><p>What symmetries (even, odd, periodic) does $f(x)$ have?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Since the basic $\\tan u$ function repeats every $\\pi$ units, set $\\pi p = \\pi$ to find the period $p$.",
+      "statement": "<p>$$f(x) = \\tan(\\pi x)$$</p><p>What is the period of $f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.4-q10",
+      "number": 10,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the period of $\\tan(3x)$ (which is $\\pi/3$) and the period of $\\sin(4x)$ (which is $2\\pi/4 = \\pi/2$), then find the smallest positive number that is a whole-number multiple of both.",
+      "statement": "<p>$$f(x) = \\tan(3x) + \\sin(4x)$$</p><p>What is the period of $f(x)$?</p>",
+      "oldExam": false
+    }
+  ]
+}

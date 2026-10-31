@@ -1,0 +1,94 @@
+{
+  "slug": "3-5",
+  "section": "3.5",
+  "title": "Derivatives of exponential functions",
+  "shortTitle": "Exponentials",
+  "group": "slopes-and-derivative",
+  "order": 10,
+  "flavour": "all",
+  "goal": "Differentiate exponential functions: $e^x$ is the unique function whose slope equals its own height, and any other base $a^x$ just picks up an extra factor of $\\ln a$.",
+  "beforeThis": {
+    "skill": "Quick check: $(e^x)' = e^x$ and $(a^x)' = a^x \\ln a$. If $a > 1$ the curve grows ever steeper; if $0 < a < 1$ it decays toward $0$.",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and logarithms",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "What's so special about Euler's number e? (Ch. 5 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=m2MIpDrF7Es",
+      "watchFor": "Shows why $e^x$ equals its own derivative and why $\\frac{\\mathrm{d}}{\\mathrm{d}x} a^x = (\\ln a)a^x$."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.2: Techniques of Differentiation",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=EY6FHX6asU0"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "3.5-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Pair each labeled curve $A, B, C, D$ in the plot with its matching exponential formula from (a)–(e).",
+      "statement": "<p>Match the curves in the graph to the following functions:</p><ol type=\"a\"><li>$y = \\left(\\dfrac{1}{2}\\right)^x$</li><li>$y = 1^x$</li><li>$y = 2^x$</li><li>$y = 2^{-x}$</li><li>$y = 3^x$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.5-q1.png",
+          "alt": "Coordinate axes showing four curves passing through (0, 1): green curve A decreases from left to right toward the positive x-axis; black line D is horizontal at y = 1; blue curve B and red curve C both increase from left to right, with blue curve B rising more steeply than red curve C for x > 0."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.5-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Use the fact that $f(x) = a^x$ is increasing and lies above its derivative $f'(x)$ to select all true inequalities for the base $a$.",
+      "statement": "<p>The graph below shows an exponential function $f(x) = a^x$ and its derivative $f'(x)$. Choose all the options that describe the constant $a$.</p><ol type=\"a\"><li>$a < 0$</li><li>$a > 0$</li><li>$a < 1$</li><li>$a > 1$</li><li>$a < e$</li><li>$a > e$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.5-q2.png",
+          "alt": "Coordinate axes showing two positive increasing exponential curves: the blue upper curve is labeled y = f(x) and passes through (0, 1), while the red lower curve is labeled y = f'(x) and lies strictly below y = f(x) for all x."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.5-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Don't fall for the power-rule trap! The power rule $x^n \\to nx^{n-1}$ only works when the exponent is a constant number, not when $x$ is in the exponent.",
+      "statement": "<p>True or false: $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\{e^x\\} = x e^{x - 1}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.5-q5",
+      "number": 5,
+      "stage": 1,
+      "half": "first",
+      "asking": "Write the formula obtained after differentiating $f(x) = e^x$ with respect to $x$ $180$ times in a row.",
+      "statement": "<p>What is the 180th derivative of the function $f(x) = e^x$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.5-q6",
+      "number": 6,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Take $\\ln$ (or simplify using exponent/log rules) to see which equations turn into a straight line $y = mx + b$.",
+      "statement": "<p>Which of the following functions describe a straight line?</p><ol type=\"a\"><li>$y = e^{3 \\log x} + 1$</li><li>$2y + 5 = e^{3 + \\log x}$</li><li>$y = e^{2x} + 4$</li><li>$y = e^{\\log x} 3^e + \\log 2$</li></ol>",
+      "oldExam": false
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "slug": "4-3",
+  "section": "4.3",
+  "title": "The chain rule",
+  "shortTitle": "Chain rule",
+  "group": "computing-derivatives",
+  "order": 13,
+  "flavour": "all",
+  "goal": "Differentiate functions stuffed inside other functions $f(g(x))$ using the chain rule: differentiate the outside wrapper first (leaving the inside alone), then multiply by the derivative of the inside.",
+  "beforeThis": {
+    "skill": "Ask yourself: if I plugged a number in for $x$, what calculation would I do last? That last operation is your outside function.",
+    "links": [
+      {
+        "label": "Precalculus: Function composition",
+        "href": "/precalculus#composition"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Chain Rule",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=o-6GzqChpJs",
+      "watchFor": "Shows how to peel outside-in layers of a composite function (paired with 3Blue1Brown's visual picture at https://www.youtube.com/watch?v=YG15m2VwSjA)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.6: Discussion of the Chain Rule for Derivatives of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=8dr1dZjfhmc"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the sign (positive or negative) of each rate of change linking otters $O$, urchins $U$, and kelp $K$.",
+      "statement": "<p>Suppose the amount of kelp in a harbour depends on the number of urchins. Urchins eat kelp: when there are more urchins, there is less kelp, and when there are fewer urchins, there is more kelp. Suppose further that the number of urchins in the harbour depends on the number of otters, who find urchins extremely tasty: the more otters there are, the fewer urchins there are.</p><p>Let $O$, $U$, and $K$ be the populations of otters, urchins, and kelp, respectively.</p><ol type=\"a\"><li>Is $\\dfrac{\\mathrm{d}K}{\\mathrm{d}U}$ positive or negative?</li><li>Is $\\dfrac{\\mathrm{d}U}{\\mathrm{d}O}$ positive or negative?</li><li>Is $\\dfrac{\\mathrm{d}K}{\\mathrm{d}O}$ positive or negative?</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if the overall rate $\\mathrm{d}A/\\mathrm{d}E$ is positive or negative from the signs of the four intermediate rates.",
+      "statement": "<p>Suppose $A, B, C, D$, and $E$ are functions describing an interrelated system, with the following signs: $\\dfrac{\\mathrm{d}A}{\\mathrm{d}B} > 0$, $\\dfrac{\\mathrm{d}B}{\\mathrm{d}C} > 0$, $\\dfrac{\\mathrm{d}C}{\\mathrm{d}D} < 0$, and $\\dfrac{\\mathrm{d}D}{\\mathrm{d}E} > 0$. Is $\\dfrac{\\mathrm{d}A}{\\mathrm{d}E}$ positive or negative?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the chain rule from outside in: differentiate $\\cos(\\text{inside}) \\to -\\sin(\\text{inside})$, then multiply by the derivative of $(5x + 3)$.",
+      "statement": "<p>Evaluate the derivative of $f(x) = \\cos(5x + 3)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Bring the outer power $5$ down in front of $(x^2 + 2)^4$, then multiply by the derivative of the inside $(x^2 + 2)$.",
+      "statement": "<p>Evaluate the derivative of $f(x) = (x^2 + 2)^5$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the chain rule: differentiate the outer power $(\\dots)^{17}$ first, then multiply by the derivative of the polynomial inside the brackets.",
+      "statement": "<p>Evaluate the derivative of $T(k) = (4k^4 + 2k^2 + 1)^{17}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Peel three layers from outside in: first the outer $e^{(\\dots)}$, then $\\cos(\\dots)$, and finally the innermost $x^2$.",
+      "statement": "<p>Evaluate the derivative of $f(x) = e^{\\cos(x^2)}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Keep the exponential $e^{x^2 + \\cos x}$ intact and multiply by the derivative of the exponent $(x^2 + \\cos x)$.",
+      "statement": "<p>Evaluate $f'(x)$ if $f(x) = e^{x^2 + \\cos x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Differentiate the outer $\\sec(u) \\to \\sec(u)\\tan(u)$ with $u = e^{2x+7}$ inside, then multiply by the derivative of $e^{2x+7}$.",
+      "statement": "<p>Evaluate the derivative of $f(x) = \\sec(e^{2x + 7})$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q15",
+      "number": 15,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the height $y(\\pi/4)$ and the chain-rule slope $y'(\\pi/4)$ at $x = \\pi/4$, then put them into $y = y_0 + m(x - \\pi/4)$.",
+      "statement": "<p>Find the tangent line to the curve $y = (\\tan^2 x + 1)\\cos^2 x$ at the point $x = \\dfrac{\\pi}{4}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the velocity $s'(t)$ using the chain rule, set $s'(t) = 0$, and solve for the times $t$ when the particle momentarily stops.",
+      "statement": "<p>The position of a particle at time $t$ is given by $s(t) = e^{t^3 - 7t^2 + 8t}$. For which values of $t$ is the velocity of the particle zero?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "first",
+      "asking": "Differentiate $\\tan(e^{x^2})$ using three chain-rule layers ($\\tan \\to e^u \\to x^2$), then plug in $x = 1$.",
+      "statement": "<p>What is the slope of the tangent line to the curve $y = \\tan\\left(e^{x^2}\\right)$ at the point $x = 1$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q20",
+      "number": 20,
+      "stage": 2,
+      "half": "first",
+      "asking": "Rewrite $\\sin^2(x)$ as $(\\sin x)^2$ so you can clearly see the three layers: $e^{(\\dots)}$, then $(\\dots)^2$, then $\\sin x$.",
+      "statement": "<p>Differentiate $e^{\\sin^2(x)}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q21",
+      "number": 21,
+      "stage": 2,
+      "half": "first",
+      "asking": "Differentiate the outer $\\sin(\\dots) \\to \\cos(\\dots)$ keeping $e^{5x}$ inside, then multiply by the derivative of $e^{5x}$.",
+      "statement": "<p>Compute the derivative of $y = \\sin\\left(e^{5x}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q24",
+      "number": 24,
+      "stage": 2,
+      "half": "first",
+      "asking": "Start with the product rule on $(1 + x^2) \\cdot (\\cos x)^2$, and use the chain rule when differentiating $(\\cos x)^2$.",
+      "statement": "<p>Evaluate the derivative.</p>$$y = (1 + x^2)\\cos^2 x$$",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q25",
+      "number": 25,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the quotient rule on $\\frac{e^{3x}}{1 + x^2}$, remembering the chain-rule factor of $3$ when differentiating $e^{3x}$.",
+      "statement": "<p>Evaluate the derivative.</p>$$y = \\frac{e^{3x}}{1 + x^2}$$",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q26",
+      "number": 26,
+      "stage": 2,
+      "half": "first",
+      "asking": "Differentiate using the product and chain rules in terms of $x$, then plug in $x = 2$ along with the given values of $h(4)$ and $h'(4)$.",
+      "statement": "<p>Find $g'(2)$ if $g(x) = x^3 h(x^2)$, where $h(4) = 2$ and $h'(4) = -2$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.3-q31",
+      "number": 31,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the time $t \\in [-\\pi/2, \\pi/2]$ at which the curve traced by $(x(t), y(t)) = (\\cos t, \\sin t)$ has tangent slope $\\mathrm{d}y/\\mathrm{d}x = -1$.",
+      "statement": "<p>A particle moves along the Cartesian plane from time $t = -\\pi/2$ to time $t = \\pi/2$. The $x$-coordinate of the particle at time $t$ is given by $x = \\cos t$, and the $y$-coordinate is given by $y = \\sin t$, so the particle traces a curve in the plane. When does the tangent line to that curve have slope $-1$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q33",
+      "number": 33,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Differentiate both sides of $\\sin(2x) = 2\\sin x \\cos x$ with respect to $x$ and simplify to obtain a formula for $\\cos(2x)$.",
+      "statement": "<p>We know that $\\sin(2x) = 2\\sin x \\cos x$. What other trig identity can you derive from this, using differentiation?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.3-q35",
+      "number": 35,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Sketch the path $(x, y) = (\\sin t, \\cos^2 t)$ for $t \\ge 0$, describe how the particle oscillates along it, and find the slope $\\mathrm{d}y/\\mathrm{d}x$ of that path at $t = 10\\pi/3$.",
+      "statement": "<p>Suppose a particle is moving in the Cartesian plane over time. For any real number $t \\ge 0$, the coordinate of the particle at time $t$ is given by $(\\sin t, \\cos^2 t)$.</p><ol type=\"a\"><li>Sketch a graph of the curve traced by the particle in the plane by plotting points, and describe how the particle moves along it over time.</li><li>What is the slope of the curve traced by the particle at time $t = \\dfrac{10\\pi}{3}$?</li></ol>",
+      "oldExam": false
+    }
+  ]
+}

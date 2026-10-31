@@ -1,0 +1,226 @@
+{
+  "slug": "3-3",
+  "section": "3.3",
+  "title": "The derivative",
+  "shortTitle": "Definition of derivative",
+  "group": "slopes-and-derivative",
+  "order": 7,
+  "flavour": "all",
+  "goal": "Find the instantaneous slope $f'(a)$ of a curve from scratch using the zoom-in limit $f'(a) = \\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h}$, and spot where sharp corners or jumps break the derivative.",
+  "beforeThis": {
+    "skill": "Quick check: $\\frac{f(a+h)-f(a)}{h}$ is just rise-over-run between $x = a$ and a tiny step away at $x = a + h$. Letting $h \\to 0$ zooms in to one instant.",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The paradox of the derivative (Ch. 2 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=9vKqVkMQHKk",
+      "watchFor": "Builds the limit definition of the derivative $f'(a) = \\lim_{h \\to 0} \\frac{f(a+h)-f(a)}{h}$ from the secant slope."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.1: Introduction to the Derivative of a Function",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=962lLfW-8Jo"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "3.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Look at the straight line: is its slope positive or negative, and does the slope stay the same (constant) or change as you move right?",
+      "statement": "<p>The function $f(x)$ is shown. Select all options below that describe its derivative, $\\dfrac{\\mathrm{d}f}{\\mathrm{d}x}$:</p><ol type=\"a\"><li>constant</li><li>increasing</li><li>decreasing</li><li>always positive</li><li>always negative</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.3-q1.png",
+          "alt": "Graph of y = f(x) showing a straight line passing through the origin with positive slope."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Walk along the curve from left to right and check whether the tangent slope is always negative (going downhill) or changing sign.",
+      "statement": "<p>The function $f(x)$ is shown. Select all options below that describe its derivative, $\\dfrac{\\mathrm{d}f}{\\mathrm{d}x}$:</p><ol type=\"a\"><li>constant</li><li>increasing</li><li>decreasing</li><li>always positive</li><li>always negative</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.3-q2.png",
+          "alt": "Graph of y = f(x) showing a curve that decreases from left to right across the entire plot, with a wiggle in the second quadrant and levelling off near the positive x-axis."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Pick every option that matches how the tangent slope changes from left to right along the parabola.",
+      "statement": "<p>The function $f(x)$ is shown. Select all options below that describe its derivative, $\\dfrac{\\mathrm{d}f}{\\mathrm{d}x}$:</p><ol type=\"a\"><li>constant</li><li>increasing</li><li>decreasing</li><li>always positive</li><li>always negative</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.3-q3.png",
+          "alt": "Graph of y = f(x) showing an upward-opening parabola symmetric about the y-axis with its vertex below the origin."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q4",
+      "number": 4,
+      "stage": 1,
+      "half": "first",
+      "asking": "Write down the limit equation that defines what it means for $f(x) = x^3$ to have a derivative at $x = 0$.",
+      "statement": "<p>State, in terms of a limit, what it means for $f(x) = x^3$ to be differentiable at $x = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q6",
+      "number": 6,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if equal left-hand and right-hand difference-quotient limits at $x = a$ guarantee that $f'(a) = 1$.",
+      "statement": "<p>Suppose $f(x)$ is a function defined at $x = a$ with</p>$$\\lim_{h \\to 0^-} \\frac{f(a + h) - f(a)}{h} = \\lim_{h \\to 0^+} \\frac{f(a + h) - f(a)}{h} = 1.$$<p>True or false: $f'(a) = 1$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q7",
+      "number": 7,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if having $f'(x) \\to 1$ from both sides of $x = a$ guarantees that $f$ is differentiable at $x = a$ with $f'(a) = 1$ (consider what happens if $f$ has a jump at $a$).",
+      "statement": "<p>Suppose $f(x)$ is a function defined at $x = a$ with</p>$$\\lim_{x \\to a^-} f'(x) = \\lim_{x \\to a^+} f'(x) = 1.$$<p>True or false: $f'(a) = 1$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q8",
+      "number": 8,
+      "stage": 1,
+      "half": "first",
+      "asking": "State the physical units of the derivative $s'(t)$ when $s$ is in metres and $t$ is in seconds.",
+      "statement": "<p>Suppose $s(t)$ is a function, with $t$ measured in seconds, and $s$ measured in metres. What are the units of $s'(t)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Write the equation of the tangent line to $y(x) = x^3 + 5$ at $(1, 6)$ after finding its slope directly from the limit definition of the derivative.",
+      "statement": "<p>Use the definition of the derivative to find the equation of the tangent line to the curve $y(x) = x^3 + 5$ at the point $(1, 6)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the formula for $f'(x)$ when $f(x) = 1/x$ by setting up and evaluating the limit definition of the derivative.",
+      "statement": "<p>Use the definition of the derivative to find the derivative of $f(x) = \\dfrac{1}{x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Show that the limit of the difference quotient for $f(x) = x|x|$ at $x = 0$ exists and has the same value from both sides.",
+      "statement": "<p>Let $f(x) = x|x|$. Using the definition of the derivative, show that $f(x)$ is differentiable at $x = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the exact slope of the tangent line at $x = 0$ by setting up and evaluating the limit definition of the derivative at $x = 0$.",
+      "statement": "<p>Use the definition of the derivative to find the slope of the tangent line to the curve $f(x) = x \\log_{10}(2x + 10)$ at the point $x = 0$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the numbers $a$ and $b$ so that the parabola $x^2$ and the line $ax + b$ connect at $x = 2$ with both the same height and the same slope.",
+      "statement": "<p>Find the values of the constants $a$ and $b$ for which</p>$$f(x) = \\begin{cases} x^2 & x \\le 2 \\\\ ax + b & x > 2 \\end{cases}$$<p>is differentiable everywhere.</p><p><em>Remark:</em> In the text, you have already learned the derivatives of $x^2$ and $ax + b$. In this question, you are only asked to find the values of $a$ and $b$—not to justify how you got them—so you don’t have to use the definition of the derivative. However, on an exam, you might be asked to justify your answer, in which case you would show how to differentiate the two branches of $f(x)$ using the definition of a derivative.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q18",
+      "number": 18,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the velocity function $s'(t)$ from the position function $s(t) = t^4 - t^2$ by evaluating the limit definition of the derivative.",
+      "statement": "<p>Use the definition of the derivative to find the velocity of an object whose position is given by the function $s(t) = t^4 - t^2$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "3.3-q19",
+      "number": 19,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Test whether $f'(0)$ exists by computing the left-hand and right-hand difference-quotient limits at $x = 0$ and checking if they are equal.",
+      "statement": "<p>Determine whether the derivative of the following function exists at $x = 0$.</p>$$f(x) = \\begin{cases} x \\cos x & \\text{if } x \\ge 0 \\\\ \\sqrt{x^2 + x^4} & \\text{if } x < 0 \\end{cases}$$<p>You must justify your answer using the definition of a derivative.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q20",
+      "number": 20,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Test whether $f'(0)$ exists by evaluating the left-hand and right-hand difference-quotient limits at $x = 0$.",
+      "statement": "<p>Determine whether the derivative of the following function exists at $x = 0$:</p>$$f(x) = \\begin{cases} x \\cos x & \\text{if } x \\le 0 \\\\ \\sqrt{1 + x} - 1 & \\text{if } x > 0 \\end{cases}$$<p>You must justify your answer using the definition of a derivative.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q21",
+      "number": 21,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Test whether $f'(0)$ exists by evaluating the left-hand and right-hand difference-quotient limits at $x = 0$.",
+      "statement": "<p>Determine whether the derivative of the following function exists at $x = 0$:</p>$$f(x) = \\begin{cases} x^3 - 7x^2 & \\text{if } x \\le 0 \\\\[4pt] x^3 \\cos\\left(\\dfrac{1}{x}\\right) & \\text{if } x > 0 \\end{cases}$$<p>You must justify your answer using the definition of a derivative.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q22",
+      "number": 22,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Test whether $f'(1)$ exists by evaluating the left-hand and right-hand difference-quotient limits at $x = 1$.",
+      "statement": "<p>Determine whether the derivative of the following function exists at $x = 1$:</p>$$f(x) = \\begin{cases} 4x^2 - 8x + 4 & \\text{if } x \\le 1 \\\\[6pt] (x - 1)^2 \\sin\\left(\\dfrac{1}{x - 1}\\right) & \\text{if } x > 1 \\end{cases}$$<p>You must justify your answer using the definition of a derivative.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q26",
+      "number": 26,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the equations of both lines that touch the parabola $y = x^2$ tangentially and also pass through the external point $(1, -3)$.",
+      "statement": "<p>There are two distinct straight lines that pass through the point $(1, -3)$ and are tangent to the curve $y = x^2$. Find equations for these two lines.</p><p><em>Remark:</em> the point $(1, -3)$ does not lie on the curve $y = x^2$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "3.3-q27",
+      "number": 27,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the range of values of the exponent $a$ for which the right-hand difference-quotient limit at $x = 0$ equals the left-hand derivative $0$.",
+      "statement": "<p>For which values of $a$ is the function</p>$$f(x) = \\begin{cases} 0 & x \\le 0 \\\\[4pt] x^a \\sin\\left(\\dfrac{1}{x}\\right) & x > 0 \\end{cases}$$<p>differentiable at $0$?</p>",
+      "oldExam": true
+    }
+  ]
+}

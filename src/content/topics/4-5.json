@@ -1,0 +1,136 @@
+{
+  "slug": "4-5",
+  "section": "4.5",
+  "title": "Implicit differentiation",
+  "shortTitle": "Implicit diff",
+  "group": "computing-derivatives",
+  "order": 16,
+  "flavour": "all",
+  "goal": "Find the slope $\\frac{\\mathrm{d}y}{\\mathrm{d}x}$ of a curve when $x$ and $y$ are tangled together in an equation (like a circle $x^2 + y^2 = 25$) without solving for $y$ first.",
+  "beforeThis": {
+    "skill": "The one rule to remember: $y$ is secretly a function of $x$. Differentiate $y$ terms normally, then multiply by $\\frac{\\mathrm{d}y}{\\mathrm{d}x}$ (by the chain rule!).",
+    "links": [
+      {
+        "label": "Precalculus: Function composition and equations of lines",
+        "href": "/precalculus#composition"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Implicit differentiation, what's going on here? (Ch. 6 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=qb40J4N1fa4",
+      "watchFor": "Visualizes how differentiating both sides of a relation between $x$ and $y$ yields the tangent slope along the curve."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.7: Implicit Differentiation",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RUS4mKo9tBk"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.5-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find a formula for $\\mathrm{d}y/\\mathrm{d}x$ in terms of $x$ and $y$ from the equation $xy + e^x + e^y = 1$.",
+      "statement": "<p>Find $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$ if $xy + e^x + e^y = 1$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find a formula for $\\mathrm{d}y/\\mathrm{d}x$ in terms of $x$ and $y$ from the equation $e^y = xy^2 + x$.",
+      "statement": "<p>If $e^y = xy^2 + x$, compute $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the numerical value(s) of $y'$ at every point on the curve where $y = 1$ (remember to first plug $y = 1$ into the original equation to find the corresponding $x$-values).",
+      "statement": "<p>If $x^2 \\tan(\\pi y / 4) + 2x \\log(y) = 16$, then find $y'$ at the points where $y = 1$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the numerical value of the second derivative $\\mathrm{d}^2y/\\mathrm{d}x^2$ at the origin $(0, 0)$.",
+      "statement": "<p>Suppose a curve is defined implicitly by</p>$$x^2 + x + y = \\sin(xy)$$<p>What is $\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}$ at the point $(0, 0)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.5-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "First plug $y = 0$ into the original curve equation to find which $x$-value(s) you are at, then differentiate implicitly and plug in $(x, 0)$ to find $y'$.",
+      "statement": "<p>If $x^2 e^y + 4x \\cos(y) = 5$, then find $y'$ at the points where $y = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "first",
+      "asking": "Plug $y = 0$ into the original equation first to find the $x$-coordinate(s), then differentiate implicitly with respect to $x$ and solve for $y'$.",
+      "statement": "<p>If $x^2 \\cos(y) + 2x e^y = 8$, then find $y'$ at the points where $y = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the coordinates $(x, y)$ of all points on the ellipse $x^2 + 3y^2 = 1$ where the tangent slope $\\mathrm{d}y/\\mathrm{d}x$ equals $1$.",
+      "statement": "<p>At what points on the ellipse $x^2 + 3y^2 = 1$ is the tangent line parallel to the line $y = x$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.5-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find a formula for $\\mathrm{d}y/\\mathrm{d}x$ in terms of $x$ and $y$ from $x^2 y^2 + x \\sin(y) = 4$.",
+      "statement": "<p>If $x^2 y^2 + x \\sin(y) = 4$, find $\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q18",
+      "number": 18,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the $x$-intercept(s) by setting $y = 0$ in the original equation, then differentiate both sides with respect to $x$ and plug in $(x, 0)$.",
+      "statement": "<p>If $x^2 + (y + 1)e^y = 5$, then find $y'$ at the points where $y = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.5-q19",
+      "number": 19,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find all $x$-values where the tangent slope $\\mathrm{d}y/\\mathrm{d}x$ on the circle $x^2 + y^2 = 1$ equals a tangent slope on the ellipse $x^2 + 3y^2 = 1$.",
+      "statement": "<p>For what values of $x$ do the circle $x^2 + y^2 = 1$ and the ellipse $x^2 + 3y^2 = 1$ have parallel tangent lines?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.5-q20",
+      "number": 20,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the numerical slope $y'$ at $(1, 2)$ and sketch the tangent line together with the curve near $(1, 2)$ given that $y'' < 0$ there.",
+      "statement": "<p>The equation $x^3 y + y^3 = 10x$ defines $y$ implicitly as a function of $x$ near the point $(1, 2)$.</p><ol type=\"a\"><li>Compute $y'$ at this point.</li><li>It can be shown that $y''$ is negative when $x = 1$. Use this fact and your answer to (a) to make a sketch showing the relationship of the curve to its tangent line at $(1, 2)$.</li></ol>",
+      "oldExam": true
+    }
+  ]
+}

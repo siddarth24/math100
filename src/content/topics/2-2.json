@@ -1,0 +1,55 @@
+{
+  "slug": "2-2",
+  "section": "2.2",
+  "title": "Asymptotes",
+  "shortTitle": "Asymptotes",
+  "group": "limits",
+  "order": 4,
+  "flavour": "all",
+  "goal": "Use limits at $0$ and $\\infty$ to read biological reaction curves (like Michaelis–Menten and Hill equations) and find their maximum speed and half-saturation point.",
+  "beforeThis": {
+    "skill": "Quick check: to see how a reaction behaves at tiny concentrations, plug in $x \\approx 0$; to find its top speed (horizontal asymptote), let $x \\to \\infty$.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and rational expressions",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Limits at Infinity & Horizontal Asymptotes",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=yHtIxYKVKUs",
+      "watchFor": "Visualizes how a curve flattens against a horizontal asymptote as the input grows large."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 1.2: Properties of Limits and Techniques of Limit Computation",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=VSqOZNULRjQ"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "2.2-q1",
+      "number": 1,
+      "half": "harder",
+      "asking": "Explain in plain terms and with a limit what happens to the reaction speed $v$ for large concentrations $x$, find the limiting speed, and evaluate $v$ at $x = k_n$.",
+      "statement": "<p>Consider the Michaelis-Menten kinetics where the speed of an enzyme-catalyzed reaction is given by $v = \\dfrac{Kx}{k_n + x}$.</p><ol type=\"a\"><li>Explain the statement that “when $x$ is large there is a horizontal asymptote” and find the value of $v$ to which that asymptote approaches.</li><li>Determine the reaction speed when $x = k_n$ and explain why the constant $k_n$ is sometimes called the “half-max” concentration.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "2.2-q2",
+      "number": 2,
+      "half": "harder",
+      "asking": "Compare the two Hill functions for $x \\ge 0$ by finding their intersection points, their asymptotes, their growth near $x = 0$, and which one transitions more sharply.",
+      "statement": "<p>Hill functions are sometimes used to represent a biochemical “switch,” that is a rapid transition from one state to another. Consider the functions:</p>$$y_1(x) = \\frac{x^2}{1 + x^2}, \\qquad y_2(x) = \\frac{x^5}{1 + x^5}$$<p>where $x \\ge 0$.</p><ol type=\"a\"><li>Where do these functions intersect?</li><li>What are the asymptotes of these functions?</li><li>Which of these functions increases fastest near the origin?</li><li>Which is the sharpest “switch” and why?</li></ol>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

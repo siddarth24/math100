@@ -1,0 +1,64 @@
+{
+  "slug": "9-2",
+  "section": "9.2",
+  "title": "Linear approximation",
+  "shortTitle": "Linear approx",
+  "group": "taylor-polynomials",
+  "order": 28,
+  "flavour": "all",
+  "goal": "Estimate a tough number (like $\\sqrt{101}$ or $\\ln(1.05)$) without a calculator by riding the tangent line $L(x) = f(a) + f'(a)(x - a)$ from a nearby easy anchor $a$.",
+  "beforeThis": {
+    "skill": "Linear approximation is nothing new—$L(x) = f(a) + f'(a)(x - a)$ is literally just the tangent line equation at $x = a$ with a new name!",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Linear Approximation",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=AorDyDOZNMA",
+      "watchFor": "Shows how the tangent line $L(x) = f(a) + f'(a)(x - a)$ estimates values of $f(x)$ near $x = a$ (with the chapter overview in 3Blue1Brown at https://www.youtube.com/watch?v=3d6DsjIBzJ4)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 2 Lecture 9.9: Approximation of Functions by Taylor Polynomials",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RbreIk02B3c"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "9.2-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "See which of $f(5)$, $f'(5)$, and $f(0)$ can be known exactly from the linear approximation $f(x) \\approx 3x - 9$ centered at $x = 5$.",
+      "statement": "<p>Suppose $f(x)$ is a function, and we calculated its linear approximation near $x = 5$ to be $f(x) \\approx 3x - 9$.</p><ol type=\"a\"><li>What is $f(5)$?</li><li>What is $f'(5)$?</li><li>What is $f(0)$?</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "9.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Estimate $\\log(0.93)$ using the tangent line to $f(x) = \\log x$ at $a = 1$, and sketch the curve and tangent line.",
+      "statement": "<p>Use a linear approximation to estimate $\\log(x)$ when $x = 0.93$. Sketch the curve $y = f(x)$ and your linear approximation.</p><p>(Remember we use $\\log x$ to mean the natural logarithm of $x$, $\\log_e x$.)</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.2-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Estimate $\\sqrt[5]{30}$ using a linear approximation of $f(x) = \\sqrt[5]{x}$ at a nearby point where the fifth root is an integer.",
+      "statement": "<p>Use a linear approximation to estimate $\\sqrt[5]{30}$.</p>",
+      "oldExam": false
+    }
+  ]
+}

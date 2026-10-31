@@ -1,0 +1,145 @@
+{
+  "slug": "4-1",
+  "section": "4.1",
+  "title": "Derivative rules (sum, product, quotient)",
+  "shortTitle": "Product & quotient rules",
+  "group": "computing-derivatives",
+  "order": 11,
+  "flavour": "all",
+  "goal": "Use the power, sum, product, and quotient rules to find derivatives in seconds instead of setting up a limit every time.",
+  "beforeThis": {
+    "skill": "Save yourself work: rewrite roots as fractional powers ($\\sqrt{x} = x^{1/2}$) and denominators as negative powers ($\\frac{1}{x^3} = x^{-3}$) before differentiating!",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and fractional exponents",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Product and Quotient Rules",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=O6m9rtIGxUM",
+      "watchFor": "Walks through why product and quotient derivatives take their two-term forms (see also 3Blue1Brown's visual picture at https://www.youtube.com/watch?v=YG15m2VwSjA)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.3: The Product and Quotient Rules for Derivatives of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=AvCQQ3X4Nuc"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if the derivative of a sum of two differentiable functions is always the sum of their derivatives.",
+      "statement": "<p>True or false: $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\{f(x) + g(x)\\} = f'(x) + g'(x)$ when $f$ and $g$ are differentiable functions.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Test with a simple example like $f(x) = x$ and $g(x) = x$: the product rule needs $f'g + fg'$, not just $f'g'$!",
+      "statement": "<p>True or false: $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\{f(x)g(x)\\} = f'(x)g'(x)$ when $f$ and $g$ are differentiable functions.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check whether the written two-term expression for the derivative of $f(x)/g(x)$ is algebraically equivalent to the standard derivative of a quotient.",
+      "statement": "<p>True or false: $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\left\\{\\dfrac{f(x)}{g(x)}\\right\\} = \\dfrac{f'(x)}{g(x)} - \\dfrac{f(x)g'(x)}{g^2(x)}$ when $f$ and $g$ are differentiable functions.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q4",
+      "number": 4,
+      "stage": 1,
+      "half": "first",
+      "asking": "Compute $g'(x)$ for $g(x) = 3f(x)$ in three different ways (such as writing $3f(x)$ as $f(x)+f(x)+f(x)$, as a product $3 \\cdot f(x)$, or as a quotient $f(x)/(1/3)$) and confirm all three match.",
+      "statement": "<p>Let $f$ be a differentiable function. Use at least three different rules to differentiate $g(x) = 3f(x)$ in different ways, and verify that they all give the same answer.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Rewrite $\\sqrt{x}$ as $x^{1/2}$, then either use the product rule $(fg)' = f'g + fg'$ or FOIL the brackets first and use the power rule.",
+      "statement": "<p>Use the product rule to differentiate $f(x) = (2x + 5)(8\\sqrt{x} - 9x)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the particle's speed, direction of motion, and whether its speed is increasing or decreasing at $t = 2$ from its position function $x(t)$.",
+      "statement": "<p>A particle moves along the $x$-axis so that its position at time $t$ is given by $x = t^3 - 4t^2 + 1$.</p><ol type=\"a\"><li>At $t = 2$, what is the particle’s speed? That is, what is the absolute value of its velocity?</li><li>At $t = 2$, in what direction is the particle moving?</li><li>At $t = 2$, is the particle’s speed increasing or decreasing?</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "4.1-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Apply the quotient rule $\\frac{\\text{low}\\cdot d(\\text{high}) - \\text{high}\\cdot d(\\text{low})}{(\\text{low})^2}$ and combine the terms on top.",
+      "statement": "<p>Calculate and simplify the derivative of $\\dfrac{2x - 1}{2x + 1}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.1-q12",
+      "number": 12,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write a simplified formula for the derivative of $g(x) = f(x)e^x$ in terms of $f(x)$, $f'(x)$, and $e^x$.",
+      "statement": "<p>Let $g(x) = f(x)e^x$, for a differentiable function $f(x)$. Give a simplified formula for $g'(x)$. Functions of the form $g(x)$ are relatively common. If you remember this formula, you can save yourself some time when you need to differentiate them.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q13",
+      "number": 13,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write an expression in terms of $b'(t)$ and $d'(t)$ for the rate at which the town's population is changing at time $t$.",
+      "statement": "<p>A town is founded in the year 2000. After $t$ years, it has had $b(t)$ births and $d(t)$ deaths. Nobody enters or leaves the town except by birth or death (whoa). Give an expression for the rate the population of the town is growing.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q14",
+      "number": 14,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the coordinates $(x, y)$ of every point on the parabola $y = 3x^2$ whose tangent line passes through $(2, 9)$.",
+      "statement": "<p>Find all points on the curve $y = 3x^2$ where the tangent line passes through $(2, 9)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.1-q16",
+      "number": 16,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write a formula in terms of $t$ for the rate of change of the rectangle's area (in $\\text{m}^2/\\text{s}$) at any time $t > 0$.",
+      "statement": "<p>A rectangle is growing. At time $t = 0$, it is a square with side length $1$ metre. Its width increases at a constant rate of $2$ metres per second, and its length increases at a constant rate of $5$ metres per second. How fast is its area increasing at time $t > 0$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.1-q19",
+      "number": 19,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the constants $a$ and $b$ so that the two pieces of $f(x)$ have the same height and the same derivative at $x = 1$.",
+      "statement": "<p>Find constants $a, b$ so that the following function is differentiable:</p>$$f(x) = \\begin{cases} ax^2 + b & x \\le 1 \\\\ e^x & x > 1 \\end{cases}$$",
+      "oldExam": true
+    }
+  ]
+}

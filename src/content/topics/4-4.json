@@ -1,0 +1,136 @@
+{
+  "slug": "4-4",
+  "section": "4.4",
+  "title": "Natural logarithm and logarithmic differentiation",
+  "shortTitle": "Logarithms",
+  "group": "computing-derivatives",
+  "order": 15,
+  "flavour": "all",
+  "goal": "Differentiate natural logarithms $(\\ln x)' = \\frac{1}{x}$, and use logs to tame giant products or formulas like $x^x$ where $x$ is in both the base and the exponent.",
+  "beforeThis": {
+    "skill": "Quick check: taking $\\ln$ turns multiplication into addition ($\\ln(AB) = \\ln A + \\ln B$) and pulls exponents down in front ($\\ln(A^B) = B \\ln A$).",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and logarithms",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Logarithmic Differentiation",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=VgurXuuIBbQ",
+      "watchFor": "Shows how taking logarithms turns variable exponents like $x^{\\sin x}$ and $x^x$ into products you can differentiate."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Introduction to Logarithmic Differentiation",
+      "creator": "Khan Academy (Study Doc link)",
+      "url": "https://www.youtube.com/watch?v=9z1Dz60mWcQ"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.4-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Either use the chain rule $\\frac{1}{10x} \\cdot 10$ or split $\\ln(10x) = \\ln 10 + \\ln x$ first (since $\\ln 10$ is a constant, its derivative is $0$!).",
+      "statement": "<p>Differentiate $f(x) = \\log(10x)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Pull the power down in front first ($\\ln(x^2) = 2\\ln x$) or use the chain rule $\\frac{1}{x^2} \\cdot 2x$.",
+      "statement": "<p>Differentiate $f(x) = \\log(x^2)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the log chain rule $(\\ln u)' = \\frac{u'}{u}$: put $x^2 + x$ in the denominator and its derivative $(2x + 1)$ on top.",
+      "statement": "<p>Differentiate $f(x) = \\log(x^2 + x)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Apply the quotient rule to $\\frac{\\ln x}{x^3}$, then cancel a common power of $x$ to simplify.",
+      "statement": "<p>Find the derivative of $y = \\dfrac{\\log x}{x^3}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.4-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Peel three layers from outside in: $e^{(\\dots)}$, then $\\cos(\\dots)$, and finally $\\ln x \\to 1/x$.",
+      "statement": "<p>Differentiate the function $f(x) = e^{\\cos(\\log x)}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the derivative of $\\log\\left(x + \\sqrt{x^2 + 4}\\right)$ and simplify the resulting fraction.",
+      "statement": "<p>Calculate and simplify the derivative of $\\log\\left(x + \\sqrt{x^2 + 4}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.4-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Put the entire inside expression in the denominator and multiply by its derivative on top using $(\\ln u)' = \\frac{u'}{u}$.",
+      "statement": "<p>Evaluate the derivative of $g(x) = \\log\\left(e^{x^2} + \\sqrt{1 + x^4}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.4-q15",
+      "number": 15,
+      "stage": 2,
+      "half": "first",
+      "asking": "Save yourself huge algebra: split the log first as $\\ln(2x - 1) - \\ln(2x + 1)$ before differentiating, then plug in $x = 1$!",
+      "statement": "<p>Evaluate the derivative of the following function at $x = 1$: $g(x) = \\log\\left(\\dfrac{2x - 1}{2x + 1}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.4-q19",
+      "number": 19,
+      "stage": 2,
+      "half": "first",
+      "asking": "Because $x$ is in both the base and the exponent, take $\\ln$ of both sides ($\\ln y = x \\ln x$) or rewrite $x^x = e^{x \\ln x}$, then differentiate.",
+      "statement": "<p>Differentiate $f(x) = x^x$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q31",
+      "number": 31,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write a general formula for the derivative of $[f(x)]^{g(x)}$ in terms of $f(x)$, $f'(x)$, $g(x)$, and $g'(x)$.",
+      "statement": "<p>Let $f(x)$ and $g(x)$ be differentiable functions, with $f(x) > 0$. Evaluate $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\left\\{[f(x)]^{g(x)}\\right\\}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.4-q32",
+      "number": 32,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Show that the derivative of $\\log(f(x))$ equals $0$ at the exact same $x$-values where $f'(x) = 0$.",
+      "statement": "<p>Let $f(x)$ be a function whose range includes only positive numbers. Show that the curves $y = f(x)$ and $y = \\log(f(x))$ have horizontal tangent lines at the same values of $x$.</p>",
+      "oldExam": false
+    }
+  ]
+}

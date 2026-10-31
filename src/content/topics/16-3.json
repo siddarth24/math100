@@ -1,0 +1,66 @@
+{
+  "slug": "16-3",
+  "section": "16.3",
+  "title": "Lagrange multipliers",
+  "shortTitle": "Lagrange multipliers",
+  "group": "flavour-c-multivariable",
+  "order": 44,
+  "flavour": "C",
+  "goal": "Find the best value of $f(x, y)$ when you are forced to stay on a fixed constraint path $g(x, y) = k$ (like a fixed budget) using Lagrange multipliers: $f_x = \\lambda g_x$, $f_y = \\lambda g_y$, and $g(x, y) = k$.",
+  "beforeThis": {
+    "skill": "Cleanest algebra strategy: solve $f_x = \\lambda g_x$ and $f_y = \\lambda g_y$ for $\\lambda$, set them equal to get a simple relationship between $x$ and $y$, and plug that into the constraint $g(x, y) = k$.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and solving nonlinear systems",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Understanding Lagrange Multipliers Visually",
+      "creator": "Serpentine Integral",
+      "url": "https://www.youtube.com/watch?v=5A39Ht9Wcu0",
+      "watchFor": "Shows visually why the highest and lowest values of $f(x, y)$ along a constraint curve $g(x, y) = k$ occur where their level curves are tangent ($\\nabla f = \\lambda \\nabla g$)."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "16.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Explain geometrically or algebraically whether $x^2 + y^2$ has a minimum or maximum on the hyperbola $xy = 1$, and find all points on $xy = 1$ where that extremum occurs.",
+      "statement": "<ol type=\"a\"><li>Does the function $f(x, y) = x^2 + y^2$ have a maximum or a minimum on the curve $xy = 1$? Explain.</li><li>Find all maxima and minima of $f(x, y)$ on the curve $xy = 1$.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "16.3-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the minimum value of $z = x^2 + y^2$ on the curve $x^2 y = 1$ and state the coordinates $(x, y)$ where it occurs.",
+      "statement": "<p>Use the method of Lagrange multipliers to find the minimum value of $z = x^2 + y^2$ subject to $x^2 y = 1$. At which point or points does the minimum occur?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "16.3-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Set up Lagrange multipliers ($f_x = \\lambda g_x$, $f_y = \\lambda g_y$, and $x^2 + 2y^2 = 1$), eliminate $\\lambda$ to relate $x$ and $y$, and compare the values of $xy$ at the resulting points.",
+      "statement": "<p>Use the method of Lagrange multipliers to find the maximum and minimum values of</p>$$f(x, y) = xy$$<p>subject to the constraint</p>$$x^2 + 2y^2 = 1.$$",
+      "oldExam": true
+    },
+    {
+      "id": "16.3-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the maximum and minimum values of $U = 9x^{1/3}y^{2/3}$ along the budget segment $3200x + 200y = 80{,}000$ with $x \\ge 0$ and $y \\ge 0$.",
+      "statement": "<p>Use the method of Lagrange multipliers to find the maximum and minimum values of the utility function $U = f(x, y) = 9x^{1/3}y^{2/3}$, subject to the constraint $g(x, y) = 3200x + 200y = 80{,}000$, where $x \\ge 0$ and $y \\ge 0$.</p>",
+      "oldExam": false
+    }
+  ]
+}

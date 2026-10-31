@@ -1,0 +1,55 @@
+{
+  "slug": "9-4",
+  "section": "9.4",
+  "title": "Still higher derivatives — Taylor polynomials",
+  "shortTitle": "Taylor polynomials",
+  "group": "taylor-polynomials",
+  "order": 30,
+  "flavour": "all",
+  "goal": "Build degree-$n$ Taylor polynomials $T_n(x) = \\sum_{k=0}^n \\frac{f^{(k)}(a)}{k!}(x - a)^k$ that match a function's first $n$ derivatives at $x = a$, and read derivatives straight off a polynomial's coefficients.",
+  "beforeThis": {
+    "skill": "Shortcut: the number sitting in front of $(x - a)^k$ in a Taylor polynomial is always $\\frac{f^{(k)}(a)}{k!}$. Multiply that coefficient by $k!$ to get $f^{(k)}(a)$ instantly!",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and factorials",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Taylor series (Ch. 11 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
+      "watchFor": "Shows how each $k$th derivative at $x = a$ determines the coefficient $\\frac{f^{(k)}(a)}{k!}$ of $(x - a)^k$."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 2 Lecture 9.9: Approximation of Functions by Taylor Polynomials",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RbreIk02B3c"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "9.4-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the numerical value of $f''(1)$ from the given third-degree Taylor polynomial $T_3(x)$ centered at $x = 1$.",
+      "statement": "<p>The 3rd degree Taylor polynomial for a function $f(x)$ about $x = 1$ is</p>$$T_3(x) = x^3 - 5x^2 + 9x$$<p>What is $f''(1)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.4-q3",
+      "number": 3,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write down the third-degree Maclaurin polynomial $T_3(x)$ by dropping the degree-$4$ term from $T_4(x)$.",
+      "statement": "<p>The 4th-degree Maclaurin polynomial for $f(x)$ is</p>$$T_4(x) = x^4 - x^3 + x^2 - x + 1$$<p>What is the third-degree Maclaurin polynomial for $f(x)$?</p>",
+      "oldExam": false
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "8-4",
+  "section": "8.4",
+  "title": "Sample optimization problems",
+  "shortTitle": "Applied optimization",
+  "group": "optimization",
+  "order": 26,
+  "flavour": "all",
+  "goal": "Tackle full exam-style optimization problems across geometry, physics, economics, and biology—and justify why your critical point is truly the global best.",
+  "beforeThis": {
+    "skill": "To prove your answer is the global max/min, either compare outputs at the endpoints of $[a, b]$ or show $f'(x)$ goes $+$ then $-$ (for a max) across your whole interval.",
+    "links": [
+      {
+        "label": "Precalculus: Geometry and quadratic functions",
+        "href": "/precalculus#geometry"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Minimizing Surface Area Given a Fixed Volume",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=6zqrFILyVbI",
+      "watchFor": "Shows the complete optimization workflow from word problem to derivative test."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.7: Optimization; Max/Min Application Problems",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=SWZcq_biZLw"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "8.4-q1",
+      "number": 1,
+      "half": "harder",
+      "asking": "Find the two positive numbers summing to $20$ that optimize each of the three given expressions.",
+      "statement": "<p><strong>Find the numbers.</strong> The sum of two positive numbers is $20$. Find the numbers</p><ol type=\"a\"><li>if their product is a maximum,</li><li>if the sum of their squares is a minimum,</li><li>if the product of the square of one and the cube of the other is a maximum.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q3",
+      "number": 3,
+      "half": "harder",
+      "asking": "Write the distance between Car A and Car B as a function of time $t$ after 9 A.M., and find the time and minimum distance of closest approach.",
+      "statement": "<p><strong>Distance of two cars.</strong> At 9 A.M., car B is $25\\text{ km}$ west of car A. Car A then travels to the south at $30\\text{ km/h}$ and car B travels east at $40\\text{ km/h}$. When are they closest to each other and what is this distance?</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q8",
+      "number": 8,
+      "half": "harder",
+      "asking": "Find the maximum rectangular area (in $\\text{ft}^2$) that can be enclosed by a perimeter of $100\\text{ ft}$.",
+      "statement": "<p><strong>The largest garden.</strong> You are building a fence to completely enclose part of your backyard for a vegetable garden. You have already purchased material for a fence of length $100\\text{ ft}$. What is the largest rectangular area that this fence can enclose?</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q14",
+      "number": 14,
+      "half": "harder",
+      "asking": "Find the temperature $T \\in [0, 30]$ (in $^\\circ\\text{C}$) that minimizes the volume $V(T)$ of a fixed mass of water, thereby maximizing its density.",
+      "statement": "<p><strong>Water and ice.</strong> Why does ice float on water? Because the density of ice is lower! In fact, water is the only common liquid whose maximal density occurs above its freezing temperature. This phenomenon favours the survival of aquatic life by preventing ice from forming at the bottoms of lakes. According to the Handbook of Chemistry and Physics, a mass of water that occupies one liter at $0^\\circ\\text{C}$ occupies a volume (in liters) of</p>$$V = -aT^3 + bT^2 - cT + 1$$<p>at $T^\\circ\\text{C}$ where $0 \\le T \\le 30$ and where the coefficients are</p>$$a = 6.79 \\times 10^{-8}, \\quad b = 8.51 \\times 10^{-6}, \\quad c = 6.42 \\times 10^{-5}.$$<p>Find the temperature between $0^\\circ\\text{C}$ and $30^\\circ\\text{C}$ at which the density of water is the greatest. (Hint: maximizing the density is equivalent to minimizing the volume. Why is this?).</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q20",
+      "number": 20,
+      "half": "harder",
+      "asking": "Explain the parabolic shape of the logistic growth rate $R(N) = rN(1 - N/K)$ and show using the sign of $R'(N)$ that $N = K/2$ maximizes the growth rate.",
+      "statement": "<p><strong>Logistic growth.</strong> Consider a fish population whose density (individuals per unit area) is $N$, and suppose this fish population grows logistically, so that the rate of growth $R$ satisfies</p>$$R(N) = rN(1 - N/K)$$<p>where $r$ and $K$ are positive constants.</p><ol type=\"a\"><li>Sketch $R$ as a function of $N$ or explain Figure 8.2.</li><li>Use a first derivative test to justify the claim that $N = K/2$ is a local maximum for the function $G(N)$.</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/8.4-q20.png",
+          "alt": "Figure 8.2: Graph of population growth rate G on the vertical axis versus population size N on the horizontal axis, showing a downward-opening parabola with intercepts at N = 0 and N = K and its peak at N = K/2."
+        }
+      ],
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q21",
+      "number": 21,
+      "half": "harder",
+      "asking": "Find the non-zero fish density $N$ (in terms of $r, K, q, E$) at which the logistic growth rate $R(N)$ equals the harvesting rate $h(N) = qEN$.",
+      "statement": "<p><strong>Logistic growth with harvesting.</strong> Consider a fish population of density $N$ growing logistically, i.e. with rate of growth $R(N) = rN(1 - N/K)$ where $r$ and $K$ are positive constants. The rate of harvesting (i.e. removal) of the population is</p>$$h(N) = qEN$$<p>where $E$, the effort of the fishermen, and $q$, the catchability of this type of fish, are positive constants. At what density of fish does the growth rate exactly balance the harvesting rate? This density is called the maximal sustainable yield: MSY.</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "8.4-q22",
+      "number": 22,
+      "half": "harder",
+      "asking": "Using the equilibrium density $N(E)$ from Question 21, express the sustainable harvest $h = qEN(E)$ as a function of fishing effort $E$ and find the effort $E$ that maximizes it.",
+      "statement": "<p><strong>Conservation of a harvested population.</strong> Conservationists insist that the density of fish should never be allowed to go below a level at which growth rate of the fish exactly balances with the harvesting rate. At this level, the harvesting is at its maximal sustainable yield. If more fish are taken, the population keeps dropping and the fish eventually go extinct.</p><p>What level of fishing effort should be used to lead to the greatest harvest at this maximal sustainable yield?</p><p><em>Note:</em> you should first complete Exercise 21.</p>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

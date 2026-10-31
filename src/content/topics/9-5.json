@@ -1,0 +1,64 @@
+{
+  "slug": "9-5",
+  "section": "9.5",
+  "title": "Somemore Taylor",
+  "shortTitle": "Standard Maclaurin",
+  "group": "taylor-polynomials",
+  "order": 31,
+  "flavour": "all",
+  "goal": "Use the famous Maclaurin series (centered at $a = 0$) for $e^x$, $\\sin x$, $\\cos x$, $\\frac{1}{1-x}$, and $\\ln(1+x)$ as Lego blocks to build new Taylor polynomials without taking endless derivatives.",
+  "beforeThis": {
+    "skill": "Instead of differentiating $e^{-x^2}$ six times, just take the known pattern $e^u = 1 + u + \\frac{u^2}{2!} + \\frac{u^3}{3!} + \\cdots$ and plug in $u = -x^2$!",
+    "links": [
+      {
+        "label": "Precalculus: Trigonometry and special angles",
+        "href": "/precalculus#trig"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Taylor series (Ch. 11 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
+      "watchFor": "Visualizes the standard Maclaurin polynomials for $\\cos x$, $\\sin x$, and $e^x$."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 2 Lecture 9.9: Approximation of Functions by Taylor Polynomials",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RbreIk02B3c"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "9.5-q1",
+      "number": 1,
+      "stage": 2,
+      "half": "first",
+      "asking": "Add the known Maclaurin series for $\\sin x$ (odd powers) and $\\cos x$ (even powers) up to the $x^{16}$ term—no differentiating needed!",
+      "statement": "<p>Give the 16th-order Maclaurin polynomial for $f(x) = \\sin x + \\cos x$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.5-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Replace $e^x$, $\\sin x$, and $\\cos x$ with their Maclaurin polynomials up to degree $3$ to find the exact limit as $x \\to 0$.",
+      "statement": "<p>Use Maclaurin polynomials to evaluate $\\lim_{x \\to 0} \\dfrac{e^x - \\sin x - \\cos x - x^2}{x^3}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.5-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Write the 5th-degree Maclaurin polynomial for $6\\arctan x$ and evaluate it at a known special-angle input to estimate $\\pi$.",
+      "statement": "<p>Use a 5th-order Maclaurin polynomial for $6\\arctan x$ to approximate $\\pi$.</p>",
+      "oldExam": false
+    }
+  ]
+}

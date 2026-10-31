@@ -1,0 +1,57 @@
+{
+  "slug": "15-2",
+  "section": "15.2",
+  "title": "Higher order partial derivatives",
+  "shortTitle": "Higher partials",
+  "group": "flavour-c-multivariable",
+  "order": 41,
+  "flavour": "C",
+  "goal": "Take second partial derivatives ($f_{xx}, f_{xy}, f_{yx}, f_{yy}$) to measure how a 3D surface bends, and use the shortcut that mixed partials match ($f_{xy} = f_{yx}$).",
+  "beforeThis": {
+    "skill": "Notation tip: in $f_{xy} = \\frac{\\partial^2 f}{\\partial y \\, \\partial x}$, differentiate with respect to $x$ first, then differentiate that result with respect to $y$.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and chain/quotient expressions",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "What are derivatives in 3D? (Partial Derivatives)",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=EoEV5-_mLeM",
+      "watchFor": "Builds the foundation for differentiating a multivariable function multiple times with respect to $x$ and $y$."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "15.2-q5",
+      "number": 5,
+      "stage": 1,
+      "half": "first",
+      "asking": "Differentiate step by step with respect to the indicated variable while holding the other variable fixed as a constant.",
+      "statement": "<p>Find the specified partial derivatives.</p><ol type=\"a\"><li>$f(x, y) = x^2 y^3$; $\\; f_{xx}(x, y), \\; f_{xyy}(x, y), \\; f_{yxy}(x, y)$</li><li>$f(x, y) = e^{xy^2}$; $\\; f_{xx}(x, y), \\; f_{xy}(x, y), \\; f_{xxy}(x, y), \\; f_{xyy}(x, y)$</li><li>$f(u, v, w) = \\dfrac{1}{u + 2v + 3w}$; $\\; \\dfrac{\\partial^3 f}{\\partial w \\partial v \\partial u}(u, v, w), \\; \\dfrac{\\partial^3 f}{\\partial w \\partial v \\partial u}(3, 2, 1)$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "15.2-q6",
+      "number": 6,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find all four second-order partial derivatives ($f_{xx}, f_{xy}, f_{yx}, f_{yy}$) of $f(x, y) = \\sqrt{x^2 + 5y^2}$.",
+      "statement": "<p>Find all second partial derivatives of $f(x, y) = \\sqrt{x^2 + 5y^2}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "15.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Compute both $f_{xy} = (f_x)_y$ and $f_{yx} = (f_y)_x$ explicitly and show that the two expressions are equal.",
+      "statement": "<p>$$f(x, y) = \\frac{\\tan(xy)}{\\ln x}$$</p><p>Verify Clairaut’s theorem by showing $f_{xy} = f_{yx}$.</p>",
+      "oldExam": false
+    }
+  ]
+}

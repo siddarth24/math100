@@ -1,0 +1,145 @@
+{
+  "slug": "7-6",
+  "section": "7.6",
+  "title": "Sketching examples",
+  "shortTitle": "Curve sketching",
+  "group": "curve-sketching",
+  "order": 22,
+  "flavour": "all",
+  "goal": "Put all the clues together—domain, asymptotes, uphill/downhill intervals ($f'$), and cup/cap bend ($f''$)—to draw the complete shape of a function.",
+  "beforeThis": {
+    "skill": "Think of curve sketching like connect-the-dots with posture: plot your key points and asymptotes first, then connect them using the uphill/downhill and $\\cup / \\cap$ chart.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions, exponentials, and trig",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Concavity & Curve Sketching",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
+      "watchFor": "Shows how domain, asymptotes, $f'(x)$, and $f''(x)$ fit together to determine the full shape of a curve."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.6: How to Sketch Graphs of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=8u6woY05aL0"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "7.6-q1",
+      "number": 1,
+      "stage": 2,
+      "half": "first",
+      "asking": "Work through the domain, intervals of increase/decrease, local extrema, concavity, vertical tangent point, and full graph sketch of $f(x) = x\\sqrt{3 - x}$.",
+      "statement": "<p>Let $f(x) = x\\sqrt{3 - x}$.</p><ol type=\"a\"><li>Find the domain of $f(x)$.</li><li>Determine the $x$-coordinates of the local maxima and minima (if any) and intervals where $f(x)$ is increasing or decreasing.</li><li>Determine intervals where $f(x)$ is concave upwards or downwards, and the $x$ coordinates of inflection points (if any). You may use, without verifying it, the formula $$f''(x) = \\frac{3x - 12}{4(3 - x)^{3/2}}.$$</li><li>There is a point at which the tangent line to the curve $y = f(x)$ is vertical. Find this point.</li><li>Sketch the graph $y = f(x)$, showing the features given in items (a) to (d) above and giving the $(x, y)$ coordinates for all points occurring above.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q2",
+      "number": 2,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find all critical points, extrema, asymptotes, inflection points, and concavity intervals of $f(x) = \\frac{x^3 - 2}{x^4}$, and sketch its graph.",
+      "statement": "<p>Sketch the graph of</p>$$f(x) = \\frac{x^3 - 2}{x^4}.$$<p>Indicate the critical points, local and absolute maxima and minima, vertical and horizontal asymptotes, inflection points and regions where the curve is concave upward or downward.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the provided formulas for $f(x)$, $f'(x)$, and $f''(x)$ to find all extrema, increasing/decreasing and concavity intervals, and asymptotes, and sketch $f(x)$.",
+      "statement": "<p>The first and second derivatives of the function $f(x) = \\dfrac{x^4}{1 + x^3}$ are:</p>$$f'(x) = \\frac{4x^3 + x^6}{(1 + x^3)^2} \\qquad \\text{and} \\qquad f''(x) = \\frac{12x^2 - 6x^5}{(1 + x^3)^3}$$<p>Graph $f(x)$. Include local and absolute maxima and minima, regions where $f(x)$ is increasing or decreasing, regions where the curve is concave upward or downward, and any asymptotes.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the provided formulas for $f(x)$, $f'(x)$, and $f''(x)$ to find all extrema, concavity intervals, and asymptotes, and sketch $f(x)$.",
+      "statement": "<p>The first and second derivatives of the function $f(x) = \\dfrac{x^3}{1 - x^2}$ are:</p>$$f'(x) = \\frac{3x^2 - x^4}{(1 - x^2)^2} \\qquad \\text{and} \\qquad f''(x) = \\frac{6x + 2x^3}{(1 - x^2)^3}$$<p>Graph $f(x)$. Include local and absolute maxima and minima, regions where the curve is concave upward or downward, and any asymptotes.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the critical points, local and absolute extrema, and horizontal asymptotes of $f(x) = (1 + 2x)e^{-x^2}$, and sketch the curve with approximate inflection points marked.",
+      "statement": "<p>The function $f(x)$ and its derivative are given below:</p>$$f(x) = (1 + 2x)e^{-x^2} \\qquad \\text{and} \\qquad f'(x) = 2(1 - x - 2x^2)e^{-x^2}$$<p>Sketch the graph of $f(x)$. Indicate the critical points, local and/or absolute maxima and minima, and asymptotes. Without actually calculating the inflection points, indicate on the graph their approximate location.</p><p><em>Note:</em> $\\lim_{x \\to \\pm\\infty} f(x) = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find all intervals of increase/decrease, concavity, inflection points, and local/global extrema of $f(x) = x e^{-x^2/2}$, and sketch its graph.",
+      "statement": "<p>Consider the function $f(x) = x e^{-x^2/2}$.</p><p><em>Note:</em> $\\lim_{x \\to \\pm\\infty} f(x) = 0$.</p><ol type=\"a\"><li>Find all inflection points and intervals of increase, decrease, convexity up, and convexity down. You may use without proof the formula $f''(x) = (x^3 - 3x)e^{-x^2/2}$.</li><li>Find local and global minima and maxima.</li><li>Use all the above to draw a graph for $f$. Indicate all special points on the graph.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the intervals of increase/decrease, local extrema, concavity, and inflection points of $f(x) = x + 2\\sin x$, and sketch its graph.",
+      "statement": "<p>Use the techniques from this section to sketch the graph of $f(x) = x + 2\\sin x$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.6-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find all local extrema and inflection points of $f(x) = 4\\sin x - 2\\cos 2x$, sketch its graph, and state its maximum and minimum values on $[0, \\pi]$.",
+      "statement": "<p>$$f(x) = 4\\sin x - 2\\cos 2x$$</p><p>Graph the equation $y = f(x)$, including all important features. (In particular, find all local maxima and minima and all inflection points.) Additionally, find the maximum and minimum values of $f(x)$ on the interval $[0, \\pi]$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q11",
+      "number": 11,
+      "stage": 3,
+      "half": "harder",
+      "asking": "From the given formula for $f'(x)$ (not $f(x)$!) and known values of $f$, find the intervals of increase/decrease, local extrema, concavity, inflection points, $\\lim_{x \\to -\\infty} f(x)$, and sketch $y = f(x)$.",
+      "statement": "<p>A function $f(x)$ defined on the whole real number line satisfies the following conditions</p>$$f(0) = 0 \\qquad f(2) = 2 \\qquad \\lim_{x \\to +\\infty} f(x) = 0 \\qquad f'(x) = K(2x - x^2)e^{-x}$$<p>for some positive constant $K$. (Read carefully: you are given the derivative of $f(x)$, not $f(x)$ itself.)</p><ol type=\"a\"><li>Determine the intervals on which $f$ is increasing and decreasing and the location of any local maximum and minimum values of $f$.</li><li>Determine the intervals on which $f$ is concave up or down and the $x$-coordinates of any inflection points of $f$.</li><li>Determine $\\lim_{x \\to -\\infty} f(x)$.</li><li>Sketch the graph of $y = f(x)$, showing any asymptotes and the information determined in parts (a) and (b).</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q12",
+      "number": 12,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Sketch $f(x) = e^{-x}$ for $x \\ge 0$ and its inverse $g(x) = f^{-1}(x)$, state the domain and range of $g$, and compute $g'(1/2)$.",
+      "statement": "<p>Let $f(x) = e^{-x}$, $x \\ge 0$.</p><ol type=\"a\"><li>Sketch the graph of the equation $y = f(x)$. Indicate any local extrema and inflection points.</li><li>Sketch the graph of the inverse function $y = g(x) = f^{-1}(x)$.</li><li>Find the domain and range of the inverse function $g(x) = f^{-1}(x)$.</li><li>Evaluate $g'\\left(\\dfrac{1}{2}\\right)$.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q13",
+      "number": 13,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Sketch $y = x^5 - x$ with all extrema and inflection points, and use the local maximum and minimum heights to determine how many real roots $x^5 - x + k = 0$ has for each value of $k$.",
+      "statement": "<p>(a) Sketch the graph of $y = f(x) = x^5 - x$, indicating asymptotes, local maxima and minima, inflection points, and where the graph is concave up/concave down.</p><p>(b) Consider the function $f(x) = x^5 - x + k$, where $k$ is a constant, $-\\infty < k < \\infty$. How many roots does the function have? (Your answer might depend on the value of $k$.)</p>",
+      "oldExam": true
+    },
+    {
+      "id": "7.6-q14",
+      "number": 14,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Sketch $\\sinh(x)$ and $\\cosh(x)$, specify the domains and graphs of their inverses $\\sinh^{-1}(x)$ and $\\cosh^{-1}(x)$, and find a formula for $\\frac{\\mathrm{d}}{\\mathrm{d}x}\\{\\cosh^{-1}(x)\\}$.",
+      "statement": "<p>The hyperbolic trigonometric functions $\\sinh(x)$ and $\\cosh(x)$ are defined by</p>$$\\sinh(x) = \\frac{e^x - e^{-x}}{2} \\qquad \\cosh(x) = \\frac{e^x + e^{-x}}{2}$$<p>They have many properties that are similar to corresponding properties of $\\sin(x)$ and $\\cos(x)$. In particular, it is easy to see that</p>$$\\frac{\\mathrm{d}}{\\mathrm{d}x} \\sinh(x) = \\cosh(x) \\qquad \\frac{\\mathrm{d}}{\\mathrm{d}x} \\cosh(x) = \\sinh(x) \\qquad \\cosh^2(x) - \\sinh^2(x) = 1$$<p>You may use these properties in your solution to this question.</p><ol type=\"a\"><li>Sketch the graphs of $\\sinh(x)$ and $\\cosh(x)$.</li><li>Define inverse hyperbolic trigonometric functions $\\sinh^{-1}(x)$ and $\\cosh^{-1}(x)$, carefully specifying their domains of definition. Sketch the graphs of $\\sinh^{-1}(x)$ and $\\cosh^{-1}(x)$.</li><li>Find $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\left\\{\\cosh^{-1}(x)\\right\\}$.</li></ol>",
+      "oldExam": true
+    }
+  ]
+}

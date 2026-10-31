@@ -1,0 +1,63 @@
+{
+  "slug": "14-1",
+  "section": "14.1",
+  "title": "Three-dimensional coordinate systems",
+  "shortTitle": "3D coordinates",
+  "group": "flavour-c-multivariable",
+  "order": 38,
+  "flavour": "C",
+  "goal": "Get comfortable plotting points $(x, y, z)$, planes, spheres, and distances in 3D space before we start doing calculus on 3D surfaces.",
+  "beforeThis": {
+    "skill": "3D distance is just the 2D Pythagorean formula with $+ \\Delta z^2$ tacked onto the end under the square root: $\\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$.",
+    "links": [
+      {
+        "label": "Precalculus: Geometry and Pythagorean theorem",
+        "href": "/precalculus#geometry"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Functions of Two Variables & 3D Graphs",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=acdX4YamDtU",
+      "watchFor": "Introduces visualizing points, coordinate planes, and surfaces in three-dimensional $(x, y, z)$ space."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "14.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Spot which shaded wall or floor in the 3D diagram is the $xy$-, $yz$-, and $xz$-plane, and match each corner of the dark triangle to its axis intercept.",
+      "statement": "<p>Part of $\\mathbb{R}^3$ is sketched below, along with a triangle.</p><p>Identify the following parts of the sketch:</p><ol type=\"a\"><li>the $xy$-plane</li><li>the $yz$-plane</li><li>the $xz$-plane</li><li>the vertex of the triangle lying on $(1, 0, 0)$</li><li>the vertex of the triangle lying on $(0, 1, 0)$</li><li>the vertex of the triangle lying on $(0, 0, 1)$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/14.1-q1.png",
+          "alt": "First octant of R^3 with positive x-axis pointing down-left, positive y-axis pointing down-right, and positive z-axis pointing straight up. Three coordinate planes meet at the origin, and a dark shaded triangle connects one vertex on each positive coordinate axis."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "14.1-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the 3D Pythagorean distance formula $\\sqrt{(4-1)^2 + (-5-2)^2 + (6-3)^2}$.",
+      "statement": "<p>What is the distance from the point $(1, 2, 3)$ to the point $(4, -5, 6)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "14.1-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the straight-line 3D distance from the nest after converting the north, east, and altitude displacements into consistent units.",
+      "statement": "<p>A bird sets off from its nest. It flies one kilometre due north, then two kilometres due east, gaining $100$ metres of altitude. How far is it from its nest?</p>",
+      "oldExam": false
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "slug": "4-7",
+  "section": "4.7",
+  "title": "Inverse trigonometric functions and their derivatives",
+  "shortTitle": "Inverse trig",
+  "group": "computing-derivatives",
+  "order": 14,
+  "flavour": "all",
+  "goal": "Differentiate inverse trig functions ($\\arcsin, \\arccos, \\arctan, \\operatorname{arcsec}$) and find the slope of an inverse function $f^{-1}$ by flipping the slope of $f$.",
+  "beforeThis": {
+    "skill": "Intuition: an inverse function swaps $x$ and $y$, so its graph is flipped across $y = x$ and its slope is the reciprocal $\\frac{1}{f'(x)}$!",
+    "links": [
+      {
+        "label": "Precalculus: Trigonometry and inverse trig domains",
+        "href": "/precalculus#trig"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Derivative of Trigonometric Functions",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=QDKj-E-ICPo",
+      "watchFor": "Reviews trigonometric derivatives and right-triangle relationships used in inverse trig differentiation."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.7: Implicit Differentiation",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RUS4mKo9tBk"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.7-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the derivative $f'(x)$ of $\\arcsin(x/3)$ and state the interval of $x$-values for which $f(x)$ is defined.",
+      "statement": "<p>Differentiate $f(x) = \\arcsin\\left(\\dfrac{x}{3}\\right)$. What is the domain of $f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the derivative $f'(t)$ and state all $t$-values in $[-1, 1]$ where the denominator $t^2 - 1$ is nonzero.",
+      "statement": "<p>Differentiate $f(t) = \\dfrac{\\arccos t}{t^2 - 1}$. What is the domain of $f(t)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the chain rule on $\\operatorname{arcsec}(u)$ and check which real numbers $x$ satisfy $|-x^2 - 2| \\ge 1$.",
+      "statement": "<p>Differentiate $f(x) = \\operatorname{arcsec}(-x^2 - 2)$. What is the domain of $f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the chain rule $(\\arctan u)' = \\frac{u'}{1 + u^2}$ with $u = x/a$ and simplify the complex fraction.",
+      "statement": "<p>Differentiate $f(x) = \\dfrac{1}{a} \\arctan\\left(\\dfrac{x}{a}\\right)$, where $a$ is a nonzero constant. What is the domain of $f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the product rule on $x \\arcsin x$ and the chain rule on $\\sqrt{1 - x^2}$—watch how neatly the two parts cancel!",
+      "statement": "<p>Differentiate $f(x) = x \\arcsin x + \\sqrt{1 - x^2}$. What is the domain of $f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "first",
+      "asking": "Differentiate $\\arctan(x^2)$ using the chain rule, set the numerator equal to $0$, and solve for $x$.",
+      "statement": "<p>For which values of $x$ is the tangent line to $y = \\arctan(x^2)$ horizontal?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q12",
+      "number": 12,
+      "stage": 2,
+      "half": "first",
+      "asking": "Add the derivatives of $\\arcsin x$ and $\\arccos x$ together—notice why their sum is $0$ (geometrically, $\\arcsin x + \\arccos x = \\pi/2$ is a constant!).",
+      "statement": "<p>Evaluate $\\dfrac{\\mathrm{d}}{\\mathrm{d}x}\\{\\arcsin x + \\arccos x\\}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.7-q21",
+      "number": 21,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Express the derivative $g'(y)$ of the inverse function $g(y) = f^{-1}(y)$ when $f(x) = x + \\cos x$.",
+      "statement": "<p>Let $f(x) = x + \\cos x$, and let $g(y) = f^{-1}(y)$ be the inverse function. Determine $g'(y)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.7-q22",
+      "number": 22,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact numerical value of the derivative of the inverse function $f^{-1}$ at the output $y = \\pi - 1$ by first identifying which input $x$ gives $f(x) = \\pi - 1$.",
+      "statement": "<p>$f(x) = 2x - \\sin(x)$ is one-to-one. Find $\\left(f^{-1}\\right)'(\\pi - 1)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.7-q23",
+      "number": 23,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact numerical value of the derivative of the inverse function $f^{-1}$ at the output $y = e + 1$ by first identifying which input $x$ gives $f(x) = e + 1$.",
+      "statement": "<p>$f(x) = e^x + x$ is one-to-one. Find $\\left(f^{-1}\\right)'(e + 1)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.7-q29",
+      "number": 29,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Differentiate both sides of $\\arcsin(x + 2y) = x^2 + y^2$ with respect to $x$ and solve for $y'$ in terms of $x$ and $y$.",
+      "statement": "<p>Suppose a curve is defined implicitly by</p>$$\\arcsin(x + 2y) = x^2 + y^2.$$<p>Solve for $y'$ in terms of $x$ and $y$.</p>",
+      "oldExam": false
+    }
+  ]
+}

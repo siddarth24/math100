@@ -1,0 +1,208 @@
+{
+  "slug": "6",
+  "section": "6",
+  "title": "L’Hôpital’s rule and indeterminate forms",
+  "shortTitle": "L’Hôpital’s rule",
+  "group": "lhopital",
+  "order": 18,
+  "flavour": "all",
+  "goal": "Break $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ limit ties using L'Hôpital's rule: compare the speed of the top ($f'$) to the speed of the bottom ($g'$).",
+  "beforeThis": {
+    "skill": "Always test by plugging in first! L'Hôpital's rule only works on $\\frac{0}{0}$ or $\\frac{\\pm\\infty}{\\pm\\infty}$. For $0 \\cdot \\infty$, flip one piece into the bottom; for $1^\\infty$, take $\\ln$ first.",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and logarithms",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Limits, L'Hôpital's rule, and epsilon delta definitions (watch 9:53–17:17)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=kfF40MiS7zA&t=593s",
+      "watchFor": "Watch the L'Hôpital portion from 9:53 to 17:17 (the earlier epsilon-delta section is beyond this course)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "L'Hôpital's Rule",
+      "creator": "Organic Chemistry Tutor (Study Doc link)",
+      "url": "https://www.youtube.com/watch?v=Gh48aOvWcxw"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "6-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the exact value of the limit as $x$ approaches $1$ (first check whether the numerator and denominator actually approach $0$).",
+      "statement": "<p>Evaluate $\\lim_{x \\to 1} \\dfrac{x^3 - e^{x - 1}}{\\sin(\\pi x)}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Check whether $\\frac{\\ln x}{x}$ is actually indeterminate as $x \\to 0^+$: since $\\ln x \\to -\\infty$ and dividing by a tiny positive $x$ makes it even larger in magnitude, no L'Hôpital is needed!",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0^+} \\dfrac{\\log x}{x}$. (Remember: in these notes, $\\log$ means logarithm base $e$.)</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Rewrite $(\\ln x)^2 e^{-x}$ as the fraction $\\frac{(\\ln x)^2}{e^x}$ so it has the $\\frac{\\infty}{\\infty}$ form, then apply L'Hôpital's rule.",
+      "statement": "<p>Evaluate $\\lim_{x \\to \\infty} (\\log x)^2 e^{-x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Move $e^{-x}$ to the denominator to get $\\frac{x^2}{e^x}$ (which is $\\frac{\\infty}{\\infty}$), then apply L'Hôpital's rule twice until the $x^2$ on top becomes a constant.",
+      "statement": "<p>Evaluate $\\lim_{x \\to \\infty} x^2 e^{-x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "first",
+      "asking": "Confirm that plugging in $x = 0$ gives $0/0$, then apply L'Hôpital's rule (or simplify trig terms) to find the limit.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{x - x \\cos x}{x - \\sin x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "Since $\\frac{(\\ln x)^2}{x}$ has the $\\frac{\\infty}{\\infty}$ form as $x \\to \\infty$, apply L'Hôpital's rule and simplify.",
+      "statement": "<p>Evaluate $\\lim_{x \\to \\infty} \\dfrac{(\\log x)^2}{x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Since plugging in $x = 0$ gives $0/0$, apply L'Hôpital's rule (or replace $\\sin^2 x$ with $1 - \\cos^2 x = (1 - \\cos x)(1 + \\cos x)$!).",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{\\sin^2 x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "first",
+      "asking": "Apply L'Hôpital's rule twice (or factor $x^2$ out of the argument) to resolve the $0/0$ ratio as $x \\to 0$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{\\sin(x^3 + 3x^2)}{\\sin^2 x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Simplify $\\ln(x^3) = 3\\ln x$ first, check that $x = 1$ gives $0/0$, and apply L'Hôpital's rule.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 1} \\dfrac{\\log(x^3)}{x^2 - 1}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q15",
+      "number": 15,
+      "stage": 2,
+      "half": "first",
+      "asking": "Substitute $u = 1/x^2$ (so $u \\to +\\infty$ as $x \\to 0$) to turn the fraction into $\\frac{u^2}{e^u}$, then use L'Hôpital's rule!",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{e^{-1/x^2}}{x^4}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "first",
+      "asking": "Since plugging in $x = 0$ gives $0/0$, differentiate the top and bottom separately using L'Hôpital's rule and plug in $x = 0$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{x e^x}{\\tan(3x)}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the value of the constant $c$ for which the quotient approaches a finite limit as $x \\to 0$.",
+      "statement": "<p>Find $c$ so that $\\lim_{x \\to 0} \\dfrac{1 + cx - \\cos x}{e^{x^2} - 1}$ exists.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q18",
+      "number": 18,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Apply L'Hôpital's rule twice and look at how the answer changes depending on whether $k = 2$ (making the leading term cancel) or $k \\ne 2$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\dfrac{e^{k \\sin(x^2)} - (1 + 2x^2)}{x^4}$, where $k$ is a constant.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "6-q19",
+      "number": 19,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Show that the relative error $\\frac{|S(n) - A(n)|}{S(n)}$ approaches $0$ as $n \\to \\infty$, and determine what happens to the absolute error $|S(n) - A(n)|$.",
+      "statement": "<p>Suppose an algorithm, given an input with $n$ variables, will terminate in at most $S(n) = 5n^4 - 13n^3 - 4n + \\log(n)$ steps. A researcher writes that the algorithm will terminate in roughly at most $A(n) = 5n^4$ steps. Show that the percentage error involved in using $A(n)$ instead of $S(n)$ tends to zero as $n$ gets very large. What happens to the absolute error?</p><p><em>Remark:</em> this is a very common kind of approximation. When people deal with functions that give very large numbers, often they don’t care about the exact large number—they only want a ballpark. So, a complicated function might be replaced by an easier function that doesn’t give a large relative error.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "6-q20",
+      "number": 20,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Construct explicit formulas for two functions $f(x) \\to 1$ and $g(x) \\to \\infty$ as $x \\to \\infty$ such that $[f(x)]^{g(x)} \\to 5$.",
+      "statement": "<p>Give two functions $f(x)$ and $g(x)$ with the following properties:</p><ol type=\"i\"><li>$\\lim_{x \\to \\infty} f(x) = 1$</li><li>$\\lim_{x \\to \\infty} g(x) = \\infty$</li><li>$\\lim_{x \\to \\infty} [f(x)]^{g(x)} = 5$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "6-q21",
+      "number": 21,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Take $\\ln$ first (or rewrite as $e^{\\frac{\\ln(\\sin^2 x)}{x^2}}$) to turn the variable power into a fraction you can attack with L'Hôpital's rule.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\sqrt[x^2]{\\sin^2 x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "6-q22",
+      "number": 22,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Rewrite $(\\cos x)^{1/x^2}$ as $e^{\\frac{\\ln(\\cos x)}{x^2}}$, use L'Hôpital's rule on the exponent $\\frac{\\ln(\\cos x)}{x^2}$ as $x \\to 0$, and exponentiate at the end.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\sqrt[x^2]{\\cos x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "6-q23",
+      "number": 23,
+      "stage": 3,
+      "half": "harder",
+      "asking": "First find the limit of the exponent $x \\ln x = \\frac{\\ln x}{1/x}$ as $x \\to 0^+$ using L'Hôpital's rule, then plug that result into $e^{(\\dots)}$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0^+} e^{x \\log x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "6-q24",
+      "number": 24,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Take $\\ln$ first so the power $x$ drops down in front, find the limit of $x \\ln(-\\ln(x^2))$ as $x \\to 0$, and put $e$ to that power.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\left[-\\log(x^2)\\right]^x$.</p>",
+      "oldExam": false
+    }
+  ]
+}

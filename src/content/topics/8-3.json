@@ -1,0 +1,184 @@
+{
+  "slug": "8-3",
+  "section": "8.3",
+  "title": "Max/min examples",
+  "shortTitle": "Optimization problems",
+  "group": "optimization",
+  "order": 25,
+  "flavour": "all",
+  "goal": "Turn real-world \"find the best/cheapest/largest\" word problems into a one-variable calculus problem and find the winning value.",
+  "beforeThis": {
+    "skill": "Two-equation recipe: 1. Write the formula you want to maximize or minimize. 2. Use the given fixed number (perimeter, volume, budget) to replace a second variable.",
+    "links": [
+      {
+        "label": "Precalculus: Geometry, surface area, and volume formulas",
+        "href": "/precalculus#geometry"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Minimizing Surface Area Given a Fixed Volume",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=6zqrFILyVbI",
+      "watchFor": "Walks through turning a geometric constraint and an objective quantity into a single-variable optimization problem."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.7: Optimization; Max/Min Application Problems",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=SWZcq_biZLw"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "8.3-q1",
+      "number": 1,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find where $f'(x) = 5x^4 - 5 = 0$ inside $[-2, 0]$, then plug that critical point and both endpoints ($x = -2$ and $x = 0$) into $f(x)$ to see which gives the largest and smallest height.",
+      "statement": "<p>Find the global maximum and the global minimum for $f(x) = x^5 - 5x + 2$ on the interval $[-2, 0]$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q2",
+      "number": 2,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Set $f'(x) = 0$ to find the critical point inside $[0, 2]$, then compare $f(x)$ at the critical point against the two endpoints $x = 0$ and $x = 2$.",
+      "statement": "<p>Find the global maximum and the global minimum for $f(x) = x^5 - 5x - 10$ on the interval $[0, 2]$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q3",
+      "number": 3,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find where $f'(x) = 6x^2 - 12x = 0$ inside $[1, 4]$, then evaluate $f(x)$ at the critical point and at the endpoints $x = 1$ and $x = 4$ to pick the max and min.",
+      "statement": "<p>Find the global maximum and the global minimum for $f(x) = 2x^3 - 6x^2 - 2$ on the interval $[1, 4]$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the $(x, y)$ coordinates of the local maximum and local minimum of $h(x) = x^3 - 12x + 4$.",
+      "statement": "<p>Consider the function $h(x) = x^3 - 12x + 4$. What are the coordinates of the local maximum of $h(x)$? What are the coordinates of the local minimum of $h(x)$?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the $(x, y)$ coordinates of the local maximum and local minimum of $h(x) = 2x^3 - 24x + 1$.",
+      "statement": "<p>Consider the function $h(x) = 2x^3 - 24x + 1$. What are the coordinates of the local maximum of $h(x)$? What are the coordinates of the local minimum of $h(x)$?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the distance from $A$ along the road to the point $Q$ where the dune buggy should aim to minimize total travel time from $P$ to $B$.",
+      "statement": "<p>You are in a dune buggy at a point $P$ in the desert, $12\\text{ km}$ due south of the nearest point $A$ on a straight east-west road. You want to get to a town $B$ on the road $18\\text{ km}$ east of $A$. If your dune buggy can travel at an average speed of $15\\text{ km/hr}$ through the desert and $30\\text{ km/hr}$ along the road, towards what point $Q$ on the road should you head to minimize your travel time from $P$ to $B$?</p>",
+      "figures": [
+        {
+          "src": "/figures/8.3-q6.png",
+          "alt": "Diagram showing point P located 12 km south of point A on a horizontal east-west road, with point Q on the road between A and B, and path segments PQ through the desert and QB along the road."
+        }
+      ],
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q7",
+      "number": 7,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the width, length, and height (in cm) of the closed box of volume $4500\\text{ cm}^3$ (with base length $3$ times base width) that minimizes total surface area, and justify that it is a minimum.",
+      "statement": "<p>A closed three dimensional box is to be constructed in such a way that its volume is $4500\\text{ cm}^3$. It is also specified that the length of the base is $3$ times the width of the base. Find the dimensions of the box that satisfies these conditions and has the minimum possible surface area. Justify your answer.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the base side length and height (in metres) of the closed square-base container that maximizes volume subject to the \\$72 material budget.",
+      "statement": "<p>A closed rectangular container with a square base is to be made from two different materials. The material for the base costs \\$5 per square metre, while the material for the other five sides costs \\$1 per square metre. Find the dimensions of the container which has the largest possible volume if the total cost of materials is \\$72.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the intercepts $X = (x_0, 0)$ and $Y = (0, y_0)$ so that the hypotenuse $XY$ is tangent to the quarter-circle $x^2 + y^2 = 1$ in the first quadrant and the area of $\\triangle XOY$ is minimized.",
+      "statement": "<p>Find a point $X$ on the positive $x$-axis and a point $Y$ on the positive $y$-axis such that (taking $O = (0, 0)$)</p><ol type=\"i\"><li>The triangle $XOY$ contains the first quadrant portion of the unit circle $x^2 + y^2 = 1$ and</li><li>the area of the triangle $XOY$ is as small as possible.</li></ol><p>A complete and careful mathematical justification of property (i) is required.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the maximum and minimum possible perimeter (in terms of $R$) of a rectangle inscribed in a semicircle of radius $R$, or explain if either extremum fails to exist for non-degenerate rectangles.",
+      "statement": "<p>A rectangle is inscribed in a semicircle of radius $R$ so that one side of the rectangle lies along a diameter of the semicircle. Find the largest possible perimeter of such a rectangle, if it exists, or explain why it does not. Do the same for the smallest possible perimeter.</p>",
+      "figures": [
+        {
+          "src": "/figures/8.3-q10.png",
+          "alt": "A semicircle with its flat diameter along the bottom and an inscribed rectangle whose bottom edge lies centered on the diameter and whose top two corners touch the semicircular arc."
+        }
+      ],
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Express the maximum possible volume of a closed circular cylinder in terms of its fixed total surface area $A$.",
+      "statement": "<p>Find the maximal possible volume of a cylinder with surface area $A$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q12",
+      "number": 12,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Express the maximum possible area of a rectangle-plus-semicircle (Norman) window in terms of its fixed outer perimeter $P$.",
+      "statement": "<p>What is the largest possible area of a window, with perimeter $P$, in the shape of a rectangle with a semicircle on top (so the diameter of the semicircle equals the width of the rectangle)?</p>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "harder",
+      "asking": "First find the dimensions $(x, y, z)$ in terms of $A$ and $p$ that maximize the open-top pan's volume when $y = px$, and then optimize over $p$ to find the best ratio $p$ and dimensions.",
+      "statement": "<p>Consider an open-top rectangular baking pan with base dimensions $x$ centimetres by $y$ centimetres and height $z$ centimetres that is made from $A$ square centimetres of tin plate. Suppose $y = px$ for some fixed constant $p$.</p><ol type=\"a\"><li>Find the dimensions of the baking pan with the maximum capacity (i.e., maximum volume). Prove that your answer yields the baking pan with maximum capacity. Your answer will depend on the value of $p$.</li><li>Find the value of the constant $p$ that yields the baking pan with maximum capacity and give the dimensions of the resulting baking pan. Prove that your answer yields the baking pan with maximum capacity.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q14",
+      "number": 14,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find $f'(x)$ for $f(x) = x^x$ ($x > 0$), find where $f'(x) = 0$, and determine whether that point is a local maximum or local minimum.",
+      "statement": "<p>Let $f(x) = x^x$ for $x > 0$.</p><ol type=\"a\"><li>Find $f'(x)$.</li><li>At what value of $x$ does the curve $y = f(x)$ have a horizontal tangent line?</li><li>Does the function $f$ have a local maximum, a local minimum, or neither of these at the point $x$ found in part (b)?</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "8.3-q15",
+      "number": 15,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find how much of the wire should be used for the circle versus the square to (1) maximize total area and (2) minimize total area, checking both the critical point and the endpoints (all circle or all square).",
+      "statement": "<p>A length of wire is cut into two pieces, one of which is bent to form a circle, the other to form a square. How should the wire be cut if the area enclosed by the two curves is maximized? How should the wire be cut if the area enclosed by the two curves is minimized? Justify your answers.</p>",
+      "oldExam": true
+    }
+  ]
+}

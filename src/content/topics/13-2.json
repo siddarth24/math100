@@ -1,0 +1,64 @@
+{
+  "slug": "13-2",
+  "section": "13.2",
+  "title": "Other biological and chemical models",
+  "shortTitle": "Bio & chem models",
+  "group": "flavour-b-models",
+  "order": 37,
+  "flavour": "B",
+  "goal": "Read multi-species biological and chemical equations term by term, and use a fixed total (conservation law) to turn two linked differential equations into one.",
+  "beforeThis": {
+    "skill": "If two forms of a molecule always add up to a fixed total $y_1 + y_2 = P$, you can replace $y_2$ with $P - y_1$ everywhere!",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and algebraic substitution",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Newton's Law of Cooling & Applied Differential Equation Models",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=_bAjWNsNrQA",
+      "watchFor": "Demonstrates setting up and analyzing an applied rate-balance differential equation."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Introduction to Initial Value Problems (Differential Equations 4)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=HjioXdmwze0"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "13.2-q2",
+      "number": 2,
+      "half": "harder",
+      "asking": "Interpret the signup and expiration terms, show $\\mathrm{d}(y_1 + y_2)/\\mathrm{d}t = 0$, substitute $y_1 = P - y_2$ to get a single equation for $y_2$, and find the condition on $P, a, b$ for the app to succeed.",
+      "statement": "<p><strong>Social media.</strong> Sally Sweetstone has invented a new social media App called HeadSpace, which instantly matches compatible mates according to their changing tastes and styles. Users hear about the App from one another by word of mouth and sign up for an account. The account expires randomly, with a half-life of $1$ month. Suppose $y_1(t)$ are the number of individuals who are not subscribers and $y_2(t)$ are the number of subscribers at time $t$. The following model has been suggested for the evolving subscriber population</p>$$\\frac{\\mathrm{d}y_1}{\\mathrm{d}t} = by_2 - ay_1 y_2, \\qquad \\frac{\\mathrm{d}y_2}{\\mathrm{d}t} = ay_1 y_2 - by_2.$$<ol type=\"a\"><li>Explain the terms in the equation. What is the value of the constant $b$?</li><li>Show that the total population $P = y_1(t) + y_2(t)$ is constant.<br/><em>Note:</em> this is a conservation statement.</li><li>Use the conservation statement to eliminate $y_1$. Then analyze the differential equation you obtain for $y_2$.</li><li>Use your model to determine whether this newly launched social media will be successful or whether it will go extinct.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "13.2-q3",
+      "number": 3,
+      "half": "harder",
+      "asking": "Explain why two molecules of $A$ per molecule of $B$ produce the factor of $2$ in the rate equations and conserved mass $M = a + 2b$, then eliminate $b$ to find the steady state of the reaction.",
+      "statement": "<p><strong>A bimolecular reaction.</strong> Two molecules of $A$ can react to form a new chemical, $B$. The reaction is reversible so that $B$ also continually decays back into $2$ molecules of $A$. The differential equation model proposed for this system is</p>$$\\frac{\\mathrm{d}a}{\\mathrm{d}t} = -\\mu a^2 + 2\\beta b, \\qquad \\frac{\\mathrm{d}b}{\\mathrm{d}t} = \\frac{\\mu}{2}a^2 - \\beta b,$$<p>where $a(t), b(t) > 0$ are the concentrations of the two chemicals.</p><ol type=\"a\"><li>Explain the factor $2$ that appears in the differential equations and the conservation statement. Show that the total mass $M = a(t) + 2b(t)$ is constant.</li><li>Use the techniques in this chapter to investigate what happens in this chemical reaction, to find any steady states, and to explain the behaviour of the system.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "13.2-q6",
+      "number": 6,
+      "half": "harder",
+      "asking": "Write the rate-in minus rate-out differential equation and initial condition $G(0) = 0$ for the mass $G(t)$ of glucose in the $1000\\text{ cm}^3$ tank, and find the steady-state mass as $t \\to \\infty$.",
+      "statement": "<p><strong>Glucose solution in a tank.</strong> A tank that holds $1$ liter is initially full of plain water. A concentrated solution of glucose, containing $0.25\\text{ gm/cm}^3$ is pumped into the tank continuously, at the rate $10\\text{ cm}^3/\\text{min}$ and the mixture (which is continuously stirred to keep it uniform) is pumped out at the same rate.</p><p>Let $G(t)$ be the amount of glucose in the tank after $t$ minutes. Write a differential equation for $G$, and give its initial condition. How much glucose is in the tank after a long time?</p>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

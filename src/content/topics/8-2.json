@@ -1,0 +1,82 @@
+{
+  "slug": "8-2",
+  "section": "8.2",
+  "title": "Finding global maxima and minima",
+  "shortTitle": "Closed-interval method",
+  "group": "optimization",
+  "order": 24,
+  "flavour": "all",
+  "goal": "Find the absolute highest and lowest values of a continuous function on a closed interval $[a, b]$ by testing critical points, sharp corners, and both endpoints.",
+  "beforeThis": {
+    "skill": "Don't forget the endpoints! On a closed interval $[a, b]$, the highest or lowest value very often happens right at the left edge $x = a$ or right edge $x = b$.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and quadratic/cubic polynomials",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Minimizing Surface Area Given a Fixed Volume",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=6zqrFILyVbI",
+      "watchFor": "Demonstrates finding global extrema by comparing critical points against interval endpoints."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.7: Optimization; Max/Min Application Problems",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=SWZcq_biZLw"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "8.2-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Sketch the graph of a function defined for all real $x$ that reaches a highest value overall but has no lowest value.",
+      "statement": "<p>Sketch a function $f(x)$ such that:</p><ul><li>$f(x)$ is defined over all real numbers</li><li>$f(x)$ has a global max but no global min.</li></ul>",
+      "oldExam": false
+    },
+    {
+      "id": "8.2-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Sketch the graph of a function defined for all real $x$ that stays strictly above the $x$-axis yet never attains a highest or lowest value.",
+      "statement": "<p>Sketch a function $f(x)$ such that:</p><ul><li>$f(x)$ is defined over all real numbers</li><li>$f(x)$ is always positive</li><li>$f(x)$ has no global max and no global min.</li></ul>",
+      "oldExam": false
+    },
+    {
+      "id": "8.2-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Sketch the graph of a function defined for all real $x$ that attains its lowest overall value at two distinct points, $x = 5$ and $x = -5$.",
+      "statement": "<p>Sketch a function $f(x)$ such that:</p><ul><li>$f(x)$ is defined over all real numbers</li><li>$f(x)$ has a global minimum at $x = 5$</li><li>$f(x)$ has a global minimum at $x = -5$, too.</li></ul>",
+      "oldExam": false
+    },
+    {
+      "id": "8.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the global maximum value and global minimum value of $f(x) = x^2 + 6x - 10$ on $[-5, 5]$ and where they occur.",
+      "statement": "<p>$f(x) = x^2 + 6x - 10$. Find all global extrema on the interval $[-5, 5]$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "8.2-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the global maximum value and global minimum value of $f(x) = \\frac{2}{3}x^3 - 2x^2 - 30x + 7$ on $[-4, 0]$ and where they occur.",
+      "statement": "<p>$f(x) = \\dfrac{2}{3}x^3 - 2x^2 - 30x + 7$. Find all global extrema on the interval $[-4, 0]$.</p>",
+      "oldExam": false
+    }
+  ]
+}

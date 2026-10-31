@@ -1,0 +1,64 @@
+{
+  "slug": "13-1",
+  "section": "13.1",
+  "title": "Qualitative methods for single differential equations",
+  "shortTitle": "Qualitative DEs",
+  "group": "flavour-b-models",
+  "order": 36,
+  "flavour": "B",
+  "goal": "Predict the long-run fate of a biological population or chemical concentration $\\frac{\\mathrm{d}y}{\\mathrm{d}t} = f(y)$ by plotting $\\frac{\\mathrm{d}y}{\\mathrm{d}t}$ vs. $y$ and checking which equilibria pull solutions in.",
+  "beforeThis": {
+    "skill": "Simple rule: when the rate $\\frac{\\mathrm{d}y}{\\mathrm{d}t}$ is positive, $y$ grows (arrows point right $\\to$); when $\\frac{\\mathrm{d}y}{\\mathrm{d}t}$ is negative, $y$ shrinks (arrows point left $\\leftarrow$).",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and sign analysis",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Geometric Meaning of Differential Equations",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=ccDMpj2UK_M",
+      "watchFor": "Shows how the sign of $\\mathrm{d}y/\\mathrm{d}t$ determines whether $y(t)$ moves toward or away from a steady state."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Introduction to Time Rate of Change (Differential Equations 5)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=yhklHobbuyg"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "13.1-q1",
+      "number": 1,
+      "half": "harder",
+      "asking": "Check the sign of $\\mathrm{d}y/\\mathrm{d}t = y^2(y - a)$ when $y(0) = 2a > a$ to determine what happens to $y(t)$ as time increases.",
+      "statement": "<p><strong>Differential equation.</strong> Given the differential equation and initial condition</p>$$\\frac{\\mathrm{d}y}{\\mathrm{d}t} = y^2(y - a), \\qquad y(0) = 2a$$<p>where $a > 0$ is a constant, the value of the function $y(t)$ would</p><ol type=\"A\"><li>approach $y = 0$;</li><li>grow larger with time;</li><li>approach $y = a$;</li><li>stay the same;</li><li>none of the above.</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "13.1-q2",
+      "number": 2,
+      "half": "harder",
+      "asking": "Explain the inflow and outflow terms in $\\mathrm{d}h/\\mathrm{d}t = I - k\\sqrt{h}$, find the steady-state height as $t \\to \\infty$, and state what physical condition on the bucket height is required.",
+      "statement": "<p><strong>There’s a hole in the bucket.</strong> Water flows into a bucket at constant rate $I$. There is a hole in the container. Explain the model</p>$$\\frac{\\mathrm{d}h}{\\mathrm{d}t} = I - k\\sqrt{h}.$$<p>Analyze the behaviour predicted. What would the height be after a long time? Is this result always valid, or is an additional assumption needed? (Hint: recall Example 11.2.3 in the text.)</p>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "13.1-q3",
+      "number": 3,
+      "half": "harder",
+      "asking": "Use $V = x^3$ to convert the volume equation into a differential equation for $\\mathrm{d}x/\\mathrm{d}t$, show that $\\mathrm{d}x/\\mathrm{d}t$ decreases as $x$ grows, and find the limiting crystal size and half-rate volume.",
+      "statement": "<p><strong>Cubical crystal.</strong> A crystal grows inside a medium in a cubical shape with side length $x$ and volume $V$. The rate of change of the volume is given by</p>$$\\frac{\\mathrm{d}V}{\\mathrm{d}t} = kx^2(V_0 - V)$$<p>where $k$ and $V_0$ are positive constants.</p><ol type=\"a\"><li>Rewrite this as a differential equation for $\\dfrac{\\mathrm{d}x}{\\mathrm{d}t}$.</li><li>Suppose that the crystal grows from a very small “seed.” Show that its growth rate continually decreases.</li><li>What happens to the size of the crystal after a very long time?</li><li>What is its volume when $x$ is growing at half its initial rate, assuming the initial value of $x$ is close to $0$?</li></ol>",
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

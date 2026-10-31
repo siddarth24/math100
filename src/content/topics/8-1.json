@@ -1,0 +1,127 @@
+{
+  "slug": "8-1",
+  "section": "8.1",
+  "title": "Local and global maxima and minima",
+  "shortTitle": "Local & global extrema",
+  "group": "optimization",
+  "order": 23,
+  "flavour": "all",
+  "goal": "Spot every place a peak or valley could hide: flat spots where $f'(c) = 0$ (critical points) and sharp corners where $f'(c)$ does not exist (singular points).",
+  "beforeThis": {
+    "skill": "Quick check: a local max/min is the highest/lowest point in its immediate neighbourhood; a global max/min is the champion across the entire domain.",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and absolute value",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Minimizing Surface Area Given a Fixed Volume",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=6zqrFILyVbI",
+      "watchFor": "Shows how critical points ($f'(x) = 0$) and domain boundaries identify local and global extrema."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.7: Optimization; Max/Min Application Problems",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=SWZcq_biZLw"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "8.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Locate every point on the graph where the tangent is horizontal (critical point) or where the curve has a sharp corner (singular point), and state which ones are local extrema.",
+      "statement": "<p>Identify every critical point and every singular point of $f(x)$ shown on the graph below. Which correspond to local extrema?</p>",
+      "figures": [
+        {
+          "src": "/figures/8.1-q1.png",
+          "alt": "Graph of y = f(x) showing a curve that rises from below the x-axis, levels off at a horizontal inflection terrace on the positive y-axis, rises to a sharp pointed peak in the first quadrant, and then drops smoothly to a rounded valley minimum before rising slightly."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find all critical points, singular points, local extrema, and global extrema over the plotted interval.",
+      "statement": "<p>Identify every critical point and every singular point of $f(x)$ on the graph below. Which correspond to local extrema? Which correspond to global extrema over the interval shown?</p>",
+      "figures": [
+        {
+          "src": "/figures/8.1-q2.png",
+          "alt": "Graph of y = f(x) on a closed interval: starts at a high filled dot on the left endpoint in the second quadrant, drops below the x-axis to a smooth rounded minimum in the third quadrant, rises to an open circle in the first quadrant where the function jumps down to a filled dot and then decreases linearly to a filled dot at the right endpoint."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Sketch a graph $y = f(x)$ that has a local peak at $x = 2$ but reaches even higher values elsewhere.",
+      "statement": "<p>Draw a graph $y = f(x)$ where $f(2)$ is a local maximum, but it is not a global maximum.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Compute $f'(x)$ to find all critical points and singular points of $f(x) = \\frac{x - 1}{x^2 + 3}$, and list all candidate $x$-values for local extrema.",
+      "statement": "<p>Suppose $f(x) = \\dfrac{x - 1}{x^2 + 3}$.</p><ol type=\"a\"><li>Find all critical points.</li><li>Find all singular points.</li><li>What are the possible points where local extrema of $f(x)$ may exist?</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q5",
+      "number": 5,
+      "stage": 3,
+      "half": "harder",
+      "asking": "For each of the four graphs, state whether the value $f(2)$ at the filled dot is a local maximum, a local minimum, or neither.",
+      "statement": "<p>Below are a number of curves, all of which have a singular point at $x = 2$. For each, label whether $x = 2$ is a local maximum, a local minimum, or neither.</p>",
+      "figures": [
+        {
+          "src": "/figures/8.1-q5.png",
+          "alt": "Four small graphs each showing behavior at x = 2: first graph rises from the left to an open circle at x = 2 and has a higher filled dot at x = 2 with a line sloping down to the right; second graph rises from the left to a filled dot at x = 2 and jumps up to an open circle sloping down to the right; third graph rises from the left to an open circle at x = 2 and jumps up to a filled dot sloping up to the right; fourth graph is a V-shaped corner at x = 2 with an open circle at the bottom vertex and a filled dot floated higher above it."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q6",
+      "number": 6,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Sketch a curve where $x = 2$ is an interior local maximum without $f'(2) = 0$ (so $f'(2)$ does not exist).",
+      "statement": "<p>Draw a graph $y = f(x)$ where $f(2)$ is a local maximum, but $x = 2$ is not a critical point and is not an endpoint.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q7",
+      "number": 7,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find every $x$-value where $f'(x) = 0$ or where $f'(x)$ fails to exist for $f(x) = \\sqrt{|(x - 5)(x + 7)|}$.",
+      "statement": "<p>$$f(x) = \\sqrt{|(x - 5)(x + 7)|}$$</p><p>Find all critical points and all singular points of $f(x)$. You do not have to specify whether a point is critical or singular.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "8.1-q8",
+      "number": 8,
+      "stage": 3,
+      "half": "harder",
+      "asking": "State the critical points, singular points, and local/global maxima and minima of the constant function $f(x) = 4$.",
+      "statement": "<p>Suppose $f(x)$ is the constant function $f(x) = 4$. What are the critical points and singular points of $f(x)$? What are its local and global maxima and minima?</p>",
+      "oldExam": false
+    }
+  ]
+}

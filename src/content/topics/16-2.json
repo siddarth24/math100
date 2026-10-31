@@ -1,0 +1,57 @@
+{
+  "slug": "16-2",
+  "section": "16.2",
+  "title": "Absolute minima and maxima",
+  "shortTitle": "2D absolute extrema",
+  "group": "flavour-c-multivariable",
+  "order": 43,
+  "flavour": "C",
+  "goal": "Find the absolute highest and lowest heights of $f(x, y)$ on a closed region (like a rectangle or disk) by checking both interior flat spots and the outer boundary edges.",
+  "beforeThis": {
+    "skill": "Just like endpoints on a 1D interval $[a, b]$, the highest or lowest point on a 2D region very often sits along the outer boundary wall or at a corner!",
+    "links": [
+      {
+        "label": "Precalculus: Geometry of circles, disks, and rectangles",
+        "href": "/precalculus#geometry"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Geometric Meaning of the Gradient Vector & Multivariable Optimization",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=QQPz3eXXgQI",
+      "watchFor": "Explains why optimizing $f(x, y)$ on a closed region requires checking both interior critical points where $\\nabla f = \\mathbf{0}$ and the boundary."
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "16.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find and classify all critical points of $h(x, y) = y(4 - x^2 - y^2)$ in $\\mathbb{R}^2$, then compare interior critical points with the boundary circle $x^2 + y^2 = 1$ to find the absolute maximum and minimum on the disk $x^2 + y^2 \\le 1$.",
+      "statement": "<p>Let $h(x, y) = y(4 - x^2 - y^2)$.</p><ol type=\"a\"><li>Find and classify the critical points of $h(x, y)$ as local maxima, local minima or saddle points.</li><li>Find the maximum and minimum values of $h(x, y)$ on the disk $x^2 + y^2 \\le 1$.</li></ol>",
+      "oldExam": true
+    },
+    {
+      "id": "16.2-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the absolute maximum and minimum values of $f(x, y) = 5 + 2x - x^2 - 4y^2$ by comparing any interior critical points in $R$ with the values along all four boundary edges and four corners of the rectangle.",
+      "statement": "<p>Find the absolute maximum and minimum values of the function $f(x, y) = 5 + 2x - x^2 - 4y^2$ on the rectangular region</p>$$R = \\{(x, y) \\mid -1 \\le x \\le 3, \\; -1 \\le y \\le 1\\}.$$",
+      "oldExam": true
+    },
+    {
+      "id": "16.2-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find the length, width, and height (in terms of $V$) of an open-top rectangular box of volume $V$ that minimizes total surface area $xy + 2xz + 2yz$.",
+      "statement": "<p>Find the most economical shape of a rectangular box that has a fixed volume $V$ and that has no top.</p>",
+      "oldExam": false
+    }
+  ]
+}

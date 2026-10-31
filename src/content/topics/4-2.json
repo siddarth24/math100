@@ -1,0 +1,154 @@
+{
+  "slug": "4-2",
+  "section": "4.2",
+  "title": "Derivatives of trigonometric functions",
+  "shortTitle": "Trig derivatives",
+  "group": "computing-derivatives",
+  "order": 12,
+  "flavour": "all",
+  "goal": "Differentiate the six trig functions ($\\sin, \\cos, \\tan, \\sec, \\csc, \\cot$) and use them to find tangent lines and horizontal peaks on wave graphs.",
+  "beforeThis": {
+    "skill": "Memory hook: thethree \"co-\" functions ($\\cos x, \\cot x, \\csc x$) are the exact three whose derivatives pick up a minus sign!",
+    "links": [
+      {
+        "label": "Precalculus: Trigonometry and unit circle",
+        "href": "/precalculus#trig"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Derivative of Trigonometric Functions",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=QDKj-E-ICPo",
+      "watchFor": "Covers the derivatives of all six trig functions (with geometric intuition in 3Blue1Brown at https://www.youtube.com/watch?v=S0_qX4VJhMQ)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 2.5: Finding Derivatives of Trigonometric Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RJJSiNz5oto"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "4.2-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Spot the $x$-values on $[-2\\pi, 2\\pi]$ where $y = \\sin x$ has a flat tangent line, and state what feature $y = \\cos x$ has at those same $x$-values.",
+      "statement": "<p>Graph sine and cosine on the same axes, from $x = -2\\pi$ to $x = 2\\pi$. Mark the points where $\\sin x$ has a horizontal tangent. What do these points correspond to, on the graph of cosine?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.2-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Spot the $x$-values on $[-2\\pi, 2\\pi]$ where $y = \\sin x$ is rising most steeply, and state what feature $y = \\cos x$ has at those same $x$-values.",
+      "statement": "<p>Graph sine and cosine on the same axes, from $x = -2\\pi$ to $x = 2\\pi$. Mark the points where $\\sin x$ has a tangent line of maximum (positive) slope. What do these points correspond to, on the graph of cosine?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.2-q5",
+      "number": 5,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if taking four derivatives in a row returns the original function for $\\sin x$, $\\cos x$, and $\\tan x$.",
+      "statement": "<p>Which statements below are true, and which false?</p><ol type=\"a\"><li>$\\dfrac{\\mathrm{d}^4}{\\mathrm{d}x^4} \\sin x = \\sin x$</li><li>$\\dfrac{\\mathrm{d}^4}{\\mathrm{d}x^4} \\cos x = \\cos x$</li><li>$\\dfrac{\\mathrm{d}^4}{\\mathrm{d}x^4} \\tan x = \\tan x$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "4.2-q7",
+      "number": 7,
+      "stage": 1,
+      "half": "first",
+      "asking": "Take the derivative $(\\sin x + \\cos x)' = \\cos x - \\sin x$, set it equal to $0$, and find all angles $x$ where $\\sin x = \\cos x$.",
+      "statement": "<p>For which values of $x$ does the function $f(x) = \\sin x + \\cos x$ have a horizontal tangent?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.2-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Use the product rule on $e^x \\cdot \\cot x$, remembering that $(\\cot x)' = -\\csc^2 x$.",
+      "statement": "<p>Differentiate $f(x) = e^x \\cot x$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "4.2-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the constants $a$ and $b$ so that $\\cos(x)$ and $ax + b$ have both the same height and the same slope at $x = 0$.",
+      "statement": "<p>Find the values of the constants $a$ and $b$ for which</p>$$f(x) = \\begin{cases} \\cos(x) & x \\le 0 \\\\ ax + b & x > 0 \\end{cases}$$<p>is differentiable everywhere.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q19",
+      "number": 19,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact value of the limit by recognizing what derivative at $x = 2015$ this difference quotient represents.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 2015} \\left(\\dfrac{\\cos(x) - \\cos(2015)}{x - 2015}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q20",
+      "number": 20,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact numerical value of the limit as $x \\to \\pi/3$ by relating the quotient to the derivative of $\\cos x$ at $\\pi/3$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to \\pi/3} \\left(\\dfrac{\\cos(x) - 1/2}{x - \\pi/3}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q21",
+      "number": 21,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the exact numerical value of the limit as $x \\to \\pi$ by relating the quotient to the derivative of $\\sin x$ at $\\pi$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to \\pi} \\left(\\dfrac{\\sin(x)}{x - \\pi}\\right)$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q23",
+      "number": 23,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the values of $a$ and $b$ that make the two branches of $f(x)$ match in both value and derivative at $x = 0$.",
+      "statement": "<p>The derivative of the function</p>$$f(x) = \\begin{cases} ax + b & \\text{for } x < 0 \\\\[6pt] \\dfrac{6 \\cos x}{2 + \\sin x + \\cos x} & \\text{for } x \\ge 0 \\end{cases}$$<p>exists for all $x$. Determine the values of the constants $a$ and $b$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q27",
+      "number": 27,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Find the height $y_0 = \\tan(\\pi/4)$ and the slope $m = \\sec^2(\\pi/4)$, then plug both into the line formula $y = y_0 + m(x - \\pi/4)$.",
+      "statement": "<p>Find the equation of the line tangent to the graph of $y = \\tan(x)$ at $x = \\dfrac{\\pi}{4}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q28",
+      "number": 28,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Plug $x = 0$ into $y$ to get the starting height $y_0$, plug $x = 0$ into $y'$ to get the slope $m$, and write $y = y_0 + mx$.",
+      "statement": "<p>Find the equation of the line tangent to the graph of $y = \\sin(x) + \\cos(x) + e^x$ at $x = 0$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "4.2-q29",
+      "number": 29,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Differentiate $e^x \\sin x$ using the product rule, factor out $e^x$ (which is never $0$), and solve $\\sin x + \\cos x = 0$.",
+      "statement": "<p>For which values of $x$ does the function $f(x) = e^x \\sin x$ have a horizontal tangent line?</p>",
+      "oldExam": false
+    }
+  ]
+}

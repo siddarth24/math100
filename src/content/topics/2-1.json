@@ -1,0 +1,178 @@
+{
+  "slug": "2-1",
+  "section": "2.1",
+  "title": "Limits",
+  "shortTitle": "Limits",
+  "group": "limits",
+  "order": 1,
+  "flavour": "all",
+  "goal": "See where a graph is heading as $x$ gets right next to a target number from the left and right—even if there is a hole or a jump right at that spot.",
+  "beforeThis": {
+    "skill": "Quick check: an open circle $\\circ$ on a graph means \"missing point (hole),\" while a filled dot $\\bullet$ shows the actual plugged-in height $f(a)$.",
+    "links": [
+      {
+        "label": "Precalculus: Function composition and piecewise graphs",
+        "href": "/precalculus#composition"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Velocity Problem | Part I: Numerically",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=LWPzHlSBlxI",
+      "watchFor": "Shows how a limit arises from computing average rates over smaller and smaller intervals."
+    },
+    {
+      "title": "The Limit of a Function (Graphically)",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=fzh-jmeDOvw",
+      "watchFor": "Graphic follow-up showing how to read one-sided and two-sided limits directly from a curve."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 1.1: An Introduction to Limits",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=54_XRjHhZzI"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "2.1-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the height the curve approaches as $x$ gets close to $-2$, $0$, and $2$ from both sides, or state if the limit does not exist.",
+      "statement": "<p>Given the function shown below, evaluate the following:</p><ol type=\"a\"><li>$\\lim_{x \\to -2} f(x)$</li><li>$\\lim_{x \\to 0} f(x)$</li><li>$\\lim_{x \\to 2} f(x)$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/2.1-q1.png",
+          "alt": "Coordinate axes showing the graph of y = f(x). As x approaches -2 from both sides, the curve rises to a peak at y = 1. The curve passes smoothly through the origin (0, 0). As x approaches 2 from both sides, the curve levels off at an open circle at (2, 2), while a separate filled dot is plotted at (2, -2)."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if the left-hand and right-hand heights of the curve agree as $x$ approaches $0$, and give that common value or state that the limit does not exist.",
+      "statement": "<p>Given the function shown below, evaluate $\\lim_{x \\to 0} f(x)$.</p>",
+      "figures": [
+        {
+          "src": "/figures/2.1-q2.png",
+          "alt": "Coordinate axes showing a piecewise graph y = f(x) with a jump at x = 0. From the left (x < 0), the curve approaches an open circle at (0, -1). At x = 0 and to the right (x >= 0), the curve starts at a filled dot at (0, 1) and rises smoothly for positive x."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Read five one-sided or two-sided limits from the piecewise linear graph by following the appropriate branch toward each target $x$-value.",
+      "statement": "<p>Given the function shown below, evaluate:</p><ol type=\"a\"><li>$\\lim_{x \\to -1^-} f(x)$</li><li>$\\lim_{x \\to -1^+} f(x)$</li><li>$\\lim_{x \\to -1} f(x)$</li><li>$\\lim_{x \\to -2^+} f(x)$</li><li>$\\lim_{x \\to 2^-} f(x)$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/2.1-q3.png",
+          "alt": "Coordinate axes showing y = f(x) made of three parallel line segments with open circles at all endpoints: the first segment goes from (-2, 0) to (-1, 2); the second goes from (-1, -2) through (0, 0) to (1, 2); the third goes from (1, -2) to (2, 0)."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q6",
+      "number": 6,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if knowing the limit of $f(x)$ as $x$ approaches $3$ forces the actual function value $f(3)$ to equal that same number.",
+      "statement": "<p>Suppose $\\lim_{x \\to 3} f(x) = 10$. True or false: $f(3) = 10$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q8",
+      "number": 8,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the value of the left-hand limit at $x = -2$ when you already know the two-sided limit at $x = -2$ equals $16$.",
+      "statement": "<p>Suppose $f(x)$ is a function defined on all real numbers, and $\\lim_{x \\to -2} f(x) = 16$. What is $\\lim_{x \\to -2^-} f(x)$?</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "See what height $\\sin t$ approaches as the angle $t$ shrinks to $0$ radians on the unit circle.",
+      "statement": "<p>Evaluate $\\lim_{t \\to 0} \\sin t$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "first",
+      "asking": "See what happens to the natural logarithm $\\log x$ as $x$ approaches $0$ through positive numbers.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0^+} \\log x$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q12",
+      "number": 12,
+      "stage": 2,
+      "half": "first",
+      "asking": "See what number $y^2$ gets close to as $y$ gets right next to $3$ (since $y^2$ has no holes or jumps, you can just plug in $y = 3$).",
+      "statement": "<p>Evaluate $\\lim_{y \\to 3} y^2$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q13",
+      "number": 13,
+      "stage": 2,
+      "half": "first",
+      "asking": "See what happens to $1/x$ when you divide $1$ by a tiny negative number (like $-0.0001$) as $x \\to 0^-$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0^-} \\frac{1}{x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "first",
+      "asking": "Check if the two-sided limit of $1/x$ at $x = 0$ exists by comparing the behaviour on both sides of $0$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\frac{1}{x}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q15",
+      "number": 15,
+      "stage": 2,
+      "half": "first",
+      "asking": "See what happens to $1/x^2$ when you divide $1$ by a tiny positive number $x^2$ as $x \\to 0$ from either side.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 0} \\frac{1}{x^2}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q16",
+      "number": 16,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the height of the flat horizontal line $y = 1/10$ as $x$ approaches $3$ (a constant never changes height!).",
+      "statement": "<p>Evaluate $\\lim_{x \\to 3} \\frac{1}{10}$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.1-q17",
+      "number": 17,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the value that $f(x)$ approaches as $x$ gets very close to $3$ by checking which rule applies immediately around $x = 3$.",
+      "statement": "<p>Evaluate $\\lim_{x \\to 3} f(x)$, where</p>$$f(x) = \\begin{cases} \\sin x & x \\le 2.9 \\\\ x^2 & x > 2.9 \\end{cases}$$",
+      "oldExam": false
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "2-3",
+  "section": "2.3",
+  "title": "Limits and continuity",
+  "shortTitle": "Continuity",
+  "group": "limits",
+  "order": 5,
+  "flavour": "all",
+  "goal": "Check whether a graph can be drawn without lifting your pen (continuity), and glue piecewise formulas together smoothly by matching their heights at the seam.",
+  "beforeThis": {
+    "skill": "Quick check: a formula only breaks where you divide by $0$, take an even root of a negative number, take $\\ln(\\le 0)$, or jump between two pieces.",
+    "links": [
+      {
+        "label": "Precalculus: Function composition and domains",
+        "href": "/precalculus#composition"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Continuity & Types of Discontinuities",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=0S01H4S8djs",
+      "watchFor": "Pictures removable holes, jumps, and vertical asymptotes alongside the Intermediate Value Theorem (https://www.youtube.com/watch?v=n3G1L3yqPI0)."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 1.4: Continuity of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=OEE5-M4aY4k"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "2.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Think of a periodic function with a denominator that hits $0$ over and over again (like $\\tan x$ or $1/\\sin x$).",
+      "statement": "<p>Give an example of a function (you can write a formula, or sketch a graph) that has infinitely many infinite discontinuities.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.3-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if knowing both $\\lim_{t \\to 5} f(t) = 17$ and that $f$ is continuous at $t = 5$ guarantees $f(5) = 17$.",
+      "statement": "<p>Suppose $\\lim_{t \\to 5} f(t) = 17$, and suppose $f(t)$ is continuous at $t = 5$. True or false: $f(5) = 17$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.3-q4",
+      "number": 4,
+      "stage": 1,
+      "half": "first",
+      "asking": "Check if knowing $\\lim_{t \\to 5} f(t) = 17$ without knowing continuity is enough to guarantee $f(5) = 17$.",
+      "statement": "<p>Suppose $\\lim_{t \\to 5} f(t) = 17$. True or false: $f(5) = 17$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.3-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find the number $k$ that makes the value $a(0)$ match the limit of $a(x)$ as $x$ approaches $0$.",
+      "statement": "<p>Find a constant $k$ so that the function</p>$$a(x) = \\begin{cases} x \\sin\\left(\\dfrac{1}{x}\\right) & \\text{when } x \\ne 0 \\\\[6pt] k & \\text{when } x = 0 \\end{cases}$$<p>is continuous at $x = 0$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "2.3-q8",
+      "number": 8,
+      "stage": 2,
+      "half": "first",
+      "asking": "Find every real number $x$ where the formula can be plugged in safely without dividing by $0$ or taking an invalid root/log.",
+      "statement": "<p>Describe all points for which this function is continuous: $f(x) = \\dfrac{1}{\\sqrt{x^2 - 1}}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.3-q9",
+      "number": 9,
+      "stage": 2,
+      "half": "first",
+      "asking": "List all inputs $x$ where the formula works without dividing by $0$ or putting a negative number inside a square root.",
+      "statement": "<p>Describe all points for which this function is continuous: $\\dfrac{1}{\\sqrt{1 + \\cos(x)}}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.3-q10",
+      "number": 10,
+      "stage": 2,
+      "half": "first",
+      "asking": "Since $1/\\sin x$ only breaks when you divide by $0$, exclude every angle $x$ where $\\sin x = 0$ (multiples of $\\pi$).",
+      "statement": "<p>Describe all points for which this function is continuous: $f(x) = \\dfrac{1}{\\sin x}$.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.3-q11",
+      "number": 11,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find every real number $c$ where the two branches of $f(x)$ meet continuously at $x = c$, and write out the limit justification.",
+      "statement": "<p>Find all values of $c$ such that the following function is continuous at $x = c$:</p>$$f(x) = \\begin{cases} 8 - cx & \\text{if } x \\le c \\\\ x^2 & \\text{if } x > c \\end{cases}$$<p>Use the definition of continuity to justify your answer.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.3-q12",
+      "number": 12,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find every constant $c$ for which the two branches of $f(x)$ connect continuously at $x = 0$, and justify using one-sided limits.",
+      "statement": "<p>Find all values of $c$ such that the following function is continuous everywhere:</p>$$f(x) = \\begin{cases} x^2 + c & x \\ge 0 \\\\ \\cos(cx) & x < 0 \\end{cases}$$<p>Use the definition of continuity to justify your answer.</p>",
+      "oldExam": true
+    },
+    {
+      "id": "2.3-q14",
+      "number": 14,
+      "stage": 2,
+      "half": "harder",
+      "asking": "Find all values of $c$ that make the two branches of $f(x)$ match at the transition point $x = 2c$, and justify using the definition of continuity.",
+      "statement": "<p>Find all values of $c$ such that the following function is continuous:</p>$$f(x) = \\begin{cases} 6 - cx & \\text{if } x \\le 2c \\\\ x^2 & \\text{if } x > 2c \\end{cases}$$<p>Use the definition of continuity to justify your answer.</p>",
+      "oldExam": true
+    }
+  ]
+}

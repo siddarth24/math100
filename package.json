@@ -1,0 +1,16 @@
+{
+  "name": "math100-study-site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^7.4.4",
+    "katex": "^0.19.1"
+  }
+}

@@ -1,0 +1,232 @@
+---
+import BaseLayout, { type TocItem } from '../layouts/BaseLayout.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import { getCollection } from 'astro:content';
+import { NAV_GROUPS } from '../data/groups';
+import { withBase } from '../lib/katex';
+
+const allTopics = await getCollection('topics');
+const sortedTopics = [...allTopics].sort((a, b) => a.data.order - b.data.order);
+const firstTopic = sortedTopics[0];
+
+const groupedSyllabus = NAV_GROUPS.map((group) => ({
+  ...group,
+  topics: sortedTopics.filter((t) => t.data.group === group.id),
+}));
+
+const tocItems: TocItem[] = [
+  { id: 'big-picture', label: 'The big idea of calculus' },
+  { id: 'courses-and-flavours', label: 'Courses & flavours' },
+  { id: 'exam-split', label: 'How the final exam works' },
+  { id: 'how-to-work', label: 'How to study a topic' },
+  { id: 'where-to-get-help', label: 'Where to get help' },
+  { id: 'course-links', label: 'Textbook & past exams' },
+  { id: 'syllabus-checklist', label: 'Sections & checklist' },
+];
+
+function formatSectionLabel(sec: string) {
+  if (sec === '3.3i') return '3.3 (Interp.)';
+  if (!sec.includes('.')) return `Ch. ${sec}`;
+  return sec;
+}
+---
+
+<BaseLayout title="How to use this course" toc={tocItems}>
+  <header class="topic-header">
+    <h1>MATH 100 and MATH 180 Study Guide</h1>
+    <p class="topic-goal">
+      Every recommended practice question from the UBC MATH 100/180 practice book, organized topic by topic with plain-English intuition, short video previews, and a simple translation of what each problem is actually asking.
+    </p>
+  </header>
+
+  <section class="home-section">
+    <h2 id="big-picture">The big idea of this entire course</h2>
+    <p>
+      All of differential calculus comes down to one simple picture: <strong>if you zoom in close enough on a smooth curve, it looks like a straight line.</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Chapters 2–3 (Limits &amp; Derivatives):</strong> How to zoom in on a curve at a single point and measure its steepness (the <em>derivative</em>, or instantaneous rate of change).
+      </li>
+      <li>
+        <strong>Chapters 4–6 (Shortcut Rules &amp; Rates):</strong> Fast rules for finding derivatives of any formula, plus how linked quantities move together in real time (<em>related rates</em>).
+      </li>
+      <li>
+        <strong>Chapters 7–9 (Using Derivatives):</strong> Using slopes to sketch curves, find the best possible outcome (<em>optimization</em>), and replace messy functions with simple polynomial twins (<em>Taylor polynomials</em>).
+      </li>
+      <li>
+        <strong>Chapters 10–16 (Your Flavour Topics):</strong> Using rates of change to model populations and differential equations (Flavours A &amp; B) or optimizing across 3D surfaces with two inputs (Flavour C).
+      </li>
+    </ul>
+
+    <div class="video-grid">
+      <VideoEmbed
+        url="https://www.youtube.com/watch?v=WUvTyaaNkzM"
+        creator="3Blue1Brown"
+        title="The essence of calculus"
+        durationNote="17 min"
+        watchFor="Watch this once before you start: it gives you the visual intuition for why limits and derivatives work before any algebra shows up."
+      />
+    </div>
+  </section>
+
+  <section class="home-section">
+    <h2 id="courses-and-flavours">Which course and flavour are you in?</h2>
+    <p>
+      <strong>MATH 100</strong> and <strong>MATH 180</strong> take the exact same final exam. The only difference is that MATH 180 is designed for students who did not take calculus in high school, so it builds in extra precalculus review along the way.
+    </p>
+    <p>
+      About <strong>70% of the course (Chapters 2 through 9.5) is identical for everyone.</strong> Your section's "flavour" only decides the application topics at the end of the term:
+    </p>
+    <ul>
+      <li><strong>Flavour A:</strong> Physical sciences and engineering (adds Taylor error bounds, Newton's method, differential equations, and slope fields).</li>
+      <li><strong>Flavour B:</strong> Life sciences (adds biological asymptotes, Newton's method, differential equations, slope fields, and biological phase-line models).</li>
+      <li><strong>Flavour C:</strong> Commerce and social sciences (adds 3D surfaces, partial derivatives, and multivariable optimization with Lagrange multipliers).</li>
+    </ul>
+    <p>
+      Pick your <strong>Course</strong> and <strong>Flavour</strong> in the bar at the top of the page. The sidebar and checklist will automatically hide any topics your section does not cover, and choosing MATH 180 will automatically open each topic's precalculus warm-up box.
+    </p>
+  </section>
+
+  <section class="home-section">
+    <h2 id="exam-split">How the final exam works (and how to prioritize)</h2>
+    <p>The final exam has 14 questions split into two equal halves:</p>
+    <ul>
+      <li>
+        <strong>Questions 1–9 (<span class="tag-first-half">first half</span> — 50% of your exam grade):</strong> Short, straightforward calculation problems shared by every section of MATH 100 and MATH 180, just like your weekly WeBWorK homework.
+      </li>
+      <li>
+        <strong>Questions 10–14 (<span class="tag-harder-half">harder half</span> — 50% of your exam grade):</strong> Longer written word problems and explanations. Question 10 and Question 14 are shared by everyone; Questions 11–13 test your specific flavour (A, B, or C).
+      </li>
+    </ul>
+    <p class="exam-priority-note">
+      <strong>Short on study time?</strong> Master every problem tagged <span class="tag-first-half">first half</span> before touching <span class="tag-harder-half">harder half</span>. Locking in the 9 routine WeBWorK-style questions first is the fastest, most reliable way to pass or bounce back from a rough midterm.
+    </p>
+  </section>
+
+  <section class="home-section">
+    <h2 id="how-to-work">How to work through a topic page</h2>
+    <ul>
+      <li>
+        <strong>1. Read the intuition box at the top of the topic.</strong> It explains the core mental picture in plain English and translates the exact code-words UBC exams use (like <em>"horizontal tangent"</em> or <em>"steady state"</em>) into concrete steps.
+      </li>
+      <li>
+        <strong>2. Read the problem in the book's own words first.</strong> On the midterm and final, nobody translates the question for you. Try to spot what the question wants on your own, and click the red <span class="red-inline-sample">What this is asking</span> line only when the wording has you stuck.
+      </li>
+      <li>
+        <strong>3. Check your work in the back of the UBC Practice Book.</strong> The official practice book has separate Hints, Answers, and full Solutions sections in the back—peek at the Hint first before reading the full Solution.
+      </li>
+    </ul>
+  </section>
+
+  <section class="home-section">
+    <h2 id="where-to-get-help">Where to get free help from a real person</h2>
+    <ul>
+      <li><strong>Calculus Common Room:</strong> Drop-in office hours specifically for MATH 100/180 students (check Canvas for the room and schedule).</li>
+      <li><strong>Math Learning Centre (MLC):</strong> Free drop-in tutoring run by UBC Math graduate students and TAs.</li>
+      <li><strong>Piazza:</strong> Best place to ask quick questions about WeBWorK formatting or practice problems (linked on Canvas).</li>
+    </ul>
+  </section>
+
+  <section class="home-section">
+    <h2 id="course-links">Official textbook, cheat sheets, and past exams</h2>
+    <ul>
+      <li>
+        <a href="https://personal.math.ubc.ca/~elyse/Math100Text/">UBC CLP-1 Textbook &amp; Practice Book</a> — the official free PDFs with all hints, answers, and full worked solutions.
+      </li>
+      <li>
+        <a href={withBase('/precalculus')}>One-Page Precalculus Reference Sheet</a> — every algebra, geometry, trig, and log rule that calculus problems assume you already know.
+      </li>
+      <li>
+        <a href="https://tutorial.math.lamar.edu/Extras/CheatSheets_Tables.aspx">Paul's Online Math Notes — Cheat Sheets</a> — printable algebra, trig, and derivative reference sheets.
+      </li>
+      <li>
+        <strong>Past UBC Final Exams with Worked Solutions (UBC Math Wiki):</strong>{' '}
+        <a href="https://wiki.ubc.ca/Science:Math_Exam_Resources/Courses/MATH100A">MATH 100A</a>,{' '}
+        <a href="https://wiki.ubc.ca/Science:Math_Exam_Resources/Courses/MATH100B">MATH 100B</a>,{' '}
+        <a href="https://wiki.ubc.ca/Science:Math_Exam_Resources/Courses/MATH100C">MATH 100C</a>, and the{' '}
+        <a href="https://wiki.ubc.ca/Science:Math_Exam_Resources/Courses/MATH100">2010–2018 archive</a>.
+      </li>
+      <li>
+        <a href="https://www.math.ubc.ca/undergraduate/advising-and-resources/exams/past-exams">UBC Mathematics Past Exam PDFs</a>.
+      </li>
+    </ul>
+  </section>
+
+  <section class="home-section">
+    <div class="syllabus-header">
+      <h2 id="syllabus-checklist">All course sections &amp; your progress</h2>
+      {
+        firstTopic && (
+          <a href={withBase(`/topics/${firstTopic.data.slug}`)} class="start-course-link">
+            Start at {firstTopic.data.section} {firstTopic.data.title} →
+          </a>
+        )
+      }
+    </div>
+
+    <div class="table-scroll">
+      <table class="ref-table syllabus-table">
+        <thead>
+          <tr>
+            <th scope="col">Book</th>
+            <th scope="col">Topic</th>
+            <th scope="col">Exam split</th>
+            <th scope="col" class="num-col">Tried</th>
+          </tr>
+        </thead>
+        {
+          groupedSyllabus.map((group) => (
+            <tbody data-content-group={group.id}>
+              <tr class="syllabus-group-row" data-content-flavour={group.flavour}>
+                <th colspan="4" scope="colgroup">
+                  {group.title}
+                </th>
+              </tr>
+              {group.topics.map((t) => {
+                const firstCount = t.data.questions.filter((q) => q.half === 'first').length;
+                const harderCount = t.data.questions.filter((q) => q.half === 'harder').length;
+                const qIds = t.data.questions.map((q) => q.id).join(',');
+                return (
+                  <tr data-content-flavour={t.data.flavour}>
+                    <td class="syllabus-sec-cell">{formatSectionLabel(t.data.section)}</td>
+                    <td>
+                      <a href={withBase(`/topics/${t.data.slug}`)}>{t.data.title}</a>
+                    </td>
+                    <td class="syllabus-tags-cell">
+                      {firstCount > 0 && (
+                        <span class="syllabus-split-item">
+                          <span class="tag-first-half">
+                            <span>first half</span>
+                            <span class="tag-count">{firstCount}</span>
+                          </span>
+                        </span>
+                      )}
+                      {harderCount > 0 && (
+                        <span class="syllabus-split-item">
+                          <span class="tag-harder-half">
+                            <span>harder half</span>
+                            <span class="tag-count">{harderCount}</span>
+                          </span>
+                        </span>
+                      )}
+                    </td>
+                    <td class="num-col">
+                      <span
+                        class="syllabus-progress"
+                        data-check-ids={qIds}
+                        data-total={t.data.questions.length}
+                      >
+                        {t.data.questions.length}
+                      </span>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          ))
+        }
+      </table>
+    </div>
+  </section>
+</BaseLayout>

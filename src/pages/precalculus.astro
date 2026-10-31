@@ -1,0 +1,189 @@
+---
+import BaseLayout, { type TocItem } from '../layouts/BaseLayout.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
+import { renderMathText } from '../lib/katex';
+
+const tocItems: TocItem[] = [
+  { id: 'reference-videos', label: 'Reference videos' },
+  { id: 'lines', label: 'Lines & slope' },
+  { id: 'geometry', label: 'Shapes, area & volume' },
+  { id: 'trig', label: 'Unit circle & trig' },
+  { id: 'composition', label: 'Functions inside functions' },
+  { id: 'exp-log', label: 'Exponents & logs' },
+  { id: 'power-functions', label: 'Power functions & graphs' },
+];
+
+const linesHtml = renderMathText(`
+<p>
+  Every tangent-line problem in calculus ends with writing the equation of a straight line. You almost never need $y = mx + b$—use <strong>point-slope form</strong> instead so you can plug in your point and slope in one step:
+</p>
+<ul>
+  <li><strong>Slope between two points $(x_1, y_1)$ and $(x_2, y_2)$:</strong> $m = \\dfrac{\\text{change in height}}{\\text{change in input}} = \\dfrac{y_2 - y_1}{x_2 - x_1}$.</li>
+  <li><strong>Point-slope equation of a line:</strong> If a line passes through $(x_0, y_0)$ with slope $m$, its equation is $y = y_0 + m(x - x_0)$. (Notice why this works: when you plug in $x = x_0$, the second term disappears and $y = y_0$!)</li>
+  <li><strong>Parallel vs. perpendicular slopes:</strong> Parallel lines tilt at the exact same angle ($m_1 = m_2$). Perpendicular lines ($90^\\circ$ apart) have slopes that are negative reciprocals: $m_2 = -\\dfrac{1}{m_1}$ (so $m_1 m_2 = -1$).</li>
+</ul>
+`);
+
+const geomHtml = renderMathText(`
+<p>
+  Related-rates (Chapter 5) and optimization (Chapter 8) problems expect you to know these shape formulas by heart:
+</p>
+<ul>
+  <li><strong>Rectangle &amp; 3D Box:</strong> A flat rectangle of length $\\ell$ and width $w$ has area $A = \\ell w$ and perimeter $P = 2\\ell + 2w$. A 3D box of size $\\ell \\times w \\times h$ has volume $V = \\ell w h$ and closed surface area $S = 2(\\ell w + \\ell h + w h)$. <em>(Tip: if the box has an open top, only count the floor $\\ell w$ once!)</em></li>
+  <li><strong>Circle:</strong> Radius $r$ gives area $A = \\pi r^2$ and outer rim (circumference) $C = 2\\pi r$.</li>
+  <li><strong>Cylinder (like a soup can):</strong> Radius $r$ and height $h$ give volume $V = (\\text{base circle}) \\times \\text{height} = \\pi r^2 h$. The curved side wall alone has area $2\\pi r h$; adding the top and bottom circular lids gives $S = 2\\pi r^2 + 2\\pi r h$.</li>
+  <li><strong>Cone (like an ice-cream cone):</strong> Base radius $r$ and height $h$ give volume $V = \\dfrac{1}{3}\\pi r^2 h$ (exactly one-third of a cylinder with the same base and height).</li>
+  <li><strong>Sphere (a ball):</strong> Radius $r$ gives volume $V = \\dfrac{4}{3}\\pi r^3$ and surface area $S = 4\\pi r^2$. <em>(Fun calculus connection: the surface area $4\\pi r^2$ is literally the derivative of the volume $\\frac{4}{3}\\pi r^3$!)</em></li>
+  <li><strong>Right triangle &amp; distance between two points:</strong> By the Pythagorean theorem, $a^2 + b^2 = c^2$. That immediately gives the straight-line distance between $(x_1, y_1)$ and $(x_2, y_2)$: $d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$.</li>
+</ul>
+`);
+
+const trigIntroHtml = renderMathText(`
+<p>
+  <strong>Why calculus always uses radians:</strong> In calculus, angles are <em>never</em> in degrees—$180^\\circ$ is $\\pi\\text{ radians}$ (halfway around a unit circle of radius $1$), $90^\\circ = \\pi/2$, $60^\\circ = \\pi/3$, $45^\\circ = \\pi/4$, and $30^\\circ = \\pi/6$. The clean derivative rules $(\\sin x)' = \\cos x$ and $(\\cos x)' = -\\sin x$ only work when $x$ is measured in radians!
+</p>
+<ul>
+  <li><strong>Unit circle intuition:</strong> On a circle of radius $1$ centered at the origin, walking counterclockwise by angle $\\theta$ from $(1, 0)$ lands you at the point $(x, y) = (\\cos\\theta, \\sin\\theta)$. So <strong>$\\cos\\theta$ is horizontal ($x$)</strong> and <strong>$\\sin\\theta$ is vertical ($y$)</strong>.</li>
+  <li><strong>Easy 0–1–2–3–4 trick for the table below:</strong> For $0, \\pi/6, \\pi/4, \\pi/3, \\pi/2$, $\\sin\\theta$ is just $\\dfrac{\\sqrt{0}}{2}, \\dfrac{\\sqrt{1}}{2}, \\dfrac{\\sqrt{2}}{2}, \\dfrac{\\sqrt{3}}{2}, \\dfrac{\\sqrt{4}}{2}$, and $\\cos\\theta$ runs the exact same list backward!</li>
+  <li><strong>Other four trig functions:</strong> $\\tan x = \\dfrac{\\sin x}{\\cos x}$, $\\cot x = \\dfrac{\\cos x}{\\sin x}$, $\\sec x = \\dfrac{1}{\\cos x}$, and $\\csc x = \\dfrac{1}{\\sin x}$.</li>
+  <li><strong>Three identities that show up everywhere:</strong> $\\cos^2 x + \\sin^2 x = 1$ (which divides by $\\cos^2 x$ to give $1 + \\tan^2 x = \\sec^2 x$), plus the double-angle rules $\\sin(2x) = 2\\sin x \\cos x$ and $\\cos(2x) = \\cos^2 x - \\sin^2 x$.</li>
+</ul>
+`);
+
+const compHtml = renderMathText(`
+<p>
+  A <strong>composite function</strong> $(f \\circ g)(x) = f(g(x))$ is like a two-step assembly line (or Russian nesting dolls): you plug $x$ into the <strong>inside function</strong> $g$ first, and then feed that output into the <strong>outside wrapper</strong> $f$. Spotting which function is on the outside is the entire secret to the Chain Rule (Section 4.3):
+</p>
+<ul>
+  <li>In $\\sin(x^2)$, you square $x$ first and take sine last: the <strong>inside</strong> is $u = x^2$ and the <strong>outside</strong> is $\\sin(u)$.</li>
+  <li>In $(\\sin x)^2$ (usually written $\\sin^2 x$), you take sine first and square the result last: the <strong>inside</strong> is $u = \\sin x$ and the <strong>outside</strong> is $u^2$.</li>
+  <li>In $e^{\\cos(3x)}$, there are three layers from inside out: $3x \\to \\cos(3x) \\to e^{\\cos(3x)}$.</li>
+</ul>
+`);
+
+const expLogHtml = renderMathText(`
+<p>
+  <strong>Heads up on notation:</strong> In UBC MATH 100/180 and the CLP practice book, $\\log x$ and $\\ln x$ mean the exact same thing—the <strong>natural logarithm</strong> (base $e \\approx 2.718$).
+</p>
+<ul>
+  <li><strong>What $\\ln x$ actually means:</strong> $e^x$ and $\\ln x$ undo each other! Specifically, $e^{\\ln x} = x$ (for $x > 0$) and $\\ln(e^x) = x$ (for all $x$).</li>
+  <li><strong>Values to know cold:</strong> $e^0 = 1$, $\\ln(1) = 0$, $\\ln(e) = 1$. As $x \\to 0^+$ (positive numbers shrinking toward zero), $\\ln x$ plunges to $-\\infty$, and $\\ln x$ does not exist for $x \\le 0$.</li>
+  <li><strong>Rewrite roots and fractions as powers before differentiating:</strong> $\\sqrt{x} = x^{1/2}$, $\\sqrt[q]{x^p} = x^{p/q}$, and $\\dfrac{1}{x^n} = x^{-n}$. That way you can use the simple power rule instead of the quotient rule!</li>
+  <li><strong>Log rules turn messy products and powers into easy sums:</strong> For $A, B > 0$, $\\ln(AB) = \\ln A + \\ln B$, $\\ln\\!\\left(\\dfrac{A}{B}\\right) = \\ln A - \\ln B$, and $\\ln(A^r) = r \\ln A$.</li>
+  <li><strong>Common trap:</strong> $\\ln(A + B)$ does <em>not</em> simplify! There is no rule for the log of a sum.</li>
+</ul>
+`);
+
+const powerHtml = renderMathText(`
+<ul>
+  <li><strong>Even powers ($x^2, x^4, \\dots$):</strong> Bowl-shaped ($\\cup$), never negative, and mirror-symmetric across the $y$-axis because $(-x)^2 = x^2$.</li>
+  <li><strong>Odd powers ($x^3, x^5, \\dots$):</strong> S-shaped through the origin: negative on the left, positive on the right, with $(-x)^3 = -x^3$.</li>
+  <li><strong>Which power wins for small vs. huge $x$?</strong> When $x$ is a tiny fraction between $0$ and $1$ (like $0.1$), multiplying by $x$ makes numbers <em>smaller</em>, so $x^3 < x^2 < x < \\sqrt{x}$. When $x > 1$ (like $10$), higher powers grow much <em>bigger</em>: $\\sqrt{x} < x < x^2 < x^3$.</li>
+  <li><strong>Negative powers ($x^{-n} = \\dfrac{1}{x^n}$):</strong> Dividing by a tiny number near $x = 0$ makes $\\dfrac{1}{x^n}$ blow up to $\\pm\\infty$ (vertical asymptote at $x = 0$), while dividing by a huge number as $x \\to \\pm\\infty$ shrinks $\\dfrac{1}{x^n}$ to $0$ (horizontal asymptote at $y = 0$).</li>
+</ul>
+`);
+
+const trigRows = [
+  ['$0$ ($0^\\circ$)', '$0$', '$1$', '$0$'],
+  ['$\\pi/6$ ($30^\\circ$)', '$1/2$', '$\\sqrt{3}/2$', '$1/\\sqrt{3}$'],
+  ['$\\pi/4$ ($45^\\circ$)', '$\\sqrt{2}/2$', '$\\sqrt{2}/2$', '$1$'],
+  ['$\\pi/3$ ($60^\\circ$)', '$\\sqrt{3}/2$', '$1/2$', '$\\sqrt{3}$'],
+  ['$\\pi/2$ ($90^\\circ$)', '$1$', '$0$', 'undefined'],
+  ['$\\pi$ ($180^\\circ$)', '$0$', '$-1$', '$0$'],
+  ['$3\\pi/2$ ($270^\\circ$)', '$-1$', '$0$', 'undefined'],
+].map((row) => row.map((cell) => renderMathText(cell)));
+---
+
+<BaseLayout title="Precalculus reference" currentSlug="precalculus" toc={tocItems}>
+  <header class="topic-header">
+    <h1>Precalculus Reference Sheet</h1>
+    <p class="topic-goal">
+      Calculus problems rarely get you stuck on the calculus itself—most mistakes happen in the algebra, geometry, or trig setup. Here is every background fact that MATH 100 and MATH 180 expect you to know, explained simply in one place.
+    </p>
+  </header>
+
+  <nav class="jump-nav" aria-label="On this page">
+    <span class="jump-nav-label">Jump to:</span>
+    <a href="#lines">Lines &amp; slope</a>
+    <a href="#geometry">Shapes &amp; volume</a>
+    <a href="#trig">Unit circle &amp; trig</a>
+    <a href="#composition">Nested functions</a>
+    <a href="#exp-log">Exponents &amp; logs</a>
+    <a href="#power-functions">Power graphs</a>
+  </nav>
+
+  <div class="prep-ledger" id="reference-videos">
+    <div class="prep-row">
+      <div class="prep-label">Quick video refreshers</div>
+      <div class="prep-content">
+        <div class="video-grid">
+          <VideoEmbed
+            url="https://www.youtube.com/watch?v=Dsf6ADwJ66E"
+            creator="Schattman Math"
+            title="All 6 Trig Functions on the Unit Circle"
+          />
+          <VideoEmbed
+            url="https://www.youtube.com/watch?v=NrmmR3-VxA8"
+            creator="Professor Leonard"
+            title="Graphs You Must Know (Precalculus - College Algebra 13)"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ref-section">
+    <h2 id="lines">Lines and slope (Book 3.1)</h2>
+    <Fragment set:html={linesHtml} />
+  </section>
+
+  <section class="ref-section">
+    <h2 id="geometry">Area, volume, and distance formulas</h2>
+    <Fragment set:html={geomHtml} />
+  </section>
+
+  <section class="ref-section">
+    <h2 id="trig">Unit circle and trig values at standard angles</h2>
+    <Fragment set:html={trigIntroHtml} />
+
+    <div class="table-scroll">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th scope="col" set:html={renderMathText('Angle $\\theta$')} />
+            <th scope="col" set:html={renderMathText('$\\sin\\theta$ (height $y$)')} />
+            <th scope="col" set:html={renderMathText('$\\cos\\theta$ (width $x$)')} />
+            <th scope="col" set:html={renderMathText('$\\tan\\theta = \\sin\\theta / \\cos\\theta$')} />
+          </tr>
+        </thead>
+        <tbody>
+          {
+            trigRows.map((row) => (
+              <tr>
+                <td set:html={row[0]} />
+                <td set:html={row[1]} />
+                <td set:html={row[2]} />
+                <td set:html={row[3]} />
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="ref-section">
+    <h2 id="composition">Functions inside functions (composition)</h2>
+    <Fragment set:html={compHtml} />
+  </section>
+
+  <section class="ref-section">
+    <h2 id="exp-log">Exponents and natural logarithms</h2>
+    <Fragment set:html={expLogHtml} />
+  </section>
+
+  <section class="ref-section">
+    <h2 id="power-functions">How power functions behave (Chapter 1)</h2>
+    <Fragment set:html={powerHtml} />
+  </section>
+</BaseLayout>

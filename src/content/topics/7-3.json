@@ -1,0 +1,79 @@
+{
+  "slug": "7-3",
+  "section": "7.3",
+  "title": "Second derivative — concavity",
+  "shortTitle": "Concavity",
+  "group": "curve-sketching",
+  "order": 20,
+  "flavour": "all",
+  "goal": "Use the second derivative $f''(x)$ to see which way a graph bends—concave up like a cup $\\cup$ ($f'' > 0$) or concave down like a cap $\\cap$ ($f'' < 0$)—and find inflection points where the bend flips.",
+  "beforeThis": {
+    "skill": "Watch out: a point with $f''(x) = 0$ is only an inflection point if $f''(x)$ actually switches sign from $+$ to $-$ (or $-$ to $+$) as you cross it!",
+    "links": [
+      {
+        "label": "Precalculus: Power functions and polynomial factoring",
+        "href": "/precalculus#power-functions"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Concavity & The Second Derivative",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=FAj9w06OhH0",
+      "watchFor": "Visualizes concave-up vs. concave-down bending and how inflection points mark where $f''(x)$ changes sign."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 3.4: The Second Derivative Test for Concavity of Functions",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=29GbRaQxtzY"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "7.3-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Spot the intervals along the $x$-axis where the curve bends upward ($f''(x) > 0$) and where it bends downward ($f''(x) < 0$).",
+      "statement": "<p>On the graph below, mark the intervals where $f''(x) > 0$ (i.e. $f(x)$ is concave up) and where $f''(x) < 0$ (i.e. $f(x)$ is concave down).</p>",
+      "figures": [
+        {
+          "src": "/figures/7.3-q1.png",
+          "alt": "Smooth curve above the x-axis that starts nearly flat on the left, bends upward as it rises toward the y-axis, bends downward over a rounded peak at the y-axis, briefly bends upward and levels off at a terrace in the first quadrant, and then bends downward as it descends below the x-axis."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "7.3-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "harder",
+      "asking": "Draw the graph of a single function $y = f(x)$ that satisfies all four increasing/decreasing and concavity conditions simultaneously.",
+      "statement": "<p>Sketch a curve that is:</p><ul><li>concave up when $|x| > 5$,</li><li>concave down when $|x| < 5$,</li><li>increasing when $x < 0$, and</li><li>decreasing when $x > 0$.</li></ul>",
+      "oldExam": false
+    },
+    {
+      "id": "7.3-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Think of $f(x) = x^4$ at $x = 0$: even if $f''(c) = 0$, the graph only has an inflection point if $f''(x)$ actually switches sign ($+$ to $-$ or $-$ to $+$) across $c$!",
+      "statement": "<p>Suppose $f(x)$ is a function whose second derivative exists and is continuous for all real numbers. True or false: if $f''(3) = 0$, then $x = 3$ is an inflection point of $f(x)$.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "7.3-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Compute $f''(x)$, factor it to find where $f''(x) = 0$, and check where $f''(x)$ actually switches sign to find the inflection point(s).",
+      "statement": "<p>Find all inflection points for the graph of $f(x) = 3x^5 - 5x^4 + 13x$.</p>",
+      "oldExam": true
+    }
+  ]
+}

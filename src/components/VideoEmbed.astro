@@ -1,0 +1,85 @@
+---
+import { renderMathText } from '../lib/katex';
+
+interface Props {
+  url: string;
+  creator: string;
+  title: string;
+  note?: string;
+  watchFor?: string;
+  durationNote?: string;
+}
+
+const { url, creator, title, note, watchFor, durationNote } = Astro.props;
+
+function parseYouTubeUrl(rawUrl: string): { videoId: string; startSeconds: string } {
+  let videoId = '';
+  let startSeconds = '';
+  try {
+    const parsed = new URL(rawUrl);
+    videoId = parsed.searchParams.get('v') || '';
+    const tParam = parsed.searchParams.get('t') || parsed.searchParams.get('start') || '';
+    if (tParam) {
+      const m = tParam.match(/^(\d+)/);
+      if (m) startSeconds = m[1];
+    }
+  } catch {
+    const idMatch = rawUrl.match(/[?&]v=([^&#]+)/);
+    if (idMatch) videoId = idMatch[1];
+  }
+  return { videoId, startSeconds };
+}
+
+const { videoId, startSeconds } = parseYouTubeUrl(url);
+const thumbUrl = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+const fullLabel = `${creator} — ${title}`;
+---
+
+<div class="yt-card">
+  <div class="yt-stage" data-yt-stage>
+    <img
+      src={thumbUrl}
+      alt=""
+      class="yt-thumb"
+      loading="lazy"
+      decoding="async"
+      width="480"
+      height="360"
+      onerror="this.hidden=true"
+    />
+    <button
+      type="button"
+      class="yt-play-trigger"
+      data-yt-id={videoId}
+      data-yt-start={startSeconds || undefined}
+      data-yt-title={fullLabel}
+      aria-label={`Play video: ${fullLabel}`}
+    >
+      <span class="yt-play-badge" aria-hidden="true">
+        <svg viewBox="0 0 48 34" width="44" height="31" focusable="false" aria-hidden="true">
+          <rect x="1" y="1" width="46" height="32" rx="6" class="yt-badge-bg" />
+          <polygon points="19,10 19,24 32,17" class="yt-badge-triangle" />
+        </svg>
+      </span>
+      <span class="yt-thumb-caption">
+        <span class="yt-thumb-creator">{creator}</span>
+        {startSeconds && <span class="yt-thumb-time">Starts at 9:53</span>}
+      </span>
+    </button>
+  </div>
+
+  <div class="yt-meta">
+    <div class="yt-title-line">
+      {note && <strong class="video-role-note">{note}: </strong>}
+      <a href={url} class="video-link">
+        {creator} — {title}
+      </a>
+      {durationNote && <span class="video-duration-note"> ({durationNote})</span>}
+    </div>
+    {
+      watchFor && (
+        <p class="video-watch-for" set:html={renderMathText(watchFor)} />
+      )
+    }
+  </div>
+</div>

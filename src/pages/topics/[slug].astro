@@ -1,0 +1,355 @@
+---
+import BaseLayout, { type TocItem } from '../../layouts/BaseLayout.astro';
+import VideoEmbed from '../../components/VideoEmbed.astro';
+import { getCollection } from 'astro:content';
+import { getGroupById } from '../../data/groups';
+import { renderMathText, withBase } from '../../lib/katex';
+
+export async function getStaticPaths() {
+  const allTopics = await getCollection('topics');
+  const sorted = [...allTopics].sort((a, b) => a.data.order - b.data.order);
+
+  return sorted.map((topic, idx) => ({
+    params: { slug: topic.data.slug },
+    props: {
+      topic,
+      prevTopic: idx > 0 ? sorted[idx - 1] : null,
+      nextTopic: idx < sorted.length - 1 ? sorted[idx + 1] : null,
+    },
+  }));
+}
+
+const { topic, prevTopic, nextTopic } = Astro.props;
+const d = topic.data;
+const group = getGroupById(d.group);
+const howToRead = d.howToReadOverride ?? group.howToRead;
+
+const stages = d.staged
+  ? [1, 2, 3]
+      .map((s) => ({
+        stage: s,
+        items: d.questions.filter((q) => q.stage === s),
+      }))
+      .filter((g) => g.items.length > 0)
+  : [{ stage: null, items: d.questions }];
+
+const sectionLabel =
+  d.section === '3.3i'
+    ? '3.3 (Interpretations)'
+    : d.section.includes('.')
+      ? d.section
+      : `Chapter ${d.section}`;
+
+const headingTitle = d.title.startsWith(d.section)
+  ? d.title
+  : `${sectionLabel} — ${d.title}`;
+
+const firstHalfCount = d.questions.filter((q) => q.half === 'first').length;
+const harderHalfCount = d.questions.filter((q) => q.half === 'harder').length;
+const allCheckIds = d.questions.map((q) => q.id).join(',');
+
+const tocItems: TocItem[] = [
+  { id: 'how-to-read-heading', label: 'How to read questions' },
+  { id: 'prep-and-videos', label: 'Videos & preparation' },
+  { id: 'practice-problems', label: `Practice (${d.questions.length})` },
+  ...stages
+    .filter((g) => g.stage !== null)
+    .map((g) => ({
+      id: `stage-${g.stage}`,
+      label: `Stage ${g.stage} (${g.items.length})`,
+      indent: true,
+    })),
+];
+
+function formatShortNav(sec: string, shortTitle: string) {
+  const prefix = sec === '3.3i' ? '3.3*' : sec.includes('.') ? sec : `Ch ${sec}`;
+  return `${prefix} ${shortTitle}`;
+}
+---
+
+<BaseLayout title={headingTitle} currentSlug={d.slug} currentGroup={d.group} toc={tocItems}>
+  <header class="topic-header">
+    <h1>{headingTitle}</h1>
+    <p class="topic-goal" set:html={renderMathText(d.goal)} />
+  </header>
+
+  <section class="how-to-read-block" aria-labelledby="how-to-read-heading">
+    <h2 id="how-to-read-heading" class="how-to-read-title">{howToRead.title}</h2>
+    <p set:html={renderMathText(howToRead.body)} />
+    {
+      howToRead.cueWords && howToRead.cueWords.length > 0 && (
+        <ul class="how-to-read-cues">
+          {howToRead.cueWords.map((cue) => (
+            <li set:html={renderMathText(cue)} />
+          ))}
+        </ul>
+      )
+    }
+  </section>
+
+  <div class="prep-ledger" id="prep-and-videos" role="region" aria-label="Topic preparation and video links">
+    <div class="prep-row">
+      <div class="prep-label">Foundation</div>
+      <div class="prep-content">
+        <details class="before-this-details">
+          <summary class="before-this-summary">Before this (precalculus &amp; setup)</summary>
+          <div class="before-this-body">
+            <p set:html={renderMathText(d.beforeThis.skill)} />
+            {
+              d.beforeThis.links.length > 0 && (
+                <ul class="before-this-links">
+                  {d.beforeThis.links.map((link) => (
+                    <li>
+                      <a href={withBase(link.href)}>{link.label}</a>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="prep-row">
+      <div class="prep-label">See it</div>
+      <div class="prep-content">
+        <div class="video-grid">
+          {
+            d.seeIt.map((v) => (
+              <VideoEmbed
+                url={v.url}
+                creator={v.creator}
+                title={v.title}
+                note={v.note}
+                watchFor={v.watchFor}
+              />
+            ))
+          }
+        </div>
+      </div>
+    </div>
+
+    {
+      d.slowWalkthrough && d.slowWalkthrough.length > 0 && (
+        <div class="prep-row">
+          <div class="prep-label">Full lecture</div>
+          <div class="prep-content">
+            <div class="video-grid">
+              {d.slowWalkthrough.map((v) => (
+                <VideoEmbed
+                  url={v.url}
+                  creator={v.creator}
+                  title={v.title}
+                  watchFor={v.watchFor}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )
+    }
+  </div>
+
+  <div class="practice-header" id="practice-problems">
+    <div class="practice-header-title-group">
+      <h2 class="practice-heading">Practice problems ({d.questions.length})</h2>
+      <div class="practice-summary-pills">
+        <span
+          class="progress-pill"
+          data-check-ids={allCheckIds}
+          data-total={d.questions.length}
+          data-verbose-progress="true"
+        >
+          0 / {d.questions.length} tried
+        </span>
+        {firstHalfCount > 0 && (
+          <span class="tag-first-half">
+            <span>first half</span>
+            <span class="tag-count">{firstHalfCount}</span>
+          </span>
+        )}
+        {harderHalfCount > 0 && (
+          <span class="tag-harder-half">
+            <span>harder half</span>
+            <span class="tag-count">{harderHalfCount}</span>
+          </span>
+        )}
+      </div>
+    </div>
+
+    <button
+      type="button"
+      class="clear-checks-btn"
+      id="clear-topic-checks"
+      data-section-slug={d.slug}
+    >
+      Clear checks on this page
+    </button>
+  </div>
+
+  {
+    d.practiceNote && (
+      <p class="practice-note" set:html={renderMathText(d.practiceNote)} />
+    )
+  }
+
+  {
+    stages.map((groupBlock) => (
+      <section class="stage-section">
+        {groupBlock.stage !== null && (
+          <h3 class="stage-heading" id={`stage-${groupBlock.stage}`}>
+            <span>Stage {groupBlock.stage}</span>
+            <span class="stage-count">{groupBlock.items.length} {groupBlock.items.length === 1 ? 'problem' : 'problems'}</span>
+          </h3>
+        )}
+        {d.section === '3.3i' && groupBlock.stage === 2 && (
+          <p class="stage-guidance-note">
+            <em>
+              The study guide notes "do any" for this group—doing one or two of Q28–Q34 is enough before moving on.
+            </em>
+          </p>
+        )}
+        <ol class="problem-list">
+          {groupBlock.items.map((q) => (
+            <li class="problem" id={q.id}>
+              <div class="problem-meta">
+                <span class="problem-number">
+                  {sectionLabel}, question {q.number}.
+                </span>
+                <div class="problem-tags">
+                  {q.stage !== null && <span class="problem-stage">Stage {q.stage}</span>}
+                  <span class={q.half === 'first' ? 'tag-first-half' : 'tag-harder-half'}>
+                    {q.half === 'first' ? 'first half' : 'harder half'}
+                  </span>
+                  {q.oldExam && <span class="problem-exam-note">from an old UBC exam</span>}
+                </div>
+              </div>
+
+              <details class="asking-disclosure">
+                <summary class="asking-summary">
+                  <span class="asking-summary-label">What this is asking</span>
+                </summary>
+                <div class="asking-text" set:html={renderMathText(q.asking)} />
+              </details>
+
+              <div class="problem-statement" set:html={renderMathText(q.statement)} />
+
+              {q.figures &&
+                q.figures.map((fig) => (
+                  <figure class="problem-figure">
+                    <img src={withBase(fig.src)} alt={fig.alt} loading="lazy" />
+                  </figure>
+                ))}
+
+              <div class="problem-check-row">
+                <label class="problem-check-label">
+                  <input
+                    type="checkbox"
+                    class="problem-checkbox"
+                    data-check-id={q.id}
+                  />
+                  <span>I tried this</span>
+                </label>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))
+  }
+
+  <nav class="topic-pagination" aria-label="Section pagination">
+    <div class="pagination-slot">
+      {
+        prevTopic && (
+          <a
+            href={withBase(`/topics/${prevTopic.data.slug}`)}
+            class="pagination-link"
+            data-content-flavour={prevTopic.data.flavour}
+          >
+            <span class="pagination-dir">← Previous section</span>
+            <span class="pagination-title">
+              {formatShortNav(prevTopic.data.section, prevTopic.data.shortTitle)}
+            </span>
+          </a>
+        )
+      }
+    </div>
+    <div class="pagination-slot pagination-slot-next">
+      {
+        nextTopic && (
+          <a
+            href={withBase(`/topics/${nextTopic.data.slug}`)}
+            class="pagination-link pagination-link-next"
+            data-content-flavour={nextTopic.data.flavour}
+          >
+            <span class="pagination-dir">Next section →</span>
+            <span class="pagination-title">
+              {formatShortNav(nextTopic.data.section, nextTopic.data.shortTitle)}
+            </span>
+          </a>
+        )
+      }
+    </div>
+  </nav>
+
+  <script is:inline>
+    (function () {
+      const PREFIX = 'math100_check_';
+      const supportsHas =
+        typeof CSS !== 'undefined' &&
+        typeof CSS.supports === 'function' &&
+        CSS.supports('selector(:has(*))');
+      const checkboxes = document.querySelectorAll('.problem-checkbox[data-check-id]');
+
+      function syncRowFallback(cb) {
+        if (supportsHas) return;
+        const row = cb.closest('.problem');
+        if (row) {
+          row.classList.toggle('is-checked', cb.checked);
+        }
+      }
+
+      checkboxes.forEach((cb) => {
+        if (!(cb instanceof HTMLInputElement)) return;
+        const id = cb.getAttribute('data-check-id');
+        if (!id) return;
+        try {
+          cb.checked = localStorage.getItem(PREFIX + id) === '1';
+        } catch (e) {}
+        syncRowFallback(cb);
+
+        cb.addEventListener('change', () => {
+          try {
+            if (cb.checked) {
+              localStorage.setItem(PREFIX + id, '1');
+            } else {
+              localStorage.removeItem(PREFIX + id);
+            }
+          } catch (e) {}
+          syncRowFallback(cb);
+          window.dispatchEvent(new CustomEvent('math100:checks-updated'));
+        });
+      });
+
+      const clearBtn = document.getElementById('clear-topic-checks');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          checkboxes.forEach((cb) => {
+            if (!(cb instanceof HTMLInputElement)) return;
+            const id = cb.getAttribute('data-check-id');
+            cb.checked = false;
+            syncRowFallback(cb);
+            if (id) {
+              try {
+                localStorage.removeItem(PREFIX + id);
+              } catch (e) {}
+            }
+          });
+          window.dispatchEvent(new CustomEvent('math100:checks-updated'));
+        });
+      }
+    })();
+  </script>
+</BaseLayout>

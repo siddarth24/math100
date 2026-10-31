@@ -1,0 +1,85 @@
+{
+  "slug": "12-2",
+  "section": "12.2",
+  "title": "Visualizing solutions with slope fields",
+  "shortTitle": "Slope fields",
+  "group": "slope-fields",
+  "order": 35,
+  "flavour": "AB",
+  "goal": "See what solutions to $\\frac{\\mathrm{d}y}{\\mathrm{d}t} = f(y)$ look like without doing algebra by following a grid of tiny slope arrows (a slope field) from any starting value.",
+  "beforeThis": {
+    "skill": "Quick check: slope $= 0$ is a flat horizontal dash ($-$), positive slope tilts uphill ($/$), and negative slope tilts downhill ($\\backslash$).",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines and polynomial roots",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The Geometric Meaning of Differential Equations (Slope Fields)",
+      "creator": "Dr. Trefor Bazett",
+      "url": "https://www.youtube.com/watch?v=ccDMpj2UK_M",
+      "watchFor": "Shows how plotting tangent segments across the plane reveals steady states and solution trajectories."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Introduction to Slope Fields (Differential Equations 9)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=m9Y8U9f9_Bw"
+    },
+    {
+      "title": "Applications of Slope Fields (Differential Equations 10)",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=i_f6tC0BKxI"
+    }
+  ],
+  "staged": false,
+  "questions": [
+    {
+      "id": "12.2-q1",
+      "number": 1,
+      "half": "harder",
+      "asking": "For each differential equation, sketch its slope field, list all steady states where $\\mathrm{d}y/\\mathrm{d}t = 0$, and describe the long-term behaviour of the solution starting at $y(0) = 1$.",
+      "statement": "<p><strong>Slope fields.</strong> Consider the differential equations given below. In each case, draw a slope field, determine the values of $y$ for which no change takes place — such values are called <em>steady states</em> — and use your slope field to predict what would happen starting from an initial value $y(0) = 1$.</p><ol type=\"a\"><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -0.5y$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = 0.5y(2 - y)$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = y(2 - y)(3 - y)$</li></ol>",
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "12.2-q4",
+      "number": 4,
+      "half": "harder",
+      "asking": "Spot which of the five differential equations (A)–(E) has horizontal segments ($\\mathrm{d}y/\\mathrm{d}t = 0$) and positive/negative slope signs matching the plotted slope field.",
+      "statement": "<p><strong>Slope field.</strong> The slope field shown in the figure below corresponds to which differential equation?</p><ol type=\"A\"><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = ry(y + 1)$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = r(y - 1)(y + 1)$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -r(y - 1)(y + 1)$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = ry(y - 1)$</li><li>$\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = -ry(y + 1)$</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/12.2-q4.png",
+          "alt": "Slope field for t from 0 to 10 and y from -2 to 2. The segments are horizontal along y = 1 and y = -1; they have positive slope above y = 1 and below y = -1, and negative slope between y = -1 and y = 1."
+        }
+      ],
+      "stage": null,
+      "oldExam": false
+    },
+    {
+      "id": "12.2-q5",
+      "number": 5,
+      "half": "harder",
+      "asking": "Trace the solution curve $y(t)$ through the marked dot in each of the six panels (a)–(f) by following the local slope segments.",
+      "statement": "<p>Shown below is the slope field for the differential equation $\\dfrac{\\mathrm{d}y}{\\mathrm{d}t} = y(1 - y^2)$.</p><p>Use the field to sketch solutions to the differential equation passing through the indicated point.</p>",
+      "figures": [
+        {
+          "src": "/figures/12.2-q5-1.png",
+          "alt": "Master slope field for dy/dt = y(1 - y^2) showing horizontal equilibrium lines at y = 1, y = 0 (the t-axis), and y = -1. Slopes are negative above y = 1 and between y = 0 and y = -1, and positive between y = 0 and y = 1 and below y = -1."
+        },
+        {
+          "src": "/figures/12.2-q5-2.png",
+          "alt": "Six copies of the slope field labeled (a) through (f), each with a single black initial-point dot placed in a different region of the (t, y)-plane."
+        }
+      ],
+      "stage": null,
+      "oldExam": false
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "9-6",
+  "section": "9.6",
+  "title": "Error in Taylor approximations (Lagrange remainder)",
+  "shortTitle": "Taylor error (Flavour A)",
+  "group": "taylor-polynomials",
+  "order": 32,
+  "flavour": "A",
+  "goal": "Guarantee how accurate a Taylor estimate is by finding the worst-case size of the remainder gap $|R_n(x)| = \\left|\\frac{f^{(n+1)}(c)}{(n+1)!}(x - a)^{n+1}\\right|$ between $a$ and $x$.",
+  "beforeThis": {
+    "skill": "Notice the pattern: the error formula looks exactly like the very next Taylor term $(n+1)$, except the derivative is evaluated at an unknown mystery point $c$ between $a$ and $x$.",
+    "links": [
+      {
+        "label": "Precalculus: Exponentials and inequalities",
+        "href": "/precalculus#exp-log"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "Taylor series (Ch. 11 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=3d6DsjIBzJ4",
+      "watchFor": "Shows how the gap between a function and its $n$th Taylor polynomial is controlled by the $(n+1)$st derivative."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 2 Lecture 9.9: Approximation of Functions by Taylor Polynomials",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=RbreIk02B3c"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "9.6-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Calculate the actual magnitude of the error $|R(10)| = |f(10) - F(10)|$ and determine which of the four inequalities are true.",
+      "statement": "<p>Suppose $f(x)$ is a function that we approximated by $F(x)$. Further, suppose $f(10) = -3$, while our approximation was $F(10) = 5$. Let $R(x) = f(x) - F(x)$.</p><ol type=\"a\"><li>True or false: $|R(10)| \\le 7$</li><li>True or false: $|R(10)| \\le 8$</li><li>True or false: $|R(10)| \\le 9$</li><li>True or false: $|R(10)| \\le 100$</li></ol>",
+      "oldExam": false
+    },
+    {
+      "id": "9.6-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Give an upper bound on $|f(2) - T_3(2)|$ using the 4th-derivative remainder formula on $[0, 2]$, and compare it with the decimal value of $|e^2 - T_3(2)|$.",
+      "statement": "<p>Let $f(x) = e^x$, and let $T_3(x)$ be the third-degree Maclaurin polynomial for $f(x)$,</p>$$T_3(x) = 1 + x + \\frac{1}{2}x^2 + \\frac{1}{3!}x^3$$<p>Use Equation 9.6.5 to give a reasonable bound on the error $|f(2) - T_3(2)|$. Then, find the error $|f(2) - T_3(2)|$ using a calculator.</p>",
+      "oldExam": false
+    },
+    {
+      "id": "9.6-q14",
+      "number": 14,
+      "stage": 3,
+      "half": "harder",
+      "asking": "Write out $T_4(x)$ for $e^x$, evaluate $T_4(1)$ as a fraction, and bound the remainder at $x = 1$ to show that $e$ lies strictly between $\\frac{326}{120}$ and $\\frac{325}{119}$.",
+      "statement": "<p>In this question, we use the remainder of a Maclaurin polynomial to approximate $e$.</p><ol type=\"a\"><li>Write out the 4th degree Maclaurin polynomial $T_4(x)$ of the function $e^x$.</li><li>Compute $T_4(1)$.</li><li>Use your answer from (b) to conclude $$\\frac{326}{120} < e < \\frac{325}{119}.$$</li></ol>",
+      "oldExam": false
+    }
+  ]
+}

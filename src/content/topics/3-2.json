@@ -1,0 +1,127 @@
+{
+  "slug": "3-2",
+  "section": "3.2",
+  "title": "Slope of a tangent line",
+  "shortTitle": "Tangent slope",
+  "group": "slopes-and-derivative",
+  "order": 6,
+  "flavour": "all",
+  "goal": "Watch the average slope between two points on a curve turn into the exact slope at a single point (the tangent line) as the second point slides into the first.",
+  "beforeThis": {
+    "skill": "Quick check: slope between two points is always $\\frac{\\text{change in } y}{\\text{change in } x} = \\frac{y_2 - y_1}{x_2 - x_1}$, and the line through $(x_0, y_0)$ with slope $m$ is $y = y_0 + m(x - x_0)$.",
+    "links": [
+      {
+        "label": "Precalculus: Equations of lines",
+        "href": "/precalculus#lines"
+      }
+    ]
+  },
+  "seeIt": [
+    {
+      "title": "The paradox of the derivative (Ch. 2 of Essence of Calculus)",
+      "creator": "3Blue1Brown",
+      "url": "https://www.youtube.com/watch?v=9vKqVkMQHKk",
+      "watchFor": "Shows how a secant slope between two nearby points becomes the tangent slope at a single point."
+    }
+  ],
+  "slowWalkthrough": [
+    {
+      "title": "Calculus 1 Lecture 1.5: Slope of a Curve, Velocity, and Rates of Change",
+      "creator": "Professor Leonard",
+      "url": "https://www.youtube.com/watch?v=PqQ5v94_NGM"
+    }
+  ],
+  "staged": true,
+  "questions": [
+    {
+      "id": "3.2-q1",
+      "number": 1,
+      "stage": 1,
+      "half": "first",
+      "asking": "Find the sign (positive or negative) of the slope of the line connecting the peak $P$ to a point $Q$ on either side of the $y$-axis.",
+      "statement": "<p>Shown below is the graph $y = f(x)$. If we choose a point $Q$ on the graph to the left of the $y$-axis, is the slope of the secant line through $P$ and $Q$ positive or negative? If we choose a point $Q$ on the graph to the right of the $y$-axis, is the slope of the secant line through $P$ and $Q$ positive or negative?</p>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q1.png",
+          "alt": "Graph of y = f(x) with a sharp highest point P on the positive y-axis. The curve rises concave up from the left toward P and falls concave up to the right of P."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.2-q2",
+      "number": 2,
+      "stage": 1,
+      "half": "first",
+      "asking": "Use the upward-bending curve to decide how moving $Q$ affects the secant slope through $P$ and $Q$, and compare that secant slope to the tangent slope at $P$.",
+      "statement": "<p>Shown below is the graph $y = f(x)$.</p><ol type=\"a\"><li>If we want the slope of the secant line through $P$ and $Q$ to increase, should we slide $Q$ closer to $P$, or further away?</li><li>Which is larger, the slope of the tangent line at $P$, or the slope of the secant line through $P$ and $Q$?</li></ol>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q2.png",
+          "alt": "Graph of an increasing, concave-up curve y = f(x) with point Q in the third quadrant and point P higher up in the first quadrant."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.2-q3",
+      "number": 3,
+      "stage": 1,
+      "half": "first",
+      "asking": "Sort the six graphs into groups that share the same secant line slope between $x = -2$ and $x = 2$.",
+      "statement": "<p>Group the functions below into collections whose secant lines from $x = -2$ to $x = 2$ all have the same slopes.</p>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q3.png",
+          "alt": "Six small graphs labeled (a) through (f) over the interval from x = -2 to x = 2: (a) rises linearly from negative at x = -2 to positive at x = 2; (b) falls linearly from positive at x = -2 to lower positive at x = 2; (c) piecewise linear starting and ending on the x-axis at x = -2 and x = 2; (d) horizontal line from x = -2 to x = 2; (e) rises linearly with the same endpoints at x = -2 and x = 2 as (a); (f) trough-shaped piecewise linear graph starting and ending at the same height at x = -2 and x = 2."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.2-q4",
+      "number": 4,
+      "stage": 2,
+      "half": "first",
+      "asking": "Pick two grid points on the drawn tangent line and calculate rise over run ($\\Delta y / \\Delta x$) to estimate the slope at $x = 5$.",
+      "statement": "<p>Give your best approximation of the slope of the tangent line to the graph below at the point $x = 5$.</p>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q4.png",
+          "alt": "Grid showing a smooth increasing curve. Grid major units are marked at 1 and 5 on the x-axis and 1 on the y-axis, with 5 subdivisions per unit. At x = 5, the curve passes near y = 0.5 and rises steeply from about y = 0 at x = 4 to y = 2 at x = 6."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.2-q5",
+      "number": 5,
+      "stage": 2,
+      "half": "first",
+      "asking": "Draw the tangent line at $P$ and pick any two points $Q$ and $R$ on the curve whose connecting secant line is parallel to that tangent line.",
+      "statement": "<p>On the graph below, sketch the tangent line to $y = f(x)$ at $P$. Then, find two points $Q$ and $R$ on the graph so that the secant line through $Q$ and $R$ has the same slope as the tangent line at $P$.</p>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q5.png",
+          "alt": "Graph of a smooth curve y = f(x) dipping below the x-axis to a minimum near the y-axis and then rising to the right, with a point P marked just to the right of the minimum."
+        }
+      ],
+      "oldExam": false
+    },
+    {
+      "id": "3.2-q6",
+      "number": 6,
+      "stage": 2,
+      "half": "first",
+      "asking": "Spot every peak, valley, or flat shelf on the curve where a tangent line would sit completely flat (slope $= 0$).",
+      "statement": "<p>Mark the points where the curve shown below has a tangent line with slope $0$.</p><p>(Later on, we’ll learn how these points tell us a lot about the shape of a graph.)</p>",
+      "figures": [
+        {
+          "src": "/figures/3.2-q6.png",
+          "alt": "Graph of a smooth curve y = f(x) that descends from the left, levels off briefly at a flat terrace in the second quadrant, continues down to a valley minimum on the negative y-axis, rises to a rounded peak in the fourth quadrant, and then descends."
+        }
+      ],
+      "oldExam": false
+    }
+  ]
+}
